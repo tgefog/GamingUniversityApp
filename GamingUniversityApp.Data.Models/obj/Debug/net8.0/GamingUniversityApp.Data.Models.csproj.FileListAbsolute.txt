@@ -10,3 +10,7 @@ C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Data.Models\
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Data.Models\obj\Debug\net8.0\refint\GamingUniversityApp.Data.Models.dll
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Data.Models\obj\Debug\net8.0\GamingUniversityApp.Data.Models.pdb
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Data.Models\obj\Debug\net8.0\ref\GamingUniversityApp.Data.Models.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Data.Models\bin\Debug\net8.0\GamingUniversityApp.Common.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Data.Models\bin\Debug\net8.0\GamingUniversityApp.Common.pdb
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Data.Models\obj\Debug\net8.0\GamingUniversityApp.Data.Models.csproj.AssemblyReference.cache
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Data.Models\obj\Debug\net8.0\GamingUn.CD0FB085.Up2Date

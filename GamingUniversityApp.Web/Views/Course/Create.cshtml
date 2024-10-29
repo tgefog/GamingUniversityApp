@@ -1,0 +1,29 @@
+﻿@model GamingUniversityApp.Data.Models.Course
+
+<h2>Add a New Course</h2> 
+
+<form asp-action="Create" method="post">
+	<div>
+		<label for="CourseName">CourseName</label>
+		<input asp-for="CourseName" class="form-control" />
+	</div>
+	@* <div>
+	<label for="Genre">Genre</label>
+	<input asp-for="Genre" class="form-control" />
+	</div> *@
+	@*     <div>
+	<label for="Director">Director</label>
+	<input asp-for="Director" class="form-control" />
+	</div> *@
+	<div>
+		<label for="Description">Description</label>
+		<textarea asp-for="Description" class="form-control"></textarea>
+	</div>
+	<div>
+		<label for="Credits">Credits</label>
+		<textarea asp-for="Credits" class="form-control"></textarea>
+	</div>
+	<button type="submit" class="btn btn-primary mt-2">Create Course</button>
+</form>
+
+<a asp-action="Index">Back to Courses List</a>

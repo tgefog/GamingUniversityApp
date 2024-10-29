@@ -156,3 +156,7 @@ C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web\obj\Debu
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web\obj\Debug\net8.0\GamingUniversityApp.Web.pdb
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web\obj\Debug\net8.0\GamingUniversityApp.Web.genruntimeconfig.cache
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web\obj\Debug\net8.0\ref\GamingUniversityApp.Web.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\EntityFramework.SqlServer.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\EntityFramework.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\Microsoft.AspNet.Identity.Core.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\Microsoft.AspNet.Identity.EntityFramework.dll
