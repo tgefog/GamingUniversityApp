@@ -1,0 +1,12 @@
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\bin\Debug\net8.0\GamingUniversityApp.Common.deps.json
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\bin\Debug\net8.0\GamingUniversityApp.Common.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\bin\Debug\net8.0\GamingUniversityApp.Common.pdb
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\obj\Debug\net8.0\GamingUniversityApp.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\obj\Debug\net8.0\GamingUniversityApp.Common.AssemblyInfoInputs.cache
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\obj\Debug\net8.0\GamingUniversityApp.Common.AssemblyInfo.cs
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\obj\Debug\net8.0\GamingUniversityApp.Common.csproj.CoreCompileInputs.cache
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\obj\Debug\net8.0\GamingUniversityApp.Common.sourcelink.json
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\obj\Debug\net8.0\GamingUniversityApp.Common.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\obj\Debug\net8.0\refint\GamingUniversityApp.Common.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\obj\Debug\net8.0\GamingUniversityApp.Common.pdb
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\obj\Debug\net8.0\ref\GamingUniversityApp.Common.dll

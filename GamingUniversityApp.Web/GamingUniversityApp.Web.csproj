@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-GamingUniversityApp.Web-4dd78455-d965-4da8-9171-bda8a54813c0</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GamingUniversityApp.Common\GamingUniversityApp.Common.csproj" />
+    <ProjectReference Include="..\GamingUniversityApp.Data.Models\GamingUniversityApp.Data.Models.csproj" />
+    <ProjectReference Include="..\GamingUniversityApp.Web.ViewModels\GamingUniversityApp.Web.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,12 @@
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\bin\Debug\net8.0\GamingUniversityApp.Web.ViewModels.deps.json
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\bin\Debug\net8.0\GamingUniversityApp.Web.ViewModels.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\bin\Debug\net8.0\GamingUniversityApp.Web.ViewModels.pdb
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\obj\Debug\net8.0\GamingUniversityApp.Web.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\obj\Debug\net8.0\GamingUniversityApp.Web.ViewModels.AssemblyInfoInputs.cache
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\obj\Debug\net8.0\GamingUniversityApp.Web.ViewModels.AssemblyInfo.cs
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\obj\Debug\net8.0\GamingUniversityApp.Web.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\obj\Debug\net8.0\GamingUniversityApp.Web.ViewModels.sourcelink.json
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\obj\Debug\net8.0\GamingUniversityApp.Web.ViewModels.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\obj\Debug\net8.0\refint\GamingUniversityApp.Web.ViewModels.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\obj\Debug\net8.0\GamingUniversityApp.Web.ViewModels.pdb
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\obj\Debug\net8.0\ref\GamingUniversityApp.Web.ViewModels.dll
