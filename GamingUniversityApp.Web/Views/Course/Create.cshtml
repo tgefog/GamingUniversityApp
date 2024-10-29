@@ -4,8 +4,9 @@
 
 <form asp-action="Create" method="post">
 	<div>
-		<label for="CourseName">CourseName</label>
+		<label for="CourseName">Course Name</label>
 		<input asp-for="CourseName" class="form-control" />
+		<span asp-validation-for="CourseName"></span>
 	</div>
 	@* <div>
 	<label for="Genre">Genre</label>
@@ -18,10 +19,12 @@
 	<div>
 		<label for="Description">Description</label>
 		<textarea asp-for="Description" class="form-control"></textarea>
+		<span asp-validation-for="Description"></span>
 	</div>
 	<div>
 		<label for="Credits">Credits</label>
 		<textarea asp-for="Credits" class="form-control"></textarea>
+		<span asp-validation-for="Credits"></span>
 	</div>
 	<button type="submit" class="btn btn-primary mt-2">Create Course</button>
 </form>

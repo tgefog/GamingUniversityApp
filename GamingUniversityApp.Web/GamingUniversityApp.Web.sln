@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamingUniversityApp.Web", "GamingUniversityApp.Web.csproj", "{97422225-58EC-4787-A5AF-630E180F2A7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamingUniversityApp.Web", "GamingUniversityApp.Web.csproj", "{97422225-58EC-4787-A5AF-630E180F2A7C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{D6EDF205-2B0B-4175-B612-B71482D72BBF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{76F100A5-E4F3-4D88-BE21-62E2142B2EB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamingUniversityApp.Common", "..\GamingUniversityApp.Common\GamingUniversityApp.Common.csproj", "{17C71893-F5C1-42E3-82D6-A8930662B816}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamingUniversityApp.Common", "..\GamingUniversityApp.Common\GamingUniversityApp.Common.csproj", "{17C71893-F5C1-42E3-82D6-A8930662B816}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamingUniversityApp.Data.Models", "..\GamingUniversityApp.Data.Models\GamingUniversityApp.Data.Models.csproj", "{A95BA7BB-54A1-4694-ACFE-20D3489259EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamingUniversityApp.Data.Models", "..\GamingUniversityApp.Data.Models\GamingUniversityApp.Data.Models.csproj", "{A95BA7BB-54A1-4694-ACFE-20D3489259EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamingUniversityApp.Web.ViewModels", "..\GamingUniversityApp.Web.ViewModels\GamingUniversityApp.Web.ViewModels.csproj", "{AA7B28A9-0E21-423C-A770-49E0A80F0B42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamingUniversityApp.Web.ViewModels", "..\GamingUniversityApp.Web.ViewModels\GamingUniversityApp.Web.ViewModels.csproj", "{AA7B28A9-0E21-423C-A770-49E0A80F0B42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamingUniversityApp.Data", "..\GamingUniversityApp.Data\GamingUniversityApp.Data.csproj", "{081698C3-9DA8-42BA-AB48-996D08332EDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{AA7B28A9-0E21-423C-A770-49E0A80F0B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA7B28A9-0E21-423C-A770-49E0A80F0B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA7B28A9-0E21-423C-A770-49E0A80F0B42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{081698C3-9DA8-42BA-AB48-996D08332EDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{081698C3-9DA8-42BA-AB48-996D08332EDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{081698C3-9DA8-42BA-AB48-996D08332EDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{081698C3-9DA8-42BA-AB48-996D08332EDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +51,7 @@ Global
 		{97422225-58EC-4787-A5AF-630E180F2A7C} = {D6EDF205-2B0B-4175-B612-B71482D72BBF}
 		{A95BA7BB-54A1-4694-ACFE-20D3489259EF} = {76F100A5-E4F3-4D88-BE21-62E2142B2EB3}
 		{AA7B28A9-0E21-423C-A770-49E0A80F0B42} = {D6EDF205-2B0B-4175-B612-B71482D72BBF}
+		{081698C3-9DA8-42BA-AB48-996D08332EDC} = {76F100A5-E4F3-4D88-BE21-62E2142B2EB3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B0EC03F0-861F-4FCA-AC52-4750C67ECC18}

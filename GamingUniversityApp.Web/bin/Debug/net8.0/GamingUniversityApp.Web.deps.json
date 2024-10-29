@@ -9,6 +9,7 @@
       "GamingUniversityApp.Web/1.0.0": {
         "dependencies": {
           "GamingUniversityApp.Common": "1.0.0",
+          "GamingUniversityApp.Data": "1.0.0",
           "GamingUniversityApp.Data.Models": "1.0.0",
           "GamingUniversityApp.Web.ViewModels": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "8.0.10",
@@ -1031,6 +1032,18 @@
           }
         }
       },
+      "GamingUniversityApp.Data/1.0.0": {
+        "dependencies": {
+          "GamingUniversityApp.Data.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.10"
+        },
+        "runtime": {
+          "GamingUniversityApp.Data.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "GamingUniversityApp.Data.Models/1.0.0": {
         "dependencies": {
           "GamingUniversityApp.Common": "1.0.0",
@@ -1045,6 +1058,9 @@
         }
       },
       "GamingUniversityApp.Web.ViewModels/1.0.0": {
+        "dependencies": {
+          "GamingUniversityApp.Common": "1.0.0"
+        },
         "runtime": {
           "GamingUniversityApp.Web.ViewModels.dll": {
             "assemblyVersion": "1.0.0",
@@ -1677,6 +1693,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "GamingUniversityApp.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GamingUniversityApp.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

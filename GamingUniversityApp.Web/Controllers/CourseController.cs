@@ -1,24 +1,29 @@
-﻿using GamingUniversityApp.Data.Models;
-using GamingUniversityApp.Web.Data;
+﻿using GamingUniversityApp.Data;
+using GamingUniversityApp.Data.Models;
+using GamingUniversityApp.Web.ViewModels.Movie;
 using Microsoft.AspNetCore.Mvc;
-using System.Data.Entity;
 
 namespace GamingUniversityApp.Web.Controllers
 {
-    public class CourseController : BaseController
+	public class CourseController : BaseController
     {
-        private readonly ApplicationDbContext dbContext;
-        public CourseController(ApplicationDbContext dbContext)
+        private readonly GamingUniversityAppDbContext dbContext;
+        private static List<Course> courses = new List<Course>();
+        //Dependency injection
+        public CourseController(GamingUniversityAppDbContext dbContext)
         {
             this.dbContext = dbContext;
         }
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
+            IEnumerable<Course> allCourses = this.dbContext
+                .Courses
+                .ToList();
             //IEnumerable<AllMoviesIndexViewModel> allMovies =
             //    await this.movieService.GetAllMoviesAsync();
 
-            return View();
+            return View(courses);
         }
         [HttpGet]
         public async Task<IActionResult> Create()
@@ -26,27 +31,37 @@ namespace GamingUniversityApp.Web.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(Course inputCourse)
+        public IActionResult Create(AddInputCourseModel inputModel)
         {
             if (!this.ModelState.IsValid)
             {
                 // Render the same form with user entered values + model errors 
-                return this.View(inputCourse);
+                return this.View(inputModel);
             }
-            inputCourse.Id = Guid.NewGuid();
-            dbContext.Add(inputCourse);
-            //bool result = await this.movieService.AddMovieAsync(inputModel);
-            //if (result == false)
-            //{
-            //    this.ModelState.AddModelError(nameof(inputModel.ReleaseDate),
-            //        String.Format("The Release Date must be in the following format: {0}", ReleaseDateFormat));
-            //    return this.View(inputModel);
-            //}
+            Course course = new Course()
+            {
+                CourseName = inputModel.CourseName,
+                Description = inputModel.Description,
+                Credits = inputModel.Credits
+            };
+			this.dbContext.Courses.Add(course);
+			this.dbContext.SaveChanges();
 
-            return this.RedirectToAction(nameof(Index));
+
+			//course.Id = Guid.NewGuid();
+			//dbContext.Add(inputCourse);
+			//bool result = await this.movieService.AddMovieAsync(inputModel);
+			//if (result == false)
+			//{
+			//    this.ModelState.AddModelError(nameof(inputModel.ReleaseDate),
+			//        String.Format("The Release Date must be in the following format: {0}", ReleaseDateFormat));
+			//    return this.View(inputModel);
+			//}
+
+			return this.RedirectToAction(nameof(Index));
         }
         [HttpGet]
-        public async Task<IActionResult> Details(string? id)
+        public IActionResult Details(string? id)
         {
             Guid courseGuid = Guid.Empty;
             bool isGuidValid = this.IsGuidValid(id, ref courseGuid);
@@ -55,7 +70,7 @@ namespace GamingUniversityApp.Web.Controllers
                 // Invalid id format
                 return this.RedirectToAction(nameof(Index));
             }
-            Course course = await dbContext.Courses.FirstOrDefaultAsync(c => c.Id == courseGuid);
+            Course course = courses.Find(c => c.Id == courseGuid);
             //MovieDetailsViewModel? movie = await this.movieService
             //    .GetMovieDetailsByIdAsync(movieGuid);
             if (course == null)

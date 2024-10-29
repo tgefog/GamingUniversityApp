@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GamingUniversityApp.Common\GamingUniversityApp.Common.csproj" />
+  </ItemGroup>
+
 </Project>

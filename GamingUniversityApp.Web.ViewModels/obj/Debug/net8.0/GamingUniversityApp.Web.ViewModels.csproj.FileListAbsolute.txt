@@ -10,3 +10,7 @@ C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewMode
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\obj\Debug\net8.0\refint\GamingUniversityApp.Web.ViewModels.dll
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\obj\Debug\net8.0\GamingUniversityApp.Web.ViewModels.pdb
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\obj\Debug\net8.0\ref\GamingUniversityApp.Web.ViewModels.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\bin\Debug\net8.0\GamingUniversityApp.Common.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\bin\Debug\net8.0\GamingUniversityApp.Common.pdb
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\obj\Debug\net8.0\GamingUniversityApp.Web.ViewModels.csproj.AssemblyReference.cache
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.ViewModels\obj\Debug\net8.0\GamingUn.EBEB6D81.Up2Date

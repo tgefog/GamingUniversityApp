@@ -7,14 +7,30 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "GamingUniversityApp.Web.ViewModels/1.0.0": {
+        "dependencies": {
+          "GamingUniversityApp.Common": "1.0.0"
+        },
         "runtime": {
           "GamingUniversityApp.Web.ViewModels.dll": {}
+        }
+      },
+      "GamingUniversityApp.Common/1.0.0": {
+        "runtime": {
+          "GamingUniversityApp.Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "GamingUniversityApp.Web.ViewModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GamingUniversityApp.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
