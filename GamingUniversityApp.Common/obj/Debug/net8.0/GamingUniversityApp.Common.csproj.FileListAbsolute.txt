@@ -10,3 +10,6 @@ C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\obj\D
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\obj\Debug\net8.0\refint\GamingUniversityApp.Common.dll
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\obj\Debug\net8.0\GamingUniversityApp.Common.pdb
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\obj\Debug\net8.0\ref\GamingUniversityApp.Common.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\bin\Debug\net8.0\GamingUniversityApp.Common.runtimeconfig.json
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\obj\Debug\net8.0\GamingUniversityApp.Common.csproj.AssemblyReference.cache
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Common\obj\Debug\net8.0\GamingUniversityApp.Common.genruntimeconfig.cache
