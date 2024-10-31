@@ -11,11 +11,13 @@ namespace GamingUniversityApp.Data.Configuration
 			builder.HasKey(ce => new { ce.CourseId, ce.StudentId });
 			builder.HasOne(ce => ce.Course)
 			.WithMany(c => c.CourseStudents)
-			.HasForeignKey(ce => ce.CourseId);
+			.HasForeignKey(ce => ce.CourseId)
+			.OnDelete(DeleteBehavior.Restrict);
 
 			builder.HasOne(ce => ce.Student)
 			.WithMany(s => s.StudentCourses)
-			.HasForeignKey(ce => ce.StudentId);
+			.HasForeignKey(ce => ce.StudentId)
+			.OnDelete(DeleteBehavior.Restrict);
 		}
 	}
 }

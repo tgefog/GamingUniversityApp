@@ -1,6 +1,6 @@
 ﻿using GamingUniversityApp.Data;
 using GamingUniversityApp.Data.Models;
-using GamingUniversityApp.Web.ViewModels.Movie;
+using GamingUniversityApp.Web.ViewModels.Course;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GamingUniversityApp.Web.Controllers
