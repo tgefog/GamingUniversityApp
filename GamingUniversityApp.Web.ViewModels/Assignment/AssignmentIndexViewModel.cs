@@ -1,6 +1,6 @@
 ﻿namespace GamingUniversityApp.Web.ViewModels.Assignment
 {
-	public class AssignmenIndexViewModel
+	public class AssignmentIndexViewModel
 	{
 		public string Id { get; set; } = null!;
 		public string Name { get; set; } = null!;
