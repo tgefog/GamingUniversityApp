@@ -23,7 +23,7 @@ namespace GamingUniversityApp.Web.Controllers
             //IEnumerable<AllMoviesIndexViewModel> allMovies =
             //    await this.movieService.GetAllMoviesAsync();
 
-            return View(courses);
+            return View(allCourses);
         }
         [HttpGet]
         public async Task<IActionResult> Create()
@@ -70,10 +70,11 @@ namespace GamingUniversityApp.Web.Controllers
                 // Invalid id format
                 return this.RedirectToAction(nameof(Index));
             }
-            Course course = courses.Find(c => c.Id == courseGuid);
-            //MovieDetailsViewModel? movie = await this.movieService
-            //    .GetMovieDetailsByIdAsync(movieGuid);
-            if (course == null)
+            Course? course = this.dbContext.Courses
+		    .FirstOrDefault(c => c.Id == courseGuid);
+			//MovieDetailsViewModel? movie = await this.movieService
+			//    .GetMovieDetailsByIdAsync(movieGuid);
+			if (course == null)
             {
                 // Non-existing movie guid
                 return this.RedirectToAction(nameof(Index));
