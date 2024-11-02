@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GamingUniversityApp.Web.Controllers
 {
-    public class AssignmentController : Controller
+    public class AssignmentController : BaseController
 	{
 		private readonly GamingUniversityAppDbContext dbContext;
         public AssignmentController(GamingUniversityAppDbContext dbContext)
@@ -56,5 +56,40 @@ namespace GamingUniversityApp.Web.Controllers
             await this.dbContext.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        [HttpGet]
+        public async Task<IActionResult> Details(string? id)
+        {
+            Guid assignmentGuid = Guid.Empty;
+            bool isGuidValid = this.IsGuidValid(id, ref assignmentGuid);
+            if (!isGuidValid)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+            Assignment? assignment = await this.dbContext.Assignments
+            .FirstOrDefaultAsync(a => a.Id == assignmentGuid);
+            //Invalid GUID in the URL
+            if (assignment == null)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+            AssignmentDetailsViewModel detailsViewModel = new AssignmentDetailsViewModel()
+            {
+                Name = assignment.Name,
+                Description = assignment.Description,
+                DueDate = assignment.DueDate,
+                CourseName = assignment.Course.CourseName
+            };
+            return this.View(detailsViewModel);
+
+        }
+        //public async Task<IActionResult> AddToCourse(string? id)
+        //{
+        //    Guid assignmentGuid = Guid.Empty;
+        //    bool isGuidValid = this.IsGuidValid(id, ref assignmentGuid);
+        //    if (!isGuidValid)
+        //    {
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //}
     }
 }

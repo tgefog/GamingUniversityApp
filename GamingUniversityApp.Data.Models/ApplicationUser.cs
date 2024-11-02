@@ -1,9 +1,12 @@
-﻿namespace GamingUniversityApp.Data.Models
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace GamingUniversityApp.Data.Models
 {
-	public class ApplicationUser //: IdentityUser
+	public class ApplicationUser : IdentityUser<Guid>
     {
-		public string FullName { get; set; }
-		public DateTime DateOfBirth { get; set; }
-		public ICollection<StudentCourse> CourseEnrollments { get; set; }
+		public ApplicationUser() 
+		{
+			this.Id = Guid.NewGuid();
+		}
 	}
 }

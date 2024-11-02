@@ -1,0 +1,31 @@
+﻿@using GamingUniversityApp.Web.ViewModels.Assignment;
+@using GamingUniversityApp.Web.ViewModels.Course;
+@model AssignmentDetailsViewModel
+
+@{
+    ViewData["Title"] = "Assignment Details";
+}
+
+<h2>Assignment Details</h2>
+
+<div class="mb-3">
+    <label><strong>Assignment Name:</strong></label>
+    <p>@Model.Name</p>
+</div>
+
+<div class="mb-3">
+    <label><strong>Description:</strong></label>
+    <p>@Model.Description</p>
+</div>
+
+<div class="mb-3">
+    <label><strong>Due Date:</strong></label>
+    <p>@Model.DueDate.ToShortDateString()</p>
+</div>
+
+<div class="mb-3">
+    <label><strong>Course:</strong></label>
+    <p>@Model.CourseName</p>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary">Back to Assignments</a>

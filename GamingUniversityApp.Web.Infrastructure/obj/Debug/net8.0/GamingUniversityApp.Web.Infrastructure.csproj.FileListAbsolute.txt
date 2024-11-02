@@ -5,6 +5,7 @@ C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.Infrastr
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\bin\Debug\net8.0\GamingUniversityApp.Web.staticwebassets.runtime.json
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\bin\Debug\net8.0\GamingUniversityApp.Web.exe
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\bin\Debug\net8.0\GamingUniversityApp.Web.Infrastructure.deps.json
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\bin\Debug\net8.0\GamingUniversityApp.Web.Infrastructure.runtimeconfig.json
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\bin\Debug\net8.0\GamingUniversityApp.Web.Infrastructure.dll
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\bin\Debug\net8.0\GamingUniversityApp.Web.Infrastructure.pdb
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\bin\Debug\net8.0\GamingUniversityApp.Common.dll
@@ -27,6 +28,5 @@ C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.Infrastr
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\obj\Debug\net8.0\GamingUniversityApp.Web.Infrastructure.dll
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\obj\Debug\net8.0\refint\GamingUniversityApp.Web.Infrastructure.dll
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\obj\Debug\net8.0\GamingUniversityApp.Web.Infrastructure.pdb
-C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\obj\Debug\net8.0\ref\GamingUniversityApp.Web.Infrastructure.dll
-C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\bin\Debug\net8.0\GamingUniversityApp.Web.Infrastructure.runtimeconfig.json
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\obj\Debug\net8.0\GamingUniversityApp.Web.Infrastructure.genruntimeconfig.cache
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\obj\Debug\net8.0\ref\GamingUniversityApp.Web.Infrastructure.dll

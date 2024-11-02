@@ -2,24 +2,24 @@
 using GamingUniversityApp.Data.Models;
 using GamingUniversityApp.Web.ViewModels.Course;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace GamingUniversityApp.Web.Controllers
 {
 	public class CourseController : BaseController
     {
         private readonly GamingUniversityAppDbContext dbContext;
-        private static List<Course> courses = new List<Course>();
         //Dependency injection
         public CourseController(GamingUniversityAppDbContext dbContext)
         {
             this.dbContext = dbContext;
         }
         [HttpGet]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            IEnumerable<Course> allCourses = this.dbContext
+            IEnumerable<Course> allCourses = await this.dbContext
                 .Courses
-                .ToList();
+                .ToListAsync();
             //IEnumerable<AllMoviesIndexViewModel> allMovies =
             //    await this.movieService.GetAllMoviesAsync();
 
@@ -31,7 +31,7 @@ namespace GamingUniversityApp.Web.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(AddInputCourseModel inputModel)
+        public async Task<IActionResult> Create(AddInputCourseModel inputModel)
         {
             if (!this.ModelState.IsValid)
             {
@@ -44,8 +44,8 @@ namespace GamingUniversityApp.Web.Controllers
                 Description = inputModel.Description,
                 Credits = inputModel.Credits
             };
-			this.dbContext.Courses.Add(course);
-			this.dbContext.SaveChanges();
+			await this.dbContext.Courses.AddAsync(course);
+			await this.dbContext.SaveChangesAsync();
 
 
 			//course.Id = Guid.NewGuid();
@@ -61,7 +61,7 @@ namespace GamingUniversityApp.Web.Controllers
 			return this.RedirectToAction(nameof(Index));
         }
         [HttpGet]
-        public IActionResult Details(string? id)
+        public async Task<IActionResult> Details(string? id)
         {
             Guid courseGuid = Guid.Empty;
             bool isGuidValid = this.IsGuidValid(id, ref courseGuid);
@@ -70,8 +70,8 @@ namespace GamingUniversityApp.Web.Controllers
                 // Invalid id format
                 return this.RedirectToAction(nameof(Index));
             }
-            Course? course = this.dbContext.Courses
-		    .FirstOrDefault(c => c.Id == courseGuid);
+            Course? course = await this.dbContext.Courses
+		    .FirstOrDefaultAsync(c => c.Id == courseGuid);
 			//MovieDetailsViewModel? movie = await this.movieService
 			//    .GetMovieDetailsByIdAsync(movieGuid);
 			if (course == null)

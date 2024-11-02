@@ -1,4 +1,5 @@
 using GamingUniversityApp.Data;
+using GamingUniversityApp.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +18,13 @@ namespace GamingUniversityApp.Web
 				{
 					options.UseSqlServer(connectionString);
 				});
+			builder.Services
+			.AddDefaultIdentity<ApplicationUser>(cfg =>
+			{
+
+			})
+			.AddRoles<IdentityRole<Guid>>()
+			.AddEntityFrameworkStores<GamingUniversityAppDbContext>();
 
 			builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
@@ -44,12 +52,14 @@ namespace GamingUniversityApp.Web
 
 			app.UseRouting();
 
-			app.UseAuthorization();
+			app.UseAuthentication(); //First -> Who am I?
+			app.UseAuthorization(); //Second -> What can I do?
 
 			app.MapControllerRoute(
 				name: "default",
 				pattern: "{controller=Home}/{action=Index}/{id?}");
-			app.MapRazorPages();
+
+			app.MapRazorPages(); //Add routing to Identity Razor Pages
 			//app.ApplyMigrations();
 			app.Run();
 		}
