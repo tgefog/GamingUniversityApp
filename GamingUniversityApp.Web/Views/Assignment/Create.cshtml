@@ -1,0 +1,40 @@
+﻿@using GamingUniversityApp.Web.ViewModels.Assignment;
+@model AddAssignmentFormModel;
+
+@{
+    ViewData["Title"] = "Add Assignment";
+}
+
+<h2>Create New Assignment</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label asp-for="Name">Assignment Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="Description">Description</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="DueDate">Due Date</label>
+        <input asp-for="DueDate" type="date" class="form-control" />
+        <span asp-validation-for="DueDate" class="text-danger"></span>
+    </div>
+
+   @*  <div>
+        <label asp-for="SelectedCourseId">Course</label>
+        <select asp-for="SelectedCourseId" asp-items="Model.Courses" class="form-control">
+            <option value="">-- Select Course --</option>
+        </select>
+        <span asp-validation-for="SelectedCourseId" class="text-danger"></span>
+    </div> *@
+
+    <button type="submit" class="btn btn-primary mt-2">Create Assignment</button>
+</form>
+
+<a asp-action="Index" class="btn btn-secondary mt-2">Back to Assignments</a>

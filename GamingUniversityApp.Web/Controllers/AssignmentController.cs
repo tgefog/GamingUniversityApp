@@ -1,20 +1,22 @@
 ﻿using GamingUniversityApp.Data;
+using GamingUniversityApp.Data.Models;
 using GamingUniversityApp.Web.ViewModels.Assignment;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace GamingUniversityApp.Web.Controllers
 {
     public class AssignmentController : Controller
 	{
-		private readonly GamingUniversityAppDbContext _dbContext;
+		private readonly GamingUniversityAppDbContext dbContext;
         public AssignmentController(GamingUniversityAppDbContext dbContext)
         {
-			_dbContext = dbContext;
+			this.dbContext = dbContext;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            IEnumerable<AssignmentIndexViewModel> assignments = _dbContext
+            IEnumerable<AssignmentIndexViewModel> assignments = await this.dbContext
                 .Assignments
                 .Select(a => new AssignmentIndexViewModel()
                 {
@@ -24,9 +26,35 @@ namespace GamingUniversityApp.Web.Controllers
                     DueDate = a.DueDate,
                     CourseName = a.Course.CourseName
                 })
-                .ToArray();
+                .ToArrayAsync();
 
             return this.View(assignments);
+        }
+        [HttpGet]
+        public async Task<IActionResult> Create()
+        {
+            return this.View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(AddAssignmentFormModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                // Reload course list if model is invalid
+                return this.View(model);
+            }
+            Assignment assignment = new Assignment()
+            {
+                Name = model.Name,
+                Description = model.Description,
+                DueDate = model.DueDate,
+                CourseId = model.SelectedCourseId
+            };
+
+            await this.dbContext.Assignments.AddAsync(assignment);
+            await this.dbContext.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
     }
 }
