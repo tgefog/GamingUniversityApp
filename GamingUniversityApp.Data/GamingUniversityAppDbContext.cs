@@ -7,6 +7,10 @@
     using System.Reflection;
     public class GamingUniversityAppDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
     {
+        public GamingUniversityAppDbContext()
+        {
+
+        }
         public GamingUniversityAppDbContext(DbContextOptions<GamingUniversityAppDbContext> options)
             : base(options)
         {

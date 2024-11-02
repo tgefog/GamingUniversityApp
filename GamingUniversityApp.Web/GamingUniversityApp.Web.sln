@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamingUniversityApp.Web.Vie
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamingUniversityApp.Data", "..\GamingUniversityApp.Data\GamingUniversityApp.Data.csproj", "{081698C3-9DA8-42BA-AB48-996D08332EDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamingUniversityApp.Web.Infrastructure", "..\GamingUniversityApp.Web.Infrastructure\GamingUniversityApp.Web.Infrastructure.csproj", "{E4AEA6C6-B0B5-40D5-BFDB-934E1D14FFD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamingUniversityApp.Web.Infrastructure", "..\GamingUniversityApp.Web.Infrastructure\GamingUniversityApp.Web.Infrastructure.csproj", "{E4AEA6C6-B0B5-40D5-BFDB-934E1D14FFD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
