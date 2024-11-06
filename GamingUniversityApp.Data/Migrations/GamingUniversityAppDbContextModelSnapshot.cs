@@ -100,7 +100,7 @@ namespace GamingUniversityApp.Data.Migrations
 
                     b.HasIndex("CourseId");
 
-                    b.ToTable("ApplicationUserCourse");
+                    b.ToTable("UsersCourses");
                 });
 
             modelBuilder.Entity("GamingUniversityApp.Data.Models.Assignment", b =>

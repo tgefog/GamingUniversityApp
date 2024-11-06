@@ -1,0 +1,72 @@
+﻿@model IEnumerable<GamingUniversityApp.Web.ViewModels.MyCourses.ApplicationUserCoursesViewModel>
+@{
+    ViewData["Title"] = "MyCourses";
+}
+<h2>My Courses</h2>
+
+<div class="course-list">
+    @foreach (var course in Model)
+    {
+        <div class="course-card">
+            <div class="course-image">
+                <img src="@course.ImageUrl" alt="@course.CourseName" class="img-fluid" />
+            </div>
+            <div class="course-details">
+                <h3>@course.CourseName</h3>
+                <p>@course.Description</p>
+                <p><strong>Credits:</strong> @course.Credits</p>
+            </div>
+            <div class="course-actions">
+                <form asp-controller="MyCourses" asp-action="RemoveFromMyCourses" method="post" class="remove-form">
+                    <input type="hidden" name="courseId" value="@course.CourseId" />
+                    <button type="submit" class="btn btn-danger">Remove</button>
+                </form>
+            </div>
+        </div>
+    }
+
+    <div class="add-course">
+        <form asp-controller="MyCourses" asp-action="AddToMyCourses" method="post" class="add-form">
+            <div class="form-group">
+                <label for="newCourseId">Add a Course by ID</label>
+                <input type="text" id="newCourseId" name="courseId" class="form-control" placeholder="Enter Course ID" />
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Add Course</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Optional: Add some JavaScript for AJAX functionality if desired
+        // Example: Using AJAX to add or remove courses without reloading
+    </script>
+}
+
+<style>
+    .course-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .course-card {
+        border: 1px solid #ddd;
+        padding: 20px;
+        width: 300px;
+        border-radius: 8px;
+        position: relative;
+    }
+    .course-image img {
+        width: 100%;
+        height: auto;
+    }
+    .course-details {
+        margin-top: 10px;
+    }
+    .course-actions {
+        margin-top: 15px;
+    }
+    .add-course {
+        margin-top: 20px;
+    }
+</style>

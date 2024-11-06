@@ -4,26 +4,34 @@
 <h2>All Courses</h2>
 
 <table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Course Name</th>
-            <th>Description</th>
-            <th>Credits</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (Course course in Model)
-        {
-            <tr>
-                <td>@course.CourseName</td>
-                <td>@course.Description</td>
-                <td>@course.Credits</td>
-                <td>
-                    <a asp-action="Details" asp-route-id="@course.Id" class="btn btn-info">Details</a>
-                </td>
-            </tr>
-        }
-    </tbody>
+	<thead>
+		<tr>
+			<th>Course Name</th>
+			<th>Description</th>
+			<th>Credits</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (Course course in Model)
+		{
+			<tr>
+				<td>@course.CourseName</td>
+				<td>@course.Description</td>
+				<td>@course.Credits</td>
+				<td>
+					<a asp-action="Details" asp-route-id="@course.Id" class="btn btn-info">Details</a>
+
+					@if (User?.Identity?.IsAuthenticated ?? false)
+					{
+						<form asp-controller="MyCourses" asp-action="AddToMyCourses" method="post" class="d-inline">
+							<input type="hidden" name="courseId" value="@course.Id" />
+							<button type="submit" class="btn btn-warning">+MyCourses</button>
+						</form>
+					}
+				</td>
+			</tr>
+		}
+	</tbody>
 </table>
 
 <a asp-action="Create" class="btn btn-primary">Add New Course</a>

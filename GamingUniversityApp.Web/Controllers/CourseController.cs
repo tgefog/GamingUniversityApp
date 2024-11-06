@@ -42,7 +42,8 @@ namespace GamingUniversityApp.Web.Controllers
             {
                 CourseName = inputModel.CourseName,
                 Description = inputModel.Description,
-                Credits = inputModel.Credits
+                Credits = inputModel.Credits,
+                ImageUrl = inputModel.ImageUrl
             };
 			await this.dbContext.Courses.AddAsync(course);
 			await this.dbContext.SaveChangesAsync();

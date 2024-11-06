@@ -34,7 +34,10 @@ namespace GamingUniversityApp.Web
             // Add MVC services for controllers and views
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages();
-
+            builder.Services.ConfigureApplicationCookie(cfg =>
+            {
+                cfg.LoginPath = "/Identity/Account/Login";
+            });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline

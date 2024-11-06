@@ -15,6 +15,9 @@ namespace GamingUniversityApp.Web.ViewModels.Course
 		public string Description { get; set; } = null!;
 		[Required(ErrorMessage = CreditsRequiredMessage)]
 		public int Credits { get; set; }
+
+		[MaxLength(ImageUrlMaxLength)]
+		public string? ImageUrl { get; set; }
 		//public void CreateMappings(IProfileExpression configuration)
   //      {
   //          configuration.CreateMap<AddMovieInputModel, Movie>()
