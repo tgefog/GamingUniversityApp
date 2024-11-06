@@ -17,7 +17,7 @@ namespace GamingUniversityApp.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.0")
+                .HasAnnotation("ProductVersion", "8.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -86,6 +86,21 @@ namespace GamingUniversityApp.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("GamingUniversityApp.Data.Models.ApplicationUserCourse", b =>
+                {
+                    b.Property<Guid>("ApplicationUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CourseId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("ApplicationUserId", "CourseId");
+
+                    b.HasIndex("CourseId");
+
+                    b.ToTable("ApplicationUserCourse");
                 });
 
             modelBuilder.Entity("GamingUniversityApp.Data.Models.Assignment", b =>
@@ -369,6 +384,25 @@ namespace GamingUniversityApp.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("GamingUniversityApp.Data.Models.ApplicationUserCourse", b =>
+                {
+                    b.HasOne("GamingUniversityApp.Data.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany("ApplicationUserCourses")
+                        .HasForeignKey("ApplicationUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GamingUniversityApp.Data.Models.Course", "Course")
+                        .WithMany("CourseApplicationUsers")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+
+                    b.Navigation("Course");
+                });
+
             modelBuilder.Entity("GamingUniversityApp.Data.Models.Assignment", b =>
                 {
                     b.HasOne("GamingUniversityApp.Data.Models.Course", "Course")
@@ -469,6 +503,11 @@ namespace GamingUniversityApp.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("GamingUniversityApp.Data.Models.ApplicationUser", b =>
+                {
+                    b.Navigation("ApplicationUserCourses");
+                });
+
             modelBuilder.Entity("GamingUniversityApp.Data.Models.Assignment", b =>
                 {
                     b.Navigation("Submissions");
@@ -477,6 +516,8 @@ namespace GamingUniversityApp.Data.Migrations
             modelBuilder.Entity("GamingUniversityApp.Data.Models.Course", b =>
                 {
                     b.Navigation("Assignments");
+
+                    b.Navigation("CourseApplicationUsers");
 
                     b.Navigation("CourseStudents");
                 });

@@ -4206,11 +4206,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Web.ViewModels\\GamingUniversityApp.Web.ViewModels.csproj",
+      "projectUniqueName": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web.ViewModels\\GamingUniversityApp.Web.ViewModels.csproj",
       "projectName": "GamingUniversityApp.Web.ViewModels",
-      "projectPath": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Web.ViewModels\\GamingUniversityApp.Web.ViewModels.csproj",
+      "projectPath": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web.ViewModels\\GamingUniversityApp.Web.ViewModels.csproj",
       "packagesPath": "C:\\Users\\tgefo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Web.ViewModels\\obj\\",
+      "outputPath": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web.ViewModels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4232,8 +4232,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Common\\GamingUniversityApp.Common.csproj": {
-              "projectPath": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Common\\GamingUniversityApp.Common.csproj"
+            "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Common\\GamingUniversityApp.Common.csproj": {
+              "projectPath": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Common\\GamingUniversityApp.Common.csproj"
             }
           }
         }

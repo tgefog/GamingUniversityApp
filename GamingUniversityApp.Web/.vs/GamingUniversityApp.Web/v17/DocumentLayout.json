@@ -1,33 +1,57 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Web\\",
+  "WorkspaceRootPath": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data\\Migrations\\20241106163111_Add ApplicationUserCourses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{081698C3-9DA8-42BA-AB48-996D08332EDC}|..\\GamingUniversityApp.Data\\GamingUniversityApp.Data.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.data\\configuration\\applicationusercourseconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A95BA7BB-54A1-4694-ACFE-20D3489259EF}|..\\GamingUniversityApp.Data.Models\\GamingUniversityApp.Data.Models.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.data.models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A95BA7BB-54A1-4694-ACFE-20D3489259EF}|..\\GamingUniversityApp.Data.Models\\GamingUniversityApp.Data.Models.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.data.models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A95BA7BB-54A1-4694-ACFE-20D3489259EF}|..\\GamingUniversityApp.Data.Models\\GamingUniversityApp.Data.Models.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.data.models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A95BA7BB-54A1-4694-ACFE-20D3489259EF}|..\\GamingUniversityApp.Data.Models\\GamingUniversityApp.Data.Models.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.data.models\\applicationusercourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{081698C3-9DA8-42BA-AB48-996D08332EDC}|..\\GamingUniversityApp.Data\\GamingUniversityApp.Data.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.data\\migrations\\20241102113245_addidentityuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{081698C3-9DA8-42BA-AB48-996D08332EDC}|..\\GamingUniversityApp.Data\\GamingUniversityApp.Data.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.data\\migrations\\gaminguniversityappdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp.web\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.web\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp.web\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.web\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp.web\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.web\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|solutionrelative:areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp.web\\areas\\identity\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.web\\areas\\identity\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|solutionrelative:areas\\identity\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp.web\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.web\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp.web\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.web\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -38,98 +62,194 @@
       "DocumentGroups": [
         {
           "DockedWidth": 164,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-02T17:51:18.964Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Logout.cshtml",
-              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-02T17:50:56.681Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Logout.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
-              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAdAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "20241106163111_Add ApplicationUserCourses.cs",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data\\Migrations\\20241106163111_Add ApplicationUserCourses.cs",
+              "RelativeDocumentMoniker": "..\\GamingUniversityApp.Data\\Migrations\\20241106163111_Add ApplicationUserCourses.cs",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data\\Migrations\\20241106163111_Add ApplicationUserCourses.cs",
+              "RelativeToolTip": "..\\GamingUniversityApp.Data\\Migrations\\20241106163111_Add ApplicationUserCourses.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T17:50:47.168Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-02T17:48:02.42Z",
+              "WhenOpened": "2024-11-06T16:31:11.696Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Login.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data.Models\\Course.cs",
+              "RelativeDocumentMoniker": "..\\GamingUniversityApp.Data.Models\\Course.cs",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data.Models\\Course.cs",
+              "RelativeToolTip": "..\\GamingUniversityApp.Data.Models\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T17:40:47.02Z",
+              "WhenOpened": "2024-11-06T16:23:57.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationUserCourseConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data\\Configuration\\ApplicationUserCourseConfiguration.cs",
+              "RelativeDocumentMoniker": "..\\GamingUniversityApp.Data\\Configuration\\ApplicationUserCourseConfiguration.cs",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data\\Configuration\\ApplicationUserCourseConfiguration.cs",
+              "RelativeToolTip": "..\\GamingUniversityApp.Data\\Configuration\\ApplicationUserCourseConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T16:23:55.763Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Register.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Title": "ApplicationUserCourse.cs",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data.Models\\ApplicationUserCourse.cs",
+              "RelativeDocumentMoniker": "..\\GamingUniversityApp.Data.Models\\ApplicationUserCourse.cs",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data.Models\\ApplicationUserCourse.cs",
+              "RelativeToolTip": "..\\GamingUniversityApp.Data.Models\\ApplicationUserCourse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T17:26:12.81Z",
+              "WhenOpened": "2024-11-06T16:22:25.328Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Web\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Web\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAARAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data.Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "..\\GamingUniversityApp.Data.Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data.Models\\ApplicationUser.cs",
+              "RelativeToolTip": "..\\GamingUniversityApp.Data.Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T17:01:44.512Z",
+              "WhenOpened": "2024-11-06T16:12:25.473Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20241102113245_AddIdentityUser.cs",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data\\Migrations\\20241102113245_AddIdentityUser.cs",
+              "RelativeDocumentMoniker": "..\\GamingUniversityApp.Data\\Migrations\\20241102113245_AddIdentityUser.cs",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data\\Migrations\\20241102113245_AddIdentityUser.cs",
+              "RelativeToolTip": "..\\GamingUniversityApp.Data\\Migrations\\20241102113245_AddIdentityUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T16:00:38.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GamingUniversityAppDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data\\Migrations\\GamingUniversityAppDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "..\\GamingUniversityApp.Data\\Migrations\\GamingUniversityAppDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data\\Migrations\\GamingUniversityAppDbContextModelSnapshot.cs",
+              "RelativeToolTip": "..\\GamingUniversityApp.Data\\Migrations\\GamingUniversityAppDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T16:00:37.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data.Models\\Student.cs",
+              "RelativeDocumentMoniker": "..\\GamingUniversityApp.Data.Models\\Student.cs",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data.Models\\Student.cs",
+              "RelativeToolTip": "..\\GamingUniversityApp.Data.Models\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T15:59:05.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-02T17:51:18.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-02T17:50:56.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Logout.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T17:50:47.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-02T17:48:02.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T17:40:47.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T17:26:12.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T17:01:44.512Z"
             }
           ]
         }

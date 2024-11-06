@@ -10,7 +10,9 @@
 		//[Required]
 		//[Comment("Lecturer that is assigned to the course")]
 		//public Lecturer Lecturer { get; set; }
-		public ICollection<StudentCourse> CourseStudents { get; set; } = new HashSet<StudentCourse>();
-		public ICollection<Assignment> Assignments { get; set; } = new HashSet<Assignment>();
+		public virtual ICollection<StudentCourse> CourseStudents { get; set; } = new HashSet<StudentCourse>();
+		public virtual ICollection<Assignment> Assignments { get; set; } = new HashSet<Assignment>();
+
+		public virtual ICollection<ApplicationUserCourse> CourseApplicationUsers { get; set; } = new HashSet<ApplicationUserCourse>();
 	}
 }

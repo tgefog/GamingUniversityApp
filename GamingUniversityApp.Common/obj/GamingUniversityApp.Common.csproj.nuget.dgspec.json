@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Common\\GamingUniversityApp.Common.csproj": {}
+    "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Common\\GamingUniversityApp.Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Common\\GamingUniversityApp.Common.csproj": {
+    "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Common\\GamingUniversityApp.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Common\\GamingUniversityApp.Common.csproj",
+        "projectUniqueName": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Common\\GamingUniversityApp.Common.csproj",
         "projectName": "GamingUniversityApp.Common",
-        "projectPath": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Common\\GamingUniversityApp.Common.csproj",
+        "projectPath": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Common\\GamingUniversityApp.Common.csproj",
         "packagesPath": "C:\\Users\\tgefo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp.Common\\obj\\",
+        "outputPath": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
