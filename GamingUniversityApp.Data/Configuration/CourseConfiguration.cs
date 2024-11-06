@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using static GamingUniversityApp.Common.EntityValidationConstants.Course;
+using static GamingUniversityApp.Common.ApplicationConstants;
 
 namespace GamingUniversityApp.Data.Configuration
 {
@@ -34,6 +35,10 @@ namespace GamingUniversityApp.Data.Configuration
 			.HasForeignKey(a => a.CourseId)
 			.IsRequired();
 
+			builder.Property(c => c.ImageUrl)
+				.IsRequired(false)
+				.HasMaxLength(ImageUrlMaxLength)
+				.HasDefaultValue(NoImageUrl);
 			//builder.HasData(this.SeedCourses());
 		}
 
