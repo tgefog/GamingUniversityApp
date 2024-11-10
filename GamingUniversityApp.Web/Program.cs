@@ -3,17 +3,18 @@ namespace GamingUniversityApp.Web
 {
     using Data;
     using Data.Models;
-    using Web.Models;
-    using Services.Mapping;
+    using Data.Repository;
+    using Data.Repository.Interfaces;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
-    
+    using Services.Mapping;
+    using Web.Models;
 
     public class Program
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+            WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
@@ -32,17 +33,21 @@ namespace GamingUniversityApp.Web
                 .AddEntityFrameworkStores<GamingUniversityAppDbContext>()
                 .AddDefaultTokenProviders();
 
-            // Add developer page exception filter
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
-            // Add MVC services for controllers and views
-            builder.Services.AddControllersWithViews();
-            builder.Services.AddRazorPages();
             builder.Services.ConfigureApplicationCookie(cfg =>
             {
                 cfg.LoginPath = "/Identity/Account/Login";
             });
-            var app = builder.Build();
+            //TO BE REPLACED BY EXTENSION METHOD
+            builder.Services.AddScoped<IRepository<Course, Guid>, BaseRepository<Course, Guid>>();
+            builder.Services.AddScoped<IRepository<ApplicationUserCourse, object>, BaseRepository<ApplicationUserCourse, object>>();
+            builder.Services.AddScoped<IRepository<Assignment, Guid>, BaseRepository<Assignment, Guid>>();
+            builder.Services.AddScoped<IRepository<Submission, Guid>, BaseRepository<Submission, Guid>>();
+
+            // Add MVC services for controllers and views
+            builder.Services.AddControllersWithViews();
+            builder.Services.AddRazorPages();
+            WebApplication app = builder.Build();
 
             AutoMapperConfig.RegisterMappings(typeof(ErrorViewModel).Assembly);
 

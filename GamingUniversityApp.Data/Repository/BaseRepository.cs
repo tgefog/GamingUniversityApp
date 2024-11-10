@@ -3,13 +3,13 @@
     using GamingUniversityApp.Data.Repository.Interfaces;
     using Microsoft.EntityFrameworkCore;
 
-    public class Repository<TType, TId> : IRepository<TType, TId>
+    public class BaseRepository<TType, TId> : IRepository<TType, TId>
         where TType : class, new()
     {
         private readonly GamingUniversityAppDbContext dbContext;
         private readonly DbSet<TType> dbSet;
 
-        public Repository(GamingUniversityAppDbContext dbContext)
+        public BaseRepository(GamingUniversityAppDbContext dbContext)
         {
             this.dbContext = dbContext;
             this.dbSet = this.dbContext.Set<TType>();

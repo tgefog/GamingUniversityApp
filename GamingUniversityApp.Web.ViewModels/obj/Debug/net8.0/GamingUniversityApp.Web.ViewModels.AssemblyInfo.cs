@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GamingUniversityApp.Web.ViewModels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1aaad9ef48f9f09ba6090d4a4908bd84b8dfc3a4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3cde7a79f3512ec9dc7bee7b050cd023452452c4")]
 [assembly: System.Reflection.AssemblyProductAttribute("GamingUniversityApp.Web.ViewModels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GamingUniversityApp.Web.ViewModels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
