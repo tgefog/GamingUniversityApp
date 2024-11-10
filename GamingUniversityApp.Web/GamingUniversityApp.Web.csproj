@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GamingUniveristyApp.Services.Mapping\GamingUniversityApp.Services.Mapping.csproj" />
     <ProjectReference Include="..\GamingUniversityApp.Common\GamingUniversityApp.Common.csproj" />
     <ProjectReference Include="..\GamingUniversityApp.Data.Models\GamingUniversityApp.Data.Models.csproj" />
     <ProjectReference Include="..\GamingUniversityApp.Data\GamingUniversityApp.Data.csproj" />

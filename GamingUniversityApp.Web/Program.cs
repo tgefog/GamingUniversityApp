@@ -1,10 +1,14 @@
-using GamingUniversityApp.Data;
-using GamingUniversityApp.Data.Models;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-
+//using GamingUniversityApp.Services.Mapping;
 namespace GamingUniversityApp.Web
 {
+    using Data;
+    using Data.Models;
+    using Web.Models;
+    using Services.Mapping;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.EntityFrameworkCore;
+    
+
     public class Program
     {
         public static void Main(string[] args)
@@ -39,6 +43,8 @@ namespace GamingUniversityApp.Web
                 cfg.LoginPath = "/Identity/Account/Login";
             });
             var app = builder.Build();
+
+            AutoMapperConfig.RegisterMappings(typeof(ErrorViewModel).Assembly);
 
             // Configure the HTTP request pipeline
             if (app.Environment.IsDevelopment())

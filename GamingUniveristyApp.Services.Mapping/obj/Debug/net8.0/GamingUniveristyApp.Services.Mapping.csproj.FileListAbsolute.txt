@@ -1,0 +1,13 @@
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniveristyApp.Services.Mapping\bin\Debug\net8.0\GamingUniveristyApp.Services.Mapping.deps.json
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniveristyApp.Services.Mapping\bin\Debug\net8.0\GamingUniveristyApp.Services.Mapping.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniveristyApp.Services.Mapping\bin\Debug\net8.0\GamingUniveristyApp.Services.Mapping.pdb
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniveristyApp.Services.Mapping\obj\Debug\net8.0\GamingUniveristyApp.Services.Mapping.csproj.AssemblyReference.cache
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniveristyApp.Services.Mapping\obj\Debug\net8.0\GamingUniveristyApp.Services.Mapping.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniveristyApp.Services.Mapping\obj\Debug\net8.0\GamingUniveristyApp.Services.Mapping.AssemblyInfoInputs.cache
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniveristyApp.Services.Mapping\obj\Debug\net8.0\GamingUniveristyApp.Services.Mapping.AssemblyInfo.cs
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniveristyApp.Services.Mapping\obj\Debug\net8.0\GamingUniveristyApp.Services.Mapping.csproj.CoreCompileInputs.cache
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniveristyApp.Services.Mapping\obj\Debug\net8.0\GamingUniveristyApp.Services.Mapping.sourcelink.json
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniveristyApp.Services.Mapping\obj\Debug\net8.0\GamingUniveristyApp.Services.Mapping.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniveristyApp.Services.Mapping\obj\Debug\net8.0\refint\GamingUniveristyApp.Services.Mapping.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniveristyApp.Services.Mapping\obj\Debug\net8.0\GamingUniveristyApp.Services.Mapping.pdb
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniveristyApp.Services.Mapping\obj\Debug\net8.0\ref\GamingUniveristyApp.Services.Mapping.dll

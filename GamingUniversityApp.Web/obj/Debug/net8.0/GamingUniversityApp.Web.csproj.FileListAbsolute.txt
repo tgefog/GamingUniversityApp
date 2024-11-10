@@ -618,3 +618,6 @@ C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniver
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\obj\Debug\net8.0\GamingUniversityApp.Web.pdb
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\obj\Debug\net8.0\GamingUniversityApp.Web.genruntimeconfig.cache
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\obj\Debug\net8.0\ref\GamingUniversityApp.Web.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Services.Mapping.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Services.Mapping.pdb

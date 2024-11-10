@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamingUniversityApp.Web", "GamingUniversityApp.Web.csproj", "{97422225-58EC-4787-A5AF-630E180F2A7C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0464D0DB-D0FD-4D28-87EE-783909A487DB} = {0464D0DB-D0FD-4D28-87EE-783909A487DB}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{D6EDF205-2B0B-4175-B612-B71482D72BBF}"
 EndProject
@@ -18,6 +21,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamingUniversityApp.Data", "..\GamingUniversityApp.Data\GamingUniversityApp.Data.csproj", "{081698C3-9DA8-42BA-AB48-996D08332EDC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamingUniversityApp.Web.Infrastructure", "..\GamingUniversityApp.Web.Infrastructure\GamingUniversityApp.Web.Infrastructure.csproj", "{E4AEA6C6-B0B5-40D5-BFDB-934E1D14FFD8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E55D7A2A-3DE5-4A1C-8BEA-A34BBA26E315}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamingUniversityApp.Services.Data", "..\GamingUniversityApp.Services.Data\GamingUniversityApp.Services.Data.csproj", "{13BAC4B3-C908-4DA7-9C46-33AC1F638DA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamingUniversityApp.Services.Mapping", "..\GamingUniveristyApp.Services.Mapping\GamingUniversityApp.Services.Mapping.csproj", "{0464D0DB-D0FD-4D28-87EE-783909A487DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +58,14 @@ Global
 		{E4AEA6C6-B0B5-40D5-BFDB-934E1D14FFD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4AEA6C6-B0B5-40D5-BFDB-934E1D14FFD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4AEA6C6-B0B5-40D5-BFDB-934E1D14FFD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13BAC4B3-C908-4DA7-9C46-33AC1F638DA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13BAC4B3-C908-4DA7-9C46-33AC1F638DA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13BAC4B3-C908-4DA7-9C46-33AC1F638DA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13BAC4B3-C908-4DA7-9C46-33AC1F638DA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0464D0DB-D0FD-4D28-87EE-783909A487DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0464D0DB-D0FD-4D28-87EE-783909A487DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0464D0DB-D0FD-4D28-87EE-783909A487DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0464D0DB-D0FD-4D28-87EE-783909A487DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +76,8 @@ Global
 		{AA7B28A9-0E21-423C-A770-49E0A80F0B42} = {D6EDF205-2B0B-4175-B612-B71482D72BBF}
 		{081698C3-9DA8-42BA-AB48-996D08332EDC} = {76F100A5-E4F3-4D88-BE21-62E2142B2EB3}
 		{E4AEA6C6-B0B5-40D5-BFDB-934E1D14FFD8} = {D6EDF205-2B0B-4175-B612-B71482D72BBF}
+		{13BAC4B3-C908-4DA7-9C46-33AC1F638DA5} = {E55D7A2A-3DE5-4A1C-8BEA-A34BBA26E315}
+		{0464D0DB-D0FD-4D28-87EE-783909A487DB} = {E55D7A2A-3DE5-4A1C-8BEA-A34BBA26E315}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B0EC03F0-861F-4FCA-AC52-4750C67ECC18}

@@ -58,3 +58,5 @@ C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniver
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\obj\Debug\net8.0\refint\GamingUniversityApp.Web.Infrastructure.dll
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\obj\Debug\net8.0\GamingUniversityApp.Web.Infrastructure.pdb
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\obj\Debug\net8.0\ref\GamingUniversityApp.Web.Infrastructure.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\bin\Debug\net8.0\GamingUniversityApp.Services.Mapping.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web.Infrastructure\bin\Debug\net8.0\GamingUniversityApp.Services.Mapping.pdb
