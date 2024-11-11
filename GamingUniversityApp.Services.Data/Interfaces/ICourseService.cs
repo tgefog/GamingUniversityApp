@@ -3,9 +3,9 @@
     using GamingUniversityApp.Web.ViewModels.Course;
     public interface ICourseService
     {
-        Task<IEnumerable<AddInputCourseModel>> IndexGetAllAsync();
-        Task AddCourseAsync(AddInputCourseModel model);
-        Task<AddInputCourseModel> GetCourseDetailsByIdAsync(Guid id);
+        Task<IEnumerable<CourseIndexViewModel>> IndexGetAllAsync();
+        //Task AddCourseAsync(AddInputCourseModel model);
+        //Task<AddInputCourseModel> GetCourseDetailsByIdAsync(Guid id);
 
     }
 }

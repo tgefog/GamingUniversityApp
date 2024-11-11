@@ -1,20 +1,24 @@
-﻿@using GamingUniversityApp.Data.Models
-@model IEnumerable<Course>
+﻿@using GamingUniversityApp.Web.ViewModels.Course;
+@model IEnumerable<CourseIndexViewModel>
 
 <h2>All Courses</h2>
 
 <table class="table table-striped">
 	<thead>
 		<tr>
+			<th>Image</th>
 			<th>Course Name</th>
 			<th>Description</th>
 			<th>Credits</th>
 		</tr>
 	</thead>
 	<tbody>
-		@foreach (Course course in Model)
+		@foreach (var course in Model)
 		{
 			<tr>
+				<td>
+					<img src="@course.ImageUrl" alt="@course.CourseName" style="width: 100px; height: auto;" />
+				</td>
 				<td>@course.CourseName</td>
 				<td>@course.Description</td>
 				<td>@course.Credits</td>

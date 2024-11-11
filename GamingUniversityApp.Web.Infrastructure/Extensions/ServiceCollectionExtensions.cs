@@ -57,14 +57,14 @@
                 .ToArray();
             Type[] serviceTypes = serviceAssembly
                 .GetTypes()
-                .Where(t => !t.IsInterface && !t.IsAbstract &&
-                                t.Name.ToLower().EndsWith("service"))
+                .Where(t => !t.IsInterface && !t.IsAbstract && t.Name.ToLower().EndsWith("service"))
                 .ToArray();
 
             foreach (Type serviceInterfaceType in serviceInterfaceTypes)
             {
                 Type? serviceType = serviceTypes
                     .SingleOrDefault(t => "i" + t.Name.ToLower() == serviceInterfaceType.Name.ToLower());
+
                 if (serviceType == null)
                 {
                     throw new NullReferenceException($"Service type could not be obtained for the service {serviceInterfaceType.Name}");

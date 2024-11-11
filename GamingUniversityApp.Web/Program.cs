@@ -1,98 +1,100 @@
 //using GamingUniversityApp.Services.Mapping;
 namespace GamingUniversityApp.Web
 {
-    using AutoMapper;
-    using Data;
-    using Data.Models;
-    using GamingUniversityApp.Services.Data;
-    using GamingUniversityApp.Services.Data.Interfaces;
-    using Microsoft.AspNetCore.Identity;
-    using Microsoft.EntityFrameworkCore;
-    using Services.Mapping;
-    using Web.Infrastructure.Extensions;
-    using Web.Models;
+	using AutoMapper;
+	using Data;
+	using Data.Models;
+	using GamingUniversityApp.Services.Data;
+	using GamingUniversityApp.Services.Data.Interfaces;
+	using Microsoft.AspNetCore.Identity;
+	using Microsoft.EntityFrameworkCore;
+	using Services.Mapping;
+	using Web.Infrastructure.Extensions;
+	using Web.Models;
 
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+	public class Program
+	{
+		public static void Main(string[] args)
+		{
+			WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
-                ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+			// Add services to the container.
+			var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+				?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
-            // Configure DbContext with SQL Server
-            builder.Services.AddDbContext<GamingUniversityAppDbContext>(options =>
-                options.UseSqlServer(connectionString));
+			// Configure DbContext with SQL Server
+			builder.Services.AddDbContext<GamingUniversityAppDbContext>(options =>
+				options.UseSqlServer(connectionString));
 
-            // Add Identity services with ApplicationUser and IdentityRole<Guid>
-            builder.Services
-                .AddIdentity<ApplicationUser, IdentityRole<Guid>>(options =>
-                {
-                    ConfigureIdentity(builder, options);
-                })
-                .AddEntityFrameworkStores<GamingUniversityAppDbContext>()
-                .AddDefaultTokenProviders();
+			// Add Identity services with ApplicationUser and IdentityRole<Guid>
+			builder.Services
+				.AddIdentity<ApplicationUser, IdentityRole<Guid>>(options =>
+				{
+					ConfigureIdentity(builder, options);
+				})
+				.AddEntityFrameworkStores<GamingUniversityAppDbContext>()
+				.AddDefaultTokenProviders();
 
-            builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-            builder.Services.ConfigureApplicationCookie(cfg =>
-            {
-                cfg.LoginPath = "/Identity/Account/Login";
-            });
+			builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+			builder.Services.ConfigureApplicationCookie(cfg =>
+			{
+				cfg.LoginPath = "/Identity/Account/Login";
+			});
 
-            builder.Services.RegisterRepositories(typeof(ApplicationUser).Assembly);
-            builder.Services.AddScoped<IAssignmentService, AssignmentService>();
+			builder.Services.RegisterRepositories(typeof(ApplicationUser).Assembly);
+			builder.Services.RegisterUserDefinedServices(typeof(ICourseService).Assembly);
 
-            // Add MVC services for controllers and views
-            builder.Services.AddControllersWithViews();
-            builder.Services.AddRazorPages();
-            WebApplication app = builder.Build();
+			builder.Services.AddScoped<IAssignmentService, AssignmentService>();
 
-            AutoMapperConfig.RegisterMappings(typeof(ErrorViewModel).Assembly);
+			// Add MVC services for controllers and views
+			builder.Services.AddControllersWithViews();
+			builder.Services.AddRazorPages();
+			WebApplication app = builder.Build();
 
-            // Configure the HTTP request pipeline
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseMigrationsEndPoint();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
-            }
+			AutoMapperConfig.RegisterMappings(typeof(ErrorViewModel).Assembly);
 
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
+			// Configure the HTTP request pipeline
+			if (app.Environment.IsDevelopment())
+			{
+				app.UseMigrationsEndPoint();
+			}
+			else
+			{
+				app.UseExceptionHandler("/Home/Error");
+				app.UseHsts();
+			}
 
-            app.UseRouting();
+			app.UseHttpsRedirection();
+			app.UseStaticFiles();
 
-            // Authentication and Authorization middleware
-            app.UseAuthentication();
-            app.UseAuthorization();
+			app.UseRouting();
 
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+			// Authentication and Authorization middleware
+			app.UseAuthentication();
+			app.UseAuthorization();
 
-            app.MapRazorPages();
-            app.ApplyMigrations();
-            app.Run();
-        }
-        private static void ConfigureIdentity(WebApplicationBuilder builder, IdentityOptions options)
-        {
-            options.Password.RequireDigit = builder.Configuration.GetValue<bool>("Identity:Password:RequireDigits");
-            options.Password.RequireLowercase = builder.Configuration.GetValue<bool>("Identity:Password:RequireLowercase");
-            options.Password.RequireUppercase = builder.Configuration.GetValue<bool>("Identity:Password:RequireUppercase");
-            options.Password.RequireNonAlphanumeric = builder.Configuration.GetValue<bool>("Identity:Password:RequireNonAlphanumeric");
-            options.Password.RequiredLength = builder.Configuration.GetValue<int>("Identity:Password:RequiredLength");
-            options.Password.RequiredUniqueChars = builder.Configuration.GetValue<int>("Identity:Password:RequiredUniqueChars");
+			app.MapControllerRoute(
+				name: "default",
+				pattern: "{controller=Home}/{action=Index}/{id?}");
 
-            options.SignIn.RequireConfirmedAccount = builder.Configuration.GetValue<bool>("Identity:Password:RequireConfirmedAccount");
-            options.SignIn.RequireConfirmedEmail = builder.Configuration.GetValue<bool>("Identity:Password:RequireConfirmedEmail");
-            options.SignIn.RequireConfirmedPhoneNumber = builder.Configuration.GetValue<bool>("Identity:Password:RequireConfirmedPhoneNumber");
+			app.MapRazorPages();
+			app.ApplyMigrations();
+			app.Run();
+		}
+		private static void ConfigureIdentity(WebApplicationBuilder builder, IdentityOptions options)
+		{
+			options.Password.RequireDigit = builder.Configuration.GetValue<bool>("Identity:Password:RequireDigits");
+			options.Password.RequireLowercase = builder.Configuration.GetValue<bool>("Identity:Password:RequireLowercase");
+			options.Password.RequireUppercase = builder.Configuration.GetValue<bool>("Identity:Password:RequireUppercase");
+			options.Password.RequireNonAlphanumeric = builder.Configuration.GetValue<bool>("Identity:Password:RequireNonAlphanumeric");
+			options.Password.RequiredLength = builder.Configuration.GetValue<int>("Identity:Password:RequiredLength");
+			options.Password.RequiredUniqueChars = builder.Configuration.GetValue<int>("Identity:Password:RequiredUniqueChars");
 
-            options.User.RequireUniqueEmail = builder.Configuration.GetValue<bool>("Identity:Password:RequireUniqueEmail");
-        }
-    }
+			options.SignIn.RequireConfirmedAccount = builder.Configuration.GetValue<bool>("Identity:Password:RequireConfirmedAccount");
+			options.SignIn.RequireConfirmedEmail = builder.Configuration.GetValue<bool>("Identity:Password:RequireConfirmedEmail");
+			options.SignIn.RequireConfirmedPhoneNumber = builder.Configuration.GetValue<bool>("Identity:Password:RequireConfirmedPhoneNumber");
+
+			options.User.RequireUniqueEmail = builder.Configuration.GetValue<bool>("Identity:Password:RequireUniqueEmail");
+		}
+	}
 }
