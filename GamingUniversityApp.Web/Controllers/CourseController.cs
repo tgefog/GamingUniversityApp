@@ -1,6 +1,5 @@
 ﻿using GamingUniversityApp.Data;
 using GamingUniversityApp.Data.Models;
-using GamingUniversityApp.Data.Repository.Interfaces;
 using GamingUniversityApp.Services.Data.Interfaces;
 using GamingUniversityApp.Web.ViewModels.Course;
 using Microsoft.AspNetCore.Mvc;
@@ -33,33 +32,13 @@ namespace GamingUniversityApp.Web.Controllers
 			return View();
 		}
 		[HttpPost]
-		public async Task<IActionResult> Create(AddInputCourseModel inputModel)
+		public async Task<IActionResult> Create(AddInputCourseModel model)
 		{
 			if (!this.ModelState.IsValid)
 			{
-				// Render the same form with user entered values + model errors 
-				return this.View(inputModel);
+				return this.View(model);
 			}
-			Course course = new Course()
-			{
-				CourseName = inputModel.CourseName,
-				Description = inputModel.Description,
-				Credits = inputModel.Credits,
-				ImageUrl = inputModel.ImageUrl
-			};
-			await this.dbContext.Courses.AddAsync(course);
-			await this.dbContext.SaveChangesAsync();
-
-
-			//course.Id = Guid.NewGuid();
-			//dbContext.Add(inputCourse);
-			//bool result = await this.movieService.AddMovieAsync(inputModel);
-			//if (result == false)
-			//{
-			//    this.ModelState.AddModelError(nameof(inputModel.ReleaseDate),
-			//        String.Format("The Release Date must be in the following format: {0}", ReleaseDateFormat));
-			//    return this.View(inputModel);
-			//}
+			await this.courseService.AddCourseAsync(model);
 
 			return this.RedirectToAction(nameof(Index));
 		}

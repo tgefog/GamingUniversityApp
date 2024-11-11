@@ -6,8 +6,8 @@ using static GamingUniversityApp.Common.EntityValidationMessages.Course;
 namespace GamingUniversityApp.Web.ViewModels.Course
 
 {
-    using Data.Models;
-    public class AddInputCourseModel
+	using Data.Models;
+	public class AddInputCourseModel : IMapTo<Course>
     {
 
         [Required(ErrorMessage = NameRequiredMessage)]
@@ -24,10 +24,5 @@ namespace GamingUniversityApp.Web.ViewModels.Course
 
         [MaxLength(ImageUrlMaxLength)]
         public string? ImageUrl { get; set; }
-        //public void CreateMappings(IProfileExpression configuration)
-        //      {
-        //          configuration.CreateMap<AddMovieInputModel, Movie>()
-        //              .ForMember(d => d.ReleaseDate, x => x.Ignore());
-        //      }
     }
 }

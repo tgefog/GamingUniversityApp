@@ -4,7 +4,7 @@
     public interface ICourseService
     {
         Task<IEnumerable<CourseIndexViewModel>> IndexGetAllAsync();
-        //Task AddCourseAsync(AddInputCourseModel model);
+        Task AddCourseAsync(AddInputCourseModel model);
         //Task<AddInputCourseModel> GetCourseDetailsByIdAsync(Guid id);
 
     }

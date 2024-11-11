@@ -30,7 +30,6 @@ namespace GamingUniversityApp.Services.Data
             AutoMapperConfig.MapperInstance.Map(model, assignment);
 
             await this.assignmentRepository.AddAsync(assignment);
-
         }
 
         public async Task<AssignmentDetailsViewModel> GetAssignmentDetailsByIdAsync(Guid id)

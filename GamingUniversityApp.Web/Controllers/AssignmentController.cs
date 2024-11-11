@@ -1,11 +1,10 @@
-﻿using GamingUniversityApp.Data;
-using GamingUniversityApp.Services.Data.Interfaces;
+﻿using GamingUniversityApp.Services.Data.Interfaces;
 using GamingUniversityApp.Web.ViewModels.Assignment;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GamingUniversityApp.Web.Controllers
 {
-    public class AssignmentController : BaseController
+	public class AssignmentController : BaseController
     {
         private readonly IAssignmentService assignmentService;
         public AssignmentController(IAssignmentService assignmentService)

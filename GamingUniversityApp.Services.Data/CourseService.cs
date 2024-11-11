@@ -24,16 +24,20 @@
 
             return allCourses;
         }
-        //public Task AddCourseAsync(AddInputCourseModel model)
-        //{
-        //    throw new NotImplementedException();
-        //}
+		public async Task AddCourseAsync(AddInputCourseModel model)
+		{
+			// Map the view model to the Course entity
+			Course course = new Course();
+			AutoMapperConfig.MapperInstance.Map(model, course);
 
-        //public Task<AddInputCourseModel> GetCourseDetailsByIdAsync(Guid id)
-        //{
-        //    throw new NotImplementedException();
-        //}
+			await this.courseRepository.AddAsync(course);
+		}
 
-        
-    }
+		//public Task<AddInputCourseModel> GetCourseDetailsByIdAsync(Guid id)
+		//{
+		//    throw new NotImplementedException();
+		//}
+
+
+	}
 }
