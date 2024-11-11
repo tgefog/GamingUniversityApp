@@ -4,14 +4,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GamingUniversityApp.Web.Controllers
 {
-	public class AssignmentController : BaseController
+    public class AssignmentController : BaseController
     {
         private readonly IAssignmentService assignmentService;
         public AssignmentController(IAssignmentService assignmentService)
         {
             this.assignmentService = assignmentService;
         }
-
         public async Task<IActionResult> Index()
         {
             IEnumerable<AssignmentIndexViewModel> assignments = await this.assignmentService
@@ -19,13 +18,11 @@ namespace GamingUniversityApp.Web.Controllers
 
             return this.View(assignments);
         }
-
         [HttpGet]
         public async Task<IActionResult> Create()
         {
             return this.View();
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(AddAssignmentFormModel model)
@@ -59,14 +56,49 @@ namespace GamingUniversityApp.Web.Controllers
             return this.View(detailsViewModel);
 
         }
-        //public async Task<IActionResult> AddToCourse(string? id)
-        //{
-        //    Guid assignmentGuid = Guid.Empty;
-        //    bool isGuidValid = this.IsGuidValid(id, ref assignmentGuid);
-        //    if (!isGuidValid)
-        //    {
-        //        return RedirectToAction(nameof(Index));
-        //    }
-        //}
+
+        [HttpGet]
+        public async Task<IActionResult> AddToCourse(string? id)
+        {
+            Guid assignmentGuid = Guid.Empty;
+            bool isGuidValid = this.IsGuidValid(id, ref assignmentGuid);
+            if (!isGuidValid)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+            AddAssignmentToCourseViewModel? viewModel = await this.assignmentService
+                .GetAddAssignmentToCourseViewModelByIdAsync(assignmentGuid);
+
+            if (viewModel == null)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+
+            return this.View(viewModel);
+        }
+        [HttpPost]
+        public async Task<IActionResult> AddToCourse(AddAssignmentToCourseViewModel model)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View(model);
+            }
+
+            Guid assignmentGuid = Guid.Empty;
+            bool isGuidValid = this.IsGuidValid(model.Id, ref assignmentGuid);
+            if (!isGuidValid)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+
+            bool result = await this.assignmentService
+                .AddAssignmentToCourseAsync(assignmentGuid, model);
+            if (result == false)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+
+            return this.RedirectToAction(nameof(Index), "Assignment");
+        }
     }
 }
