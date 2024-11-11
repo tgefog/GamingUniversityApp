@@ -1,8 +1,10 @@
-﻿using GamingUniversityApp.Web.ViewModels.Course;
+﻿using GamingUniversityApp.Services.Mapping;
+using GamingUniversityApp.Web.ViewModels.Course;
 
 namespace GamingUniversityApp.Web.ViewModels.Assignment
 {
-    public class AssignmentDetailsViewModel
+    using Data.Models;
+    public class AssignmentDetailsViewModel : IMapFrom<Assignment>
     {
         //public string Id { get; set; } = null!;
         public string Name { get; set; } = null!;

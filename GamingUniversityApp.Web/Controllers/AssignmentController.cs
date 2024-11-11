@@ -1,19 +1,15 @@
 ﻿using GamingUniversityApp.Data;
-using GamingUniversityApp.Data.Models;
 using GamingUniversityApp.Services.Data.Interfaces;
 using GamingUniversityApp.Web.ViewModels.Assignment;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace GamingUniversityApp.Web.Controllers
 {
     public class AssignmentController : BaseController
     {
-        private readonly GamingUniversityAppDbContext dbContext;
         private readonly IAssignmentService assignmentService;
-        public AssignmentController(GamingUniversityAppDbContext dbContext, IAssignmentService assignmentService)
+        public AssignmentController(IAssignmentService assignmentService)
         {
-            this.dbContext = dbContext;
             this.assignmentService = assignmentService;
         }
 
@@ -24,32 +20,25 @@ namespace GamingUniversityApp.Web.Controllers
 
             return this.View(assignments);
         }
+
         [HttpGet]
         public async Task<IActionResult> Create()
         {
             return this.View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(AddAssignmentFormModel model)
         {
             if (!ModelState.IsValid)
             {
-                // Reload course list if model is invalid
                 return this.View(model);
             }
-            Assignment assignment = new Assignment()
-            {
-                Name = model.Name,
-                Description = model.Description,
-                DueDate = model.DueDate,
-                CourseId = model.SelectedCourseId
-            };
-
-            await this.dbContext.Assignments.AddAsync(assignment);
-            await this.dbContext.SaveChangesAsync();
+            await this.assignmentService.AddAssignmentAsync(model);
             return RedirectToAction(nameof(Index));
         }
+
         [HttpGet]
         public async Task<IActionResult> Details(string? id)
         {
@@ -59,20 +48,15 @@ namespace GamingUniversityApp.Web.Controllers
             {
                 return this.RedirectToAction(nameof(Index));
             }
-            Assignment? assignment = await this.dbContext.Assignments
-            .FirstOrDefaultAsync(a => a.Id == assignmentGuid);
+
+            AssignmentDetailsViewModel? detailsViewModel = await this.assignmentService
+                .GetAssignmentDetailsByIdAsync(assignmentGuid);
+
             //Invalid GUID in the URL
-            if (assignment == null)
+            if (detailsViewModel == null)
             {
                 return this.RedirectToAction(nameof(Index));
             }
-            AssignmentDetailsViewModel detailsViewModel = new AssignmentDetailsViewModel()
-            {
-                Name = assignment.Name,
-                Description = assignment.Description,
-                DueDate = assignment.DueDate,
-                CourseName = assignment.Course.CourseName
-            };
             return this.View(detailsViewModel);
 
         }

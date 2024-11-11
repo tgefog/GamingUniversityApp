@@ -5,7 +5,7 @@
     {
         Task<IEnumerable<AssignmentIndexViewModel>> IndexGetAllAsync();
         Task AddAssignmentAsync(AddAssignmentFormModel model);
-        Task<AssignmentDetailsViewModel> GetAssignmentDetailsByIdAsync(Guid id);
+        Task<AssignmentDetailsViewModel?> GetAssignmentDetailsByIdAsync(Guid id);
 
     }
 }

@@ -1,9 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using GamingUniversityApp.Services.Mapping;
+using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 using static GamingUniversityApp.Common.EntityValidationConstants.Assignment;
 namespace GamingUniversityApp.Web.ViewModels.Assignment
 {
-	public class AddAssignmentFormModel
+    using Data.Models;
+    public class AddAssignmentFormModel : IMapTo<Assignment>
 	{
 		[Required]
 		[MinLength(NameMinLength)]

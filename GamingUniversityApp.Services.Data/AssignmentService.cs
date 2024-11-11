@@ -24,14 +24,33 @@ namespace GamingUniversityApp.Services.Data
 
             return assignments;
         }
-        public Task AddAssignmentAsync(AddAssignmentFormModel model)
+        public async Task AddAssignmentAsync(AddAssignmentFormModel model)
         {
-            throw new NotImplementedException();
+            Assignment assignment = new Assignment();
+            AutoMapperConfig.MapperInstance.Map(model, assignment);
+
+            await this.assignmentRepository.AddAsync(assignment);
+
         }
 
-        public Task<AssignmentDetailsViewModel> GetAssignmentDetailsByIdAsync(Guid id)
+        public async Task<AssignmentDetailsViewModel> GetAssignmentDetailsByIdAsync(Guid id)
         {
-            throw new NotImplementedException();
+            // Fetch assignment by id
+            Assignment? assignment = await this.assignmentRepository
+                .GetAllAttached()
+                .FirstOrDefaultAsync(a => a.Id == id);
+
+            // If assignment is null, handle invalid ID
+            if (assignment == null)
+            {
+                throw new ArgumentException("Invalid assignment ID");
+            }
+
+            // Map assignment to AssignmentDetailsViewModel
+            AssignmentDetailsViewModel detailsViewModel = AutoMapperConfig.MapperInstance
+                .Map<AssignmentDetailsViewModel>(assignment);
+
+            return detailsViewModel;
         }
 
 

@@ -1,6 +1,7 @@
 //using GamingUniversityApp.Services.Mapping;
 namespace GamingUniversityApp.Web
 {
+    using AutoMapper;
     using Data;
     using Data.Models;
     using GamingUniversityApp.Services.Data;
@@ -41,7 +42,6 @@ namespace GamingUniversityApp.Web
             });
 
             builder.Services.RegisterRepositories(typeof(ApplicationUser).Assembly);
-
             builder.Services.AddScoped<IAssignmentService, AssignmentService>();
 
             // Add MVC services for controllers and views
