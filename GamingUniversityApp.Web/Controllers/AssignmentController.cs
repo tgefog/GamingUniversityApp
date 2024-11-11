@@ -1,5 +1,6 @@
 ﻿using GamingUniversityApp.Data;
 using GamingUniversityApp.Data.Models;
+using GamingUniversityApp.Services.Data.Interfaces;
 using GamingUniversityApp.Web.ViewModels.Assignment;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -7,26 +8,19 @@ using Microsoft.EntityFrameworkCore;
 namespace GamingUniversityApp.Web.Controllers
 {
     public class AssignmentController : BaseController
-	{
-		private readonly GamingUniversityAppDbContext dbContext;
-        public AssignmentController(GamingUniversityAppDbContext dbContext)
+    {
+        private readonly GamingUniversityAppDbContext dbContext;
+        private readonly IAssignmentService assignmentService;
+        public AssignmentController(GamingUniversityAppDbContext dbContext, IAssignmentService assignmentService)
         {
-			this.dbContext = dbContext;
+            this.dbContext = dbContext;
+            this.assignmentService = assignmentService;
         }
 
         public async Task<IActionResult> Index()
         {
-            IEnumerable<AssignmentIndexViewModel> assignments = await this.dbContext
-                .Assignments
-                .Select(a => new AssignmentIndexViewModel()
-                {
-                    Id = a.Id.ToString(),
-                    Name = a.Name,
-                    Description = a.Description,
-                    DueDate = a.DueDate,
-                    CourseName = a.Course.CourseName
-                })
-                .ToArrayAsync();
+            IEnumerable<AssignmentIndexViewModel> assignments = await this.assignmentService
+                .IndexGetAllAsync();
 
             return this.View(assignments);
         }

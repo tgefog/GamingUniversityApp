@@ -1,5 +1,6 @@
 ﻿using GamingUniversityApp.Data;
 using GamingUniversityApp.Data.Models;
+using GamingUniversityApp.Data.Repository.Interfaces;
 using GamingUniversityApp.Web.ViewModels.Course;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,10 +10,13 @@ namespace GamingUniversityApp.Web.Controllers
 	public class CourseController : BaseController
     {
         private readonly GamingUniversityAppDbContext dbContext;
+        private IRepository<Course, Guid> courseRepository;
+
         //Dependency injection
-        public CourseController(GamingUniversityAppDbContext dbContext)
+        public CourseController(GamingUniversityAppDbContext dbContext, IRepository<Course, Guid> courseRepository)
         {
             this.dbContext = dbContext;
+            this.courseRepository = courseRepository;
         }
         [HttpGet]
         public async Task<IActionResult> Index()

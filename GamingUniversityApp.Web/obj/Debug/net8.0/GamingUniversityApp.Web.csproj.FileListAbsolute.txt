@@ -316,6 +316,7 @@ C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniver
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Web.runtimeconfig.json
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Web.dll
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Web.pdb
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\Humanizer.dll
@@ -587,10 +588,14 @@ C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniver
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Common.dll
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Data.dll
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Data.Models.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Services.Mapping.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Web.Infrastructure.dll
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Web.ViewModels.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Services.Mapping.pdb
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Common.pdb
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Data.Models.pdb
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Data.pdb
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Web.Infrastructure.pdb
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Web.ViewModels.pdb
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\obj\Debug\net8.0\GamingUniversityApp.Web.csproj.AssemblyReference.cache
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\obj\Debug\net8.0\GamingUniversityApp.Web.GeneratedMSBuildEditorConfig.editorconfig
@@ -618,6 +623,5 @@ C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniver
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\obj\Debug\net8.0\GamingUniversityApp.Web.pdb
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\obj\Debug\net8.0\GamingUniversityApp.Web.genruntimeconfig.cache
 C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\obj\Debug\net8.0\ref\GamingUniversityApp.Web.dll
-C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\AutoMapper.dll
-C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Services.Mapping.dll
-C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Services.Mapping.pdb
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Services.Data.dll
+C:\Users\tgefo\source\repos\GamingUniversityApp\GamingUniversityApp\GamingUniversityApp.Web\bin\Debug\net8.0\GamingUniversityApp.Services.Data.pdb

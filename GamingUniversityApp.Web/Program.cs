@@ -3,11 +3,12 @@ namespace GamingUniversityApp.Web
 {
     using Data;
     using Data.Models;
-    using Data.Repository;
-    using Data.Repository.Interfaces;
+    using GamingUniversityApp.Services.Data;
+    using GamingUniversityApp.Services.Data.Interfaces;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
     using Services.Mapping;
+    using Web.Infrastructure.Extensions;
     using Web.Models;
 
     public class Program
@@ -38,11 +39,10 @@ namespace GamingUniversityApp.Web
             {
                 cfg.LoginPath = "/Identity/Account/Login";
             });
-            //TO BE REPLACED BY EXTENSION METHOD
-            builder.Services.AddScoped<IRepository<Course, Guid>, BaseRepository<Course, Guid>>();
-            builder.Services.AddScoped<IRepository<ApplicationUserCourse, object>, BaseRepository<ApplicationUserCourse, object>>();
-            builder.Services.AddScoped<IRepository<Assignment, Guid>, BaseRepository<Assignment, Guid>>();
-            builder.Services.AddScoped<IRepository<Submission, Guid>, BaseRepository<Submission, Guid>>();
+
+            builder.Services.RegisterRepositories(typeof(ApplicationUser).Assembly);
+
+            builder.Services.AddScoped<IAssignmentService, AssignmentService>();
 
             // Add MVC services for controllers and views
             builder.Services.AddControllersWithViews();
@@ -76,7 +76,7 @@ namespace GamingUniversityApp.Web
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.MapRazorPages();
-
+            app.ApplyMigrations();
             app.Run();
         }
         private static void ConfigureIdentity(WebApplicationBuilder builder, IdentityOptions options)

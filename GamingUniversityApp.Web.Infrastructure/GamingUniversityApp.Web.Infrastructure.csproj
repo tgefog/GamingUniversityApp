@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GamingUniversityApp.Data\GamingUniversityApp.Data.csproj" />
-    <ProjectReference Include="..\GamingUniversityApp.Web\GamingUniversityApp.Web.csproj" />
   </ItemGroup>
 
 </Project>

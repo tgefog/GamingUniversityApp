@@ -27,6 +27,8 @@
     <ProjectReference Include="..\GamingUniversityApp.Common\GamingUniversityApp.Common.csproj" />
     <ProjectReference Include="..\GamingUniversityApp.Data.Models\GamingUniversityApp.Data.Models.csproj" />
     <ProjectReference Include="..\GamingUniversityApp.Data\GamingUniversityApp.Data.csproj" />
+    <ProjectReference Include="..\GamingUniversityApp.Services.Data\GamingUniversityApp.Services.Data.csproj" />
+    <ProjectReference Include="..\GamingUniversityApp.Web.Infrastructure\GamingUniversityApp.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\GamingUniversityApp.Web.ViewModels\GamingUniversityApp.Web.ViewModels.csproj" />
   </ItemGroup>
 
