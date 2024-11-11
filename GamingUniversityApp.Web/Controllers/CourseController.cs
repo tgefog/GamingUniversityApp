@@ -1,21 +1,16 @@
-﻿using GamingUniversityApp.Data;
-using GamingUniversityApp.Data.Models;
-using GamingUniversityApp.Services.Data.Interfaces;
-using GamingUniversityApp.Web.ViewModels.Course;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-
+﻿
 namespace GamingUniversityApp.Web.Controllers
 {
+	using Services.Data.Interfaces;
+	using ViewModels.Course;
+	using Microsoft.AspNetCore.Mvc;
+
 	public class CourseController : BaseController
 	{
-		private readonly GamingUniversityAppDbContext dbContext;
-		private readonly ICourseService courseService;
-
 		//Dependency injection
-		public CourseController(GamingUniversityAppDbContext dbContext, ICourseService courseService)
+		private readonly ICourseService courseService;
+		public CourseController(ICourseService courseService)
 		{
-			this.dbContext = dbContext;
 			this.courseService = courseService;
 		}
 		[HttpGet]
@@ -49,16 +44,14 @@ namespace GamingUniversityApp.Web.Controllers
 			bool isGuidValid = this.IsGuidValid(id, ref courseGuid);
 			if (!isGuidValid)
 			{
-				// Invalid id format
 				return this.RedirectToAction(nameof(Index));
 			}
-			Course? course = await this.dbContext.Courses
-			.FirstOrDefaultAsync(c => c.Id == courseGuid);
-			//MovieDetailsViewModel? movie = await this.movieService
-			//    .GetMovieDetailsByIdAsync(movieGuid);
+
+			CourseDetailsViewModel? course = await this.courseService
+				.GetCourseDetailsByIdAsync(courseGuid);
+
 			if (course == null)
 			{
-				// Non-existing movie guid
 				return this.RedirectToAction(nameof(Index));
 			}
 

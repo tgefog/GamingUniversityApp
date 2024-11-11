@@ -1,6 +1,9 @@
-﻿@model GamingUniversityApp.Data.Models.Course
+﻿@using GamingUniversityApp.Web.ViewModels.Course;
+@model CourseDetailsViewModel
 
 <h2>@Model.CourseName</h2>
+
+<img src="@Model.ImageUrl" alt="@Model.CourseName" class="course-image" />
 
 <p><strong>Description:</strong> @Model.Description</p>
 <p><strong>Credits:</strong> @Model.Credits</p>

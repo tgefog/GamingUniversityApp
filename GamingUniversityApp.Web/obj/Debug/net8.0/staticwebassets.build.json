@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "W+aMktMODVUpFDuNU9yyTTjgVc2H0NY6BWXumU/46x0=",
+  "Hash": "ER44AQc7k9FJjD53fvh18AzdckNBquRCrsMsEYL4A64=",
   "Source": "GamingUniversityApp.Web",
   "BasePath": "_content/GamingUniversityApp.Web",
   "Mode": "Default",
@@ -1233,12 +1233,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\wwwroot\\Images\\No_Image_Available.jpg",
+      "Identity": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\wwwroot\\images\\No_Image_Available.jpg",
       "SourceId": "GamingUniversityApp.Web",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\wwwroot\\",
       "BasePath": "_content/GamingUniversityApp.Web",
-      "RelativePath": "Images/No_Image_Available.jpg",
+      "RelativePath": "images/No_Image_Available.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1249,7 +1249,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\No_Image_Available.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\No_Image_Available.jpg"
     },
     {
       "Identity": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\wwwroot\\js\\site.js",

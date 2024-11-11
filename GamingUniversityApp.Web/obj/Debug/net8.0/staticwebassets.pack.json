@@ -5,16 +5,16 @@
       "PackagePath": "staticwebassets\\GamingUniversityApp.Web.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\wwwroot\\Images\\No_Image_Available.jpg",
-      "PackagePath": "staticwebassets\\Images\\No_Image_Available.jpg"
-    },
-    {
       "Id": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\wwwroot\\images\\No_Image_Available.jpg",
+      "PackagePath": "staticwebassets\\images\\No_Image_Available.jpg"
     },
     {
       "Id": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\wwwroot\\js\\site.js",
