@@ -27,6 +27,18 @@
             await this.dbContext.SaveChangesAsync();
         }
 
+        public void AddRange(TType[] items)
+        {
+            this.dbSet.AddRange(items);
+            this.dbContext.SaveChanges();
+        }
+
+        public async Task AddRangeAsync(TType[] items)
+        {
+            await this.dbSet.AddRangeAsync(items);
+            await this.dbContext.SaveChangesAsync();
+        }
+
         public bool Delete(TId id)
         {
             TType entity = GetById(id);
@@ -93,7 +105,7 @@
             catch (Exception)
             {
                 return false;
-            } 
+            }
         }
 
         public async Task<bool> UpdateAsync(TType item)

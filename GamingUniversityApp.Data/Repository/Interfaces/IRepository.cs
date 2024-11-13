@@ -9,6 +9,8 @@
         IQueryable<TType> GetAllAttached();
         void Add(TType item);
         Task AddAsync(TType item);
+        void AddRange(TType[] items);
+        Task AddRangeAsync(TType[] items);
         bool Delete(TId id);
         Task<bool> DeleteAsync(TId id);
         bool Update(TType item);

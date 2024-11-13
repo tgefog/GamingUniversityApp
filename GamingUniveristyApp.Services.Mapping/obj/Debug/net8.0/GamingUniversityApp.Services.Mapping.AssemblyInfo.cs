@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GamingUniversityApp.Services.Mapping")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac823cbd0b672f80014a51b86cfe25ab5dc8bc3d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b304f3389a67f6f8314efa108a6a140c3e58dca7")]
 [assembly: System.Reflection.AssemblyProductAttribute("GamingUniversityApp.Services.Mapping")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GamingUniversityApp.Services.Mapping")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
