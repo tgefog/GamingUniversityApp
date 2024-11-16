@@ -1,10 +1,11 @@
-﻿@using GamingUniversityApp.Web.ViewModels.Course;
+﻿@using GamingUniversityApp.Web.ViewModels.Course
+@using static GamingUniversityApp.Common.ErrorMessages.MyCourses
 @model IEnumerable<CourseIndexViewModel>
 
-@if (ViewData["ErrorMessage"] != null)
+@if (TempData[nameof(AddToMyCoursesNotSuccessfullMessage)] != null)
 {
 <div class="alert alert-danger"role="alert">
-	@ViewData["ErrorMessage"]
+		@TempData[nameof(AddToMyCoursesNotSuccessfullMessage)]
 </div>
 }
 
