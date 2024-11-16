@@ -164,7 +164,7 @@ namespace GamingUniversityApp.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(2083)
                         .HasColumnType("nvarchar(2083)")
-                        .HasDefaultValue("~/images/No_Image_Available");
+                        .HasDefaultValue("/images/No_Image_Available.jpg");
 
                     b.HasKey("Id");
 
@@ -250,11 +250,16 @@ namespace GamingUniversityApp.Data.Migrations
                         .HasColumnType("datetime2")
                         .HasComment("Date of the submission");
 
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
 
                     b.HasIndex("AssignmentId");
 
                     b.HasIndex("StudentId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Submissions");
                 });
@@ -448,14 +453,22 @@ namespace GamingUniversityApp.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("GamingUniversityApp.Data.Models.Student", "Student")
-                        .WithMany()
+                        .WithMany("Submissions")
                         .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GamingUniversityApp.Data.Models.ApplicationUser", "User")
+                        .WithMany("Submissions")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Assignment");
 
                     b.Navigation("Student");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -512,6 +525,8 @@ namespace GamingUniversityApp.Data.Migrations
             modelBuilder.Entity("GamingUniversityApp.Data.Models.ApplicationUser", b =>
                 {
                     b.Navigation("ApplicationUserCourses");
+
+                    b.Navigation("Submissions");
                 });
 
             modelBuilder.Entity("GamingUniversityApp.Data.Models.Assignment", b =>
@@ -531,6 +546,8 @@ namespace GamingUniversityApp.Data.Migrations
             modelBuilder.Entity("GamingUniversityApp.Data.Models.Student", b =>
                 {
                     b.Navigation("StudentCourses");
+
+                    b.Navigation("Submissions");
                 });
 #pragma warning restore 612, 618
         }

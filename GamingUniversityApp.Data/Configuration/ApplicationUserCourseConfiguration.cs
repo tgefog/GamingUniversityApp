@@ -19,6 +19,7 @@ namespace GamingUniversityApp.Data.Configuration
 			builder.HasOne(uc => uc.ApplicationUser)
 				.WithMany(u => u.ApplicationUserCourses)
 				.HasForeignKey(uc => uc.ApplicationUserId);
+			
 		}
 	}
 }

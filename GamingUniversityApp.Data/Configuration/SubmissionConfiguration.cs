@@ -8,41 +8,44 @@ namespace GamingUniversityApp.Data.Configuration
 	{
 		public void Configure(EntityTypeBuilder<Submission> builder)
 		{
-			builder.HasKey(e => e.Id);
+			builder.HasKey(s => s.Id);
 
-			builder.Property(e => e.Id)
+			builder.Property(s => s.Id)
 				.IsRequired()
 				.HasComment("Unique identifier");
 
-			builder.Property(e => e.AssignmentId)
+			builder.Property(s => s.AssignmentId)
 				.IsRequired()
 				.HasComment("Unique identifier of the assignment");
 
-			builder.HasOne(e => e.Assignment)
+			builder.HasOne(s => s.Assignment)
 				.WithMany(a => a.Submissions)
-				.HasForeignKey(e => e.AssignmentId)
+				.HasForeignKey(s => s.AssignmentId)
 				.IsRequired();
 
-			builder.Property(e => e.StudentId)
+			builder.Property(s => s.StudentId)
 				.IsRequired()
 				.HasComment("Unique identifier of the student");
 
-			builder.HasOne(e => e.Student)
-				.WithMany()
-				.HasForeignKey(e => e.StudentId)
+			builder.HasOne(s => s.Student)
+				.WithMany(st=>st.Submissions)
+				.HasForeignKey(s => s.StudentId)
 				.IsRequired();
 
-			builder.Property(e => e.Content)
+			builder.Property(s=> s.Content)
 				.IsRequired()
 				.HasComment("Content of the submission");
 
-			builder.Property(e => e.SubmissionDate)
+			builder.Property(s => s.SubmissionDate)
 				.IsRequired()
 				.HasComment("Date of the submission");
 
-			builder.Property(e => e.Grade)
+			builder.Property(s => s.Grade)
 				.IsRequired()
 				.HasComment("Grade for the submission");
+			builder.HasOne(s => s.User)
+				.WithMany(u => u.Submissions)
+				.HasForeignKey(s => s.UserId);
 		}
 	}
 }

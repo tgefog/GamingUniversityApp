@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace GamingUniversityApp.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class AddIdentityUser : Migration
+    public partial class AddsubmissionstoDB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -57,7 +57,8 @@ namespace GamingUniversityApp.Data.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, comment: "Unique identifier"),
                     CourseName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false, comment: "Name of the course"),
                     Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false, comment: "Course description"),
-                    Credits = table.Column<int>(type: "int", nullable: false, comment: "Amount of credits given to students for completing the course")
+                    Credits = table.Column<int>(type: "int", nullable: false, comment: "Amount of credits given to students for completing the course"),
+                    ImageUrl = table.Column<string>(type: "nvarchar(2083)", maxLength: 2083, nullable: true, defaultValue: "/images/No_Image_Available.jpg")
                 },
                 constraints: table =>
                 {
@@ -206,6 +207,30 @@ namespace GamingUniversityApp.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "UsersCourses",
+                columns: table => new
+                {
+                    ApplicationUserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CourseId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UsersCourses", x => new { x.ApplicationUserId, x.CourseId });
+                    table.ForeignKey(
+                        name: "FK_UsersCourses_AspNetUsers_ApplicationUserId",
+                        column: x => x.ApplicationUserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_UsersCourses_Courses_CourseId",
+                        column: x => x.CourseId,
+                        principalTable: "Courses",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "StudentCourses",
                 columns: table => new
                 {
@@ -239,11 +264,18 @@ namespace GamingUniversityApp.Data.Migrations
                     StudentId = table.Column<Guid>(type: "uniqueidentifier", nullable: false, comment: "Unique identifier of the student"),
                     Content = table.Column<string>(type: "nvarchar(max)", nullable: false, comment: "Content of the submission"),
                     SubmissionDate = table.Column<DateTime>(type: "datetime2", nullable: false, comment: "Date of the submission"),
-                    Grade = table.Column<string>(type: "nvarchar(max)", nullable: false, comment: "Grade for the submission")
+                    Grade = table.Column<string>(type: "nvarchar(max)", nullable: false, comment: "Grade for the submission"),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Submissions", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Submissions_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Submissions_Assignments_AssignmentId",
                         column: x => x.AssignmentId,
@@ -316,6 +348,16 @@ namespace GamingUniversityApp.Data.Migrations
                 name: "IX_Submissions_StudentId",
                 table: "Submissions",
                 column: "StudentId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Submissions_UserId",
+                table: "Submissions",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UsersCourses_CourseId",
+                table: "UsersCourses",
+                column: "CourseId");
         }
 
         /// <inheritdoc />
@@ -343,16 +385,19 @@ namespace GamingUniversityApp.Data.Migrations
                 name: "Submissions");
 
             migrationBuilder.DropTable(
-                name: "AspNetRoles");
+                name: "UsersCourses");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "Assignments");
 
             migrationBuilder.DropTable(
                 name: "Students");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUsers");
 
             migrationBuilder.DropTable(
                 name: "Courses");

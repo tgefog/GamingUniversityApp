@@ -7,7 +7,7 @@
 		public string Description { get; set; } = null!;
 		public DateTime DueDate { get; set; }
 		public Guid CourseId { get; set; }
-		public Course Course { get; set; } = null!;
-		public ICollection<Submission> Submissions { get; set; } = new HashSet<Submission>();
+		public virtual Course Course { get; set; } = null!;
+		public virtual ICollection<Submission> Submissions { get; set; } = new HashSet<Submission>();
 	}
 }
