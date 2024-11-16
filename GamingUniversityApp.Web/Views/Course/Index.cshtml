@@ -1,6 +1,13 @@
 ﻿@using GamingUniversityApp.Web.ViewModels.Course;
 @model IEnumerable<CourseIndexViewModel>
 
+@if (ViewData["ErrorMessage"] != null)
+{
+<div class="alert alert-danger"role="alert">
+	@ViewData["ErrorMessage"]
+</div>
+}
+
 <h2>All Courses</h2>
 
 <table class="table table-striped">
@@ -19,7 +26,7 @@
 				<td>
 					<img src="@course.ImageUrl" alt="@course.CourseName" style="width: 100px; height: 75px;" />
 				</td>
-				
+
 				<td>@course.CourseName</td>
 				<td>@course.Description</td>
 				<td>@course.Credits</td>

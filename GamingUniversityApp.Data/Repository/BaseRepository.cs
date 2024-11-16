@@ -2,6 +2,7 @@
 {
     using GamingUniversityApp.Data.Repository.Interfaces;
     using Microsoft.EntityFrameworkCore;
+    using System.Linq.Expressions;
 
     public class BaseRepository<TType, TId> : IRepository<TType, TId>
         where TType : class, new()
@@ -39,28 +40,34 @@
             await this.dbContext.SaveChangesAsync();
         }
 
-        public bool Delete(TId id)
+        public bool Delete(TType entity)
         {
-            TType entity = GetById(id);
-            if (entity == null)
-            {
-                return false;
-            }
             this.dbSet.Remove(entity);
             this.dbContext.SaveChanges();
             return true;
         }
 
-        public async Task<bool> DeleteAsync(TId id)
+        public async Task<bool> DeleteAsync(TType entity)
         {
-            TType entity = await this.GetByIdAsync(id);
-            if (entity == null)
-            {
-                return false;
-            }
             this.dbSet.Remove(entity);
             await this.dbContext.SaveChangesAsync();
             return true;
+        }
+
+        public TType FirstOrDefault(Func<TType, bool> predicate)
+        {
+            TType entity = this.dbSet
+                .FirstOrDefault(predicate);
+
+            return entity;
+        }
+
+        public async Task<TType> FirstOrDefaultAsync(Expression<Func<TType, bool>> predicate)
+        {
+            TType entity = await this.dbSet
+                .FirstOrDefaultAsync(predicate);
+
+            return entity;
         }
 
         public IEnumerable<TType> GetAll()
