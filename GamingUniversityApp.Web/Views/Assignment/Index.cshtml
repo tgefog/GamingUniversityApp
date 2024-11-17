@@ -1,36 +1,48 @@
-﻿@using GamingUniversityApp.Web.ViewModels.Assignment
+﻿@using GamingUniversityApp.Services.Data.Interfaces
+@using GamingUniversityApp.Web.Infrastructure.Extensions
+@using GamingUniversityApp.Web.ViewModels.Assignment
+
 @model IEnumerable<AssignmentIndexViewModel>
-@using static GamingUniversityApp.Common.EntityValidationConstants.Assignment;
+@inject ILecturerService lecturerService
 
 <h2>Assignments</h2>
 
 <table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Due Date</th>
-            <th>Course</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var assignment in Model)
-        {
-            <tr>
-                <td>@assignment.Name</td>
-                <td>@assignment.Description</td>
-                <td>@assignment.DueDate.ToString("yyyy-MM-dd")</td>
-                <td>@assignment.CourseName</td>
-                <td>
-                    <a asp-action="Details" asp-route-id="@assignment.Id" class="btn btn-info">Details</a>
-                    <a asp-action="Edit" asp-route-id="@assignment.Id" class="btn btn-warning">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@assignment.Id" class="btn btn-danger">Delete</a>
-                    <a asp-action="AddToCourse" asp-route-id="@assignment.Id" class="btn btn-danger">Add to Course</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Due Date</th>
+			<th>Course</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var assignment in Model)
+		{
+			<tr>
+				<td>@assignment.Name</td>
+				<td>@assignment.Description</td>
+				<td>@assignment.DueDate.ToString("yyyy-MM-dd")</td>
+				<td>@assignment.CourseName</td>
+				<td>
+					<a asp-action="Details" asp-route-id="@assignment.Id" class="btn btn-info">Details</a>
+					@if (await this.lecturerService.IsUserLecturerAsync(this.User.GetUserId()))
+					{
+						<a asp-action="Edit" asp-route-id="@assignment.Id" class="btn btn-warning">Edit</a>
+						<a asp-action="Delete" asp-route-id="@assignment.Id" class="btn btn-danger">Delete</a>
+						<a asp-action="AddToCourse" asp-route-id="@assignment.Id" class="btn btn-danger">Add to Course</a>
+					}
 
-<a asp-action="Create" class="btn btn-primary">Add New Assignment</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+@if (this.User?.Identity?.IsAuthenticated ?? false)
+{
+	@if (await this.lecturerService.IsUserLecturerAsync(this.User.GetUserId()))
+	{
+		<a asp-action="Create" class="btn btn-primary">Add New Assignment</a>
+	}
+}

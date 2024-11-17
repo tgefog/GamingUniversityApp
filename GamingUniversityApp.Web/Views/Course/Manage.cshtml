@@ -1,0 +1,41 @@
+﻿@using GamingUniversityApp.Web.ViewModels.Course
+@model IEnumerable<CourseIndexViewModel>
+
+@{
+    ViewData["Title"] = "Manage Courses";
+}
+
+<h2>Manage Courses</h2>
+
+<div class="mb-3">
+    <a asp-action="Create" class="btn btn-success">Add New Course</a>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (CourseIndexViewModel course in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@course.ImageUrl" alt="@course.CourseName" style="width: 100px; height: 75px;" />
+                </td>
+
+                <td>@course.CourseName</td>
+                <td>@course.Description</td>
+                <td>@course.Credits</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@course.Id" class="btn btn-info">Details</a>
+                    <a asp-action="Edit" asp-route-id="@course.Id" class="btn btn-primary">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@course.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

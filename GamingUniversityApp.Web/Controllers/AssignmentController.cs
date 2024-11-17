@@ -1,13 +1,15 @@
-﻿using GamingUniversityApp.Services.Data.Interfaces;
-using GamingUniversityApp.Web.ViewModels.Assignment;
-using Microsoft.AspNetCore.Mvc;
-
-namespace GamingUniversityApp.Web.Controllers
+﻿namespace GamingUniversityApp.Web.Controllers
 {
-    public class AssignmentController : BaseController
+	using Microsoft.AspNetCore.Authorization;
+	using Microsoft.AspNetCore.Mvc;
+	using Services.Data.Interfaces;
+	using ViewModels.Assignment;
+
+	public class AssignmentController : BaseController
     {
         private readonly IAssignmentService assignmentService;
-        public AssignmentController(IAssignmentService assignmentService)
+        public AssignmentController(IAssignmentService assignmentService, ILecturerService lecturerService)
+            :base(lecturerService)
         {
             this.assignmentService = assignmentService;
         }
@@ -19,15 +21,28 @@ namespace GamingUniversityApp.Web.Controllers
             return this.View(assignments);
         }
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> Create()
         {
-            return this.View();
+			bool isLecturer = await this.IsUserLecturerAsync();
+			if (!isLecturer)
+			{
+				return this.RedirectToAction(nameof(Index));
+			}
+			return this.View();
         }
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(AddAssignmentFormModel model)
         {
-            if (!ModelState.IsValid)
+			bool isLecturer = await this.IsUserLecturerAsync();
+			if (!isLecturer)
+			{
+				return this.RedirectToAction(nameof(Index));
+			}
+
+			if (!ModelState.IsValid)
             {
                 return this.View(model);
             }
@@ -58,9 +73,15 @@ namespace GamingUniversityApp.Web.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> AddToCourse(string? id)
         {
-            Guid assignmentGuid = Guid.Empty;
+			bool isLecturer = await this.IsUserLecturerAsync();
+			if (!isLecturer)
+			{
+				return this.RedirectToAction(nameof(Index));
+			}
+			Guid assignmentGuid = Guid.Empty;
             bool isGuidValid = this.IsGuidValid(id, ref assignmentGuid);
             if (!isGuidValid)
             {
@@ -73,13 +94,18 @@ namespace GamingUniversityApp.Web.Controllers
             {
                 return this.RedirectToAction(nameof(Index));
             }
-
             return this.View(viewModel);
         }
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> AddToCourse(AddAssignmentToCourseViewModel model)
         {
-            if (!this.ModelState.IsValid)
+			bool isLecturer = await this.IsUserLecturerAsync();
+			if (!isLecturer)
+			{
+				return this.RedirectToAction(nameof(Index));
+			}
+			if (!this.ModelState.IsValid)
             {
                 return this.View(model);
             }

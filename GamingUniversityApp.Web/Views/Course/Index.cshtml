@@ -4,9 +4,9 @@
 
 @if (TempData[nameof(AddToMyCoursesNotSuccessfullMessage)] != null)
 {
-<div class="alert alert-danger"role="alert">
+	<div class="alert alert-danger" role="alert">
 		@TempData[nameof(AddToMyCoursesNotSuccessfullMessage)]
-</div>
+	</div>
 }
 
 <h2>All Courses</h2>
@@ -21,7 +21,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		@foreach (var course in Model)
+		@foreach (CourseIndexViewModel course in Model)
 		{
 			<tr>
 				<td>
@@ -46,5 +46,3 @@
 		}
 	</tbody>
 </table>
-
-<a asp-action="Create" class="btn btn-primary">Add New Course</a>

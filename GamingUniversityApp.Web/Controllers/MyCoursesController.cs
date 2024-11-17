@@ -12,7 +12,8 @@
 	{
 		private readonly IMyCoursesService myCoursesService;
 		private readonly UserManager<ApplicationUser> userManager;
-		public MyCoursesController(IMyCoursesService myCoursesService, UserManager<ApplicationUser> userManager)
+		public MyCoursesController(IMyCoursesService myCoursesService, UserManager<ApplicationUser> userManager, ILecturerService lecturerService)
+			: base(lecturerService)
 		{
 			this.myCoursesService = myCoursesService;
 			this.userManager = userManager;
