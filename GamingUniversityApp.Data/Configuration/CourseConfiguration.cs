@@ -26,6 +26,10 @@ namespace GamingUniversityApp.Data.Configuration
 				.HasMaxLength(DescriptionMaxLength)
 				.HasComment("Course description");
 
+			builder.HasOne(c => c.Lecturer)
+				.WithMany(l => l.Courses)
+				.HasForeignKey(l => l.Id);
+
 			builder.Property(c => c.Credits)
 				.IsRequired()
 				.HasComment("Amount of credits given to students for completing the course");

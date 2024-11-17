@@ -7,13 +7,11 @@
 		public string CourseName { get; set; } = null!;
 		public string Description { get; set; } = null!;
 		public int Credits { get; set; }
-		//[Required]
-		//[Comment("Lecturer that is assigned to the course")]
-		//public Lecturer Lecturer { get; set; }
+		public Lecturer Lecturer { get; set; } = null!;
+		public Guid LecturerId { get; set; }
 		public string? ImageUrl { get; set; }
 		public virtual ICollection<StudentCourse> CourseStudents { get; set; } = new HashSet<StudentCourse>();
 		public virtual ICollection<Assignment> Assignments { get; set; } = new HashSet<Assignment>();
-
 		public virtual ICollection<ApplicationUserCourse> CourseApplicationUsers { get; set; } = new HashSet<ApplicationUserCourse>();
 	}
 }
