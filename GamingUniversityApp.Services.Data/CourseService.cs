@@ -19,6 +19,7 @@
         {
             IEnumerable<CourseIndexViewModel> allCourses = await this.courseRepository
                 .GetAllAttached()
+                .Where(c => !c.IsDeleted)
                 .To<CourseIndexViewModel>()
                 .ToArrayAsync();
 
@@ -41,6 +42,45 @@
                 AutoMapperConfig.MapperInstance.Map(course, viewModel);
             }
             return viewModel;
+        }
+
+        public async Task<EditCourseModel?> GetCourseForEditByIdAsync(Guid id)
+        {
+            EditCourseModel? courseModel = await this.courseRepository
+                .GetAllAttached()
+                .Where(c => !c.IsDeleted)
+                .To<EditCourseModel>()
+                .FirstOrDefaultAsync(c => c.Id.ToLower() == id.ToString().ToLower());
+            return courseModel;
+        }
+
+        public async Task<bool> EditCourseAsync(EditCourseModel model)
+        {
+            Course courseEntity = AutoMapperConfig.MapperInstance
+                .Map<EditCourseModel, Course>(model);
+            bool result = await this.courseRepository.UpdateAsync(courseEntity);
+            return result;
+        }
+        public async Task<DeleteCourseViewModel?> GetCourseForDeleteByIdAsync(Guid id)
+        {
+            DeleteCourseViewModel? courseToDelete = await this.courseRepository
+                .GetAllAttached()
+                .Where(c => !c.IsDeleted)
+                .To<DeleteCourseViewModel>()
+                .FirstOrDefaultAsync(c => c.Id.ToLower() == id.ToString().ToLower());
+
+            return courseToDelete;
+        }
+        public async Task<bool> SoftDeleteCourseAsync(Guid id)
+        {
+            Course courseTodelete = await this.courseRepository
+                .FirstOrDefaultAsync(c => c.Id.ToString().ToLower() == id.ToString().ToLower());
+            if (courseTodelete == null)
+            {
+                return false;
+            }
+            courseTodelete.IsDeleted = true;
+            return await this.courseRepository.UpdateAsync(courseTodelete);
         }
     }
 }

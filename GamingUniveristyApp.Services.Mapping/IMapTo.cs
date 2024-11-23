@@ -1,6 +1,6 @@
 ﻿namespace GamingUniversityApp.Services.Mapping
 {
-    public interface IMapTo<T>
+    public interface IHaveCustomMappings<T>
     {
 
     }

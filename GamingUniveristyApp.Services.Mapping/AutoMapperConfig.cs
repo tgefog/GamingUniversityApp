@@ -69,7 +69,7 @@ namespace GamingUniversityApp.Services.Mapping
             var toMaps = from t in types
                          from i in t.GetTypeInfo().GetInterfaces()
                          where i.GetTypeInfo().IsGenericType &&
-                               i.GetTypeInfo().GetGenericTypeDefinition() == typeof(IMapTo<>) &&
+                               i.GetTypeInfo().GetGenericTypeDefinition() == typeof(IHaveCustomMappings<>) &&
                                !t.GetTypeInfo().IsAbstract &&
                                !t.GetTypeInfo().IsInterface
                          select new TypesMap

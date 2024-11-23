@@ -5,7 +5,7 @@ using static GamingUniversityApp.Common.EntityValidationConstants.Assignment;
 namespace GamingUniversityApp.Web.ViewModels.Assignment
 {
     using Data.Models;
-    public class AddAssignmentFormModel : IMapTo<Assignment>
+    public class AddAssignmentFormModel : IHaveCustomMappings<Assignment>
 	{
 		[Required]
 		[MinLength(NameMinLength)]

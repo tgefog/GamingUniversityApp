@@ -33,17 +33,6 @@ namespace GamingUniversityApp.Services.Data
 
             return assignments;
         }
-        //Old automapper implementation
-
-        //public async Task<IEnumerable<AssignmentIndexViewModel>> IndexGetAllAsync()
-        //{
-        //    IEnumerable<AssignmentIndexViewModel> assignments = await this.assignmentRepository
-        //        .GetAllAttached()
-        //        .To<AssignmentIndexViewModel>()
-        //        .ToArrayAsync();
-
-        //    return assignments;
-        //}
         public async Task AddAssignmentAsync(AddAssignmentFormModel model)
         {
             Assignment assignment = new Assignment();
@@ -52,9 +41,8 @@ namespace GamingUniversityApp.Services.Data
             await this.assignmentRepository.AddAsync(assignment);
         }
 
-        public async Task<AssignmentDetailsViewModel> GetAssignmentDetailsByIdAsync(Guid id)
+        public async Task<AssignmentDetailsViewModel?> GetAssignmentDetailsByIdAsync(Guid id)
         {
-            // Fetch assignment by id
             Assignment? assignment = await this.assignmentRepository
                 .GetAllAttached()
                 .FirstOrDefaultAsync(a => a.Id == id);
@@ -63,8 +51,6 @@ namespace GamingUniversityApp.Services.Data
             {
                 throw new ArgumentException("Invalid assignment ID");
             }
-
-            // Map assignment to view model
             AssignmentDetailsViewModel detailsViewModel = AutoMapperConfig.MapperInstance
                 .Map<AssignmentDetailsViewModel>(assignment);
 
@@ -105,7 +91,7 @@ namespace GamingUniversityApp.Services.Data
             }
             var course = await this.courseRepository.GetByIdAsync(model.CourseId);
 
-            if (course == null)
+            if (course == null || course.IsDeleted)
             {
                 return false;
             }
