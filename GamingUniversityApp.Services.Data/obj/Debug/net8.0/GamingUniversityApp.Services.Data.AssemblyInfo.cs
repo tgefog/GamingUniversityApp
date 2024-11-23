@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GamingUniversityApp.Services.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9881ee25c56ec0362d3190951645c997a8615ae7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5fb61aaca7de4fba99322a49c50d9c1623604a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("GamingUniversityApp.Services.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GamingUniversityApp.Services.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

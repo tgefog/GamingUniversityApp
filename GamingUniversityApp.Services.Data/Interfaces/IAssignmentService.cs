@@ -8,5 +8,7 @@
         Task<AssignmentDetailsViewModel?> GetAssignmentDetailsByIdAsync(Guid id);
         Task<AddAssignmentToCourseViewModel?> GetAddAssignmentToCourseViewModelByIdAsync(Guid id);
         Task<bool> AddAssignmentToCourseAsync(Guid assignmentId, AddAssignmentToCourseViewModel model);
+        Task<EditAssignmentViewModel?> GetAssignmentForEditByIdAsync(Guid id);
+        Task<bool> EditAssignmentAsync(EditAssignmentViewModel model);
     }
 }

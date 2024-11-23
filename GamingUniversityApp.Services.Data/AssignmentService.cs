@@ -1,12 +1,13 @@
-﻿using GamingUniversityApp.Data.Models;
-using GamingUniversityApp.Data.Repository.Interfaces;
-using GamingUniversityApp.Services.Data.Interfaces;
-using GamingUniversityApp.Services.Mapping;
-using GamingUniversityApp.Web.ViewModels.Assignment;
-using Microsoft.EntityFrameworkCore;
-
-namespace GamingUniversityApp.Services.Data
+﻿namespace GamingUniversityApp.Services.Data
 {
+    using GamingUniversityApp.Data.Models;
+    using GamingUniversityApp.Data.Repository.Interfaces;
+    using GamingUniversityApp.Web.ViewModels.Assignment;
+    using Interfaces;
+    using Mapping;
+    using Microsoft.EntityFrameworkCore;
+    using System.Globalization;
+    using static GamingUniversityApp.Common.EntityValidationConstants.Assignment;
     public class AssignmentService : BaseService, IAssignmentService
     {
         private readonly IRepository<Assignment, Guid> assignmentRepository;
@@ -99,6 +100,35 @@ namespace GamingUniversityApp.Services.Data
             await this.assignmentRepository.AddAsync(assignment);
 
             return true;
+        }
+
+        public async Task<EditAssignmentViewModel?> GetAssignmentForEditByIdAsync(Guid id)
+        {
+            //TODO : check soft delete
+            EditAssignmentViewModel? editAssignmentViewModel = await this.assignmentRepository
+                .GetAllAttached()
+                .To<EditAssignmentViewModel>()
+                .FirstOrDefaultAsync(a => a.Id.ToLower() == id.ToString().ToLower());
+
+            return editAssignmentViewModel;
+        }
+
+        public async Task<bool> EditAssignmentAsync(EditAssignmentViewModel model)
+        {
+            Guid assignmentGuid = Guid.Empty;
+            if (this.IsGuidValid(model.Id, ref assignmentGuid))
+            {
+                return false;
+            }
+            Assignment editedAssignment = AutoMapperConfig.MapperInstance.Map<Assignment>(model);
+            editedAssignment.Id = assignmentGuid;
+            bool isDueDateValid = DateTime.TryParseExact(model.DueDate, DueDateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime dueDate);
+            if (!isDueDateValid)
+            {
+                return false;
+            }
+            editedAssignment.DueDate = dueDate;
+            return await this.assignmentRepository.UpdateAsync(editedAssignment);
         }
     }
 }

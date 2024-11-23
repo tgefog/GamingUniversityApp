@@ -1,15 +1,15 @@
 ﻿namespace GamingUniversityApp.Web.Controllers
 {
-	using Microsoft.AspNetCore.Authorization;
-	using Microsoft.AspNetCore.Mvc;
-	using Services.Data.Interfaces;
-	using ViewModels.Assignment;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Mvc;
+    using Services.Data.Interfaces;
+    using ViewModels.Assignment;
 
-	public class AssignmentController : BaseController
+    public class AssignmentController : BaseController
     {
         private readonly IAssignmentService assignmentService;
         public AssignmentController(IAssignmentService assignmentService, ILecturerService lecturerService)
-            :base(lecturerService)
+            : base(lecturerService)
         {
             this.assignmentService = assignmentService;
         }
@@ -24,25 +24,25 @@
         [Authorize]
         public async Task<IActionResult> Create()
         {
-			bool isLecturer = await this.IsUserLecturerAsync();
-			if (!isLecturer)
-			{
-				return this.RedirectToAction(nameof(Index));
-			}
-			return this.View();
+            bool isLecturer = await this.IsUserLecturerAsync();
+            if (!isLecturer)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+            return this.View();
         }
         [HttpPost]
         [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(AddAssignmentFormModel model)
         {
-			bool isLecturer = await this.IsUserLecturerAsync();
-			if (!isLecturer)
-			{
-				return this.RedirectToAction(nameof(Index));
-			}
+            bool isLecturer = await this.IsUserLecturerAsync();
+            if (!isLecturer)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
 
-			if (!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return this.View(model);
             }
@@ -76,12 +76,12 @@
         [Authorize]
         public async Task<IActionResult> AddToCourse(string? id)
         {
-			bool isLecturer = await this.IsUserLecturerAsync();
-			if (!isLecturer)
-			{
-				return this.RedirectToAction(nameof(Index));
-			}
-			Guid assignmentGuid = Guid.Empty;
+            bool isLecturer = await this.IsUserLecturerAsync();
+            if (!isLecturer)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+            Guid assignmentGuid = Guid.Empty;
             bool isGuidValid = this.IsGuidValid(id, ref assignmentGuid);
             if (!isGuidValid)
             {
@@ -100,12 +100,12 @@
         [Authorize]
         public async Task<IActionResult> AddToCourse(AddAssignmentToCourseViewModel model)
         {
-			bool isLecturer = await this.IsUserLecturerAsync();
-			if (!isLecturer)
-			{
-				return this.RedirectToAction(nameof(Index));
-			}
-			if (!this.ModelState.IsValid)
+            bool isLecturer = await this.IsUserLecturerAsync();
+            if (!isLecturer)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+            if (!this.ModelState.IsValid)
             {
                 return this.View(model);
             }
@@ -125,6 +125,56 @@
             }
 
             return this.RedirectToAction(nameof(Index), "Assignment");
+        }
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> Edit(string? id)
+        {
+            bool isLecturer = await this.IsUserLecturerAsync();
+            Guid assignmentGuid = Guid.Empty;
+            bool isIdValid = this.IsGuidValid(id, ref assignmentGuid);
+
+            if (!isLecturer)
+            {
+                //TODO : Implement notifications for error and warning messages!
+                return this.RedirectToAction(nameof(Index));
+            }
+
+            if (!isIdValid)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+
+            EditAssignmentViewModel? model = await this.assignmentService
+                .GetAssignmentForEditByIdAsync(assignmentGuid);
+
+            if (model == null)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+            return this.View(model);
+        }
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> Edit(EditAssignmentViewModel model)
+        {
+            bool isLecturer = await this.IsUserLecturerAsync();
+            if (!isLecturer)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+            if (!ModelState.IsValid)
+            {
+                return this.View(model);
+            }
+
+            bool isUpdated = await this.assignmentService.EditAssignmentAsync(model);
+            if (!isUpdated)
+            {
+                ModelState.AddModelError(string.Empty, "Unexpected error occured while updating the assignment! Please contact administrator");
+                return this.RedirectToAction(nameof(Index));
+            }
+            return this.RedirectToAction(nameof(Details), "Assignment", new { id = model.Id });
         }
     }
 }

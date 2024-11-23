@@ -31,6 +31,7 @@
             builder.Property(a => a.CourseId)
                 .IsRequired()
                 .HasComment("Unique identifier of the course that the assignment belongs to");
+
             builder.Property(a => a.IsDeleted)
                 .IsRequired()
                 .HasDefaultValue(false);

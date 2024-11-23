@@ -1,0 +1,49 @@
+﻿@using GamingUniversityApp.Web.ViewModels.Assignment
+@model EditAssignmentViewModel
+
+@{
+    ViewData["Title"] = "Edit Assignment";
+}
+
+<h2>Edit Assignment</h2>
+
+<form asp-action="Edit" method="post">
+    @Html.AntiForgeryToken()
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>.
+
+    <div class="form-group">
+        <label asp-for="Description" class="control-label"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DueDate" class="control-label"></label>
+        <input asp-for="DueDate" class="form-control"/>
+        <span asp-validation-for="DueDate" class="text-danger"></span>
+    </div>
+
+    @* <div>
+    <label asp-for="SelectedCourseId">Course</label>
+    <select asp-for="SelectedCourseId" asp-items="Model.Courses" class="form-control">
+    <option value="">-- Select Course --</option>
+    </select>
+    <span asp-validation-for="SelectedCourseId" class="text-danger"></span>
+    </div> *@
+
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

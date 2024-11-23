@@ -8,7 +8,6 @@ namespace GamingUniversityApp.Web.Controllers
 
     public class CourseController : BaseController
     {
-        //Dependency injection
         private readonly ICourseService courseService;
         public CourseController(ICourseService courseService, ILecturerService lecturerService)
             : base(lecturerService)
@@ -101,10 +100,16 @@ namespace GamingUniversityApp.Web.Controllers
 
             if (!isIdValid)
             {
-                return this.RedirectToAction(nameof(Index));
+                return this.RedirectToAction(nameof(Manage));
             }
 
-            EditCourseModel? model = await this.courseService.GetCourseForEditByIdAsync(courseGuid);
+            EditCourseModel? model = await this.courseService
+                .GetCourseForEditByIdAsync(courseGuid);
+
+            if (model == null)
+            {
+                return this.RedirectToAction(nameof(Manage));
+            }
             return this.View(model);
         }
         [HttpPost]
@@ -130,6 +135,7 @@ namespace GamingUniversityApp.Web.Controllers
             return this.RedirectToAction(nameof(Details), "Course", new { id = model.Id });
         }
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> Delete(string? id)
         {
             Guid courseGuid = Guid.Empty;
@@ -153,6 +159,7 @@ namespace GamingUniversityApp.Web.Controllers
             return this.View(courseToDelete);
         }
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> SoftDeleteConfirmed(DeleteCourseViewModel course)
         {
             Guid courseGuid = Guid.Empty;
