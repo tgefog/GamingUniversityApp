@@ -1,18 +1,16 @@
-//using GamingUniversityApp.Services.Mapping;
 namespace GamingUniversityApp.Web
 {
-	using AutoMapper;
-	using Data;
-	using Data.Models;
-	using GamingUniversityApp.Services.Data;
-	using GamingUniversityApp.Services.Data.Interfaces;
-	using Microsoft.AspNetCore.Identity;
-	using Microsoft.EntityFrameworkCore;
-	using Services.Mapping;
-	using Web.Infrastructure.Extensions;
-	using Web.Models;
+    using Data;
+    using Data.Models;
+    using GamingUniversityApp.Services.Data;
+    using GamingUniversityApp.Services.Data.Interfaces;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.EntityFrameworkCore;
+    using Services.Mapping;
+    using Web.Infrastructure.Extensions;
+    using Web.Models;
 
-	public class Program
+    public class Program
 	{
 		public static void Main(string[] args)
 		{

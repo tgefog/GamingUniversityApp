@@ -130,5 +130,28 @@
             editedAssignment.DueDate = dueDate;
             return await this.assignmentRepository.UpdateAsync(editedAssignment);
         }
+        public async Task<DeleteAssignmentViewModel?> GetAssignmentForDeleteByIdAsync(Guid id)
+        {
+            DeleteAssignmentViewModel? assignmentToDelete = await this.assignmentRepository
+                .GetAllAttached()
+                .Where(a => !a.IsDeleted)
+                .To<DeleteAssignmentViewModel>()
+                .FirstOrDefaultAsync(a => a.Id.ToLower() == id.ToString().ToLower());
+
+            return assignmentToDelete;
+        }
+        public async Task<bool> SoftDeleteAssignmentAsync(Guid id)
+        {
+            Assignment assignmentTodelete = await this.assignmentRepository
+                .FirstOrDefaultAsync(c => c.Id.ToString().ToLower() == id.ToString().ToLower());
+            if (assignmentTodelete == null)
+            {
+                return false;
+            }
+            assignmentTodelete.IsDeleted = true;
+            return await this.assignmentRepository.UpdateAsync(assignmentTodelete);
+        }
+
+        
     }
 }

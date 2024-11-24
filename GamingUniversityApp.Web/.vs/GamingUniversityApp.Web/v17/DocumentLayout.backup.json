@@ -3,14 +3,42 @@
   "WorkspaceRootPath": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{13BAC4B3-C908-4DA7-9C46-33AC1F638DA5}|..\\GamingUniversityApp.Services.Data\\GamingUniversityApp.Services.Data.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.services.data\\assignmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{081698C3-9DA8-42BA-AB48-996D08332EDC}|..\\GamingUniversityApp.Data\\GamingUniversityApp.Data.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.data\\configuration\\assignmentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A95BA7BB-54A1-4694-ACFE-20D3489259EF}|..\\GamingUniversityApp.Data.Models\\GamingUniversityApp.Data.Models.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.data.models\\assignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA7B28A9-0E21-423C-A770-49E0A80F0B42}|..\\GamingUniversityApp.Web.ViewModels\\GamingUniversityApp.Web.ViewModels.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.web.viewmodels\\course\\addinputcoursemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA7B28A9-0E21-423C-A770-49E0A80F0B42}|..\\GamingUniversityApp.Web.ViewModels\\GamingUniversityApp.Web.ViewModels.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.web.viewmodels\\assignment\\addassignmentformmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0464D0DB-D0FD-4D28-87EE-783909A487DB}|..\\GamingUniveristyApp.Services.Mapping\\GamingUniversityApp.Services.Mapping.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniveristyapp.services.mapping\\automapperconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17C71893-F5C1-42E3-82D6-A8930662B816}|..\\GamingUniversityApp.Common\\GamingUniversityApp.Common.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.common\\entityvalidationmessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.web\\controllers\\assignmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|solutionrelative:controllers\\assignmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{081698C3-9DA8-42BA-AB48-996D08332EDC}|..\\GamingUniversityApp.Data\\GamingUniversityApp.Data.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.data\\configuration\\assignmentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{13BAC4B3-C908-4DA7-9C46-33AC1F638DA5}|..\\GamingUniversityApp.Services.Data\\GamingUniversityApp.Services.Data.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.services.data\\assignmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BAC4B3-C908-4DA7-9C46-33AC1F638DA5}|..\\GamingUniversityApp.Services.Data\\GamingUniversityApp.Services.Data.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.services.data\\interfaces\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BAC4B3-C908-4DA7-9C46-33AC1F638DA5}|..\\GamingUniversityApp.Services.Data\\GamingUniversityApp.Services.Data.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.services.data\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BAC4B3-C908-4DA7-9C46-33AC1F638DA5}|..\\GamingUniversityApp.Services.Data\\GamingUniversityApp.Services.Data.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.services.data\\interfaces\\iassignmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.web\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|solutionrelative:controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.web\\views\\assignment\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -18,16 +46,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{AA7B28A9-0E21-423C-A770-49E0A80F0B42}|..\\GamingUniversityApp.Web.ViewModels\\GamingUniversityApp.Web.ViewModels.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.web.viewmodels\\assignment\\editassignmentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.web\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97422225-58EC-4787-A5AF-630E180F2A7C}|GamingUniversityApp.Web.csproj|solutionrelative:controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BAC4B3-C908-4DA7-9C46-33AC1F638DA5}|..\\GamingUniversityApp.Services.Data\\GamingUniversityApp.Services.Data.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.services.data\\interfaces\\iassignmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BAC4B3-C908-4DA7-9C46-33AC1F638DA5}|..\\GamingUniversityApp.Services.Data\\GamingUniversityApp.Services.Data.csproj|c:\\users\\tgefo\\source\\repos\\gaminguniversityapp\\gaminguniversityapp\\gaminguniversityapp.services.data\\interfaces\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,44 +54,57 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 125,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 145,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
+              "Title": "CourseService.cs",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Services.Data\\CourseService.cs",
+              "RelativeDocumentMoniker": "..\\GamingUniversityApp.Services.Data\\CourseService.cs",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Services.Data\\CourseService.cs",
+              "RelativeToolTip": "..\\GamingUniversityApp.Services.Data\\CourseService.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAA0wEcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T08:45:29.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ICourseService.cs",
               "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Services.Data\\Interfaces\\ICourseService.cs",
               "RelativeDocumentMoniker": "..\\GamingUniversityApp.Services.Data\\Interfaces\\ICourseService.cs",
               "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Services.Data\\Interfaces\\ICourseService.cs",
               "RelativeToolTip": "..\\GamingUniversityApp.Services.Data\\Interfaces\\ICourseService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T18:07:45.789Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "AssignmentService.cs",
               "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Services.Data\\AssignmentService.cs",
               "RelativeDocumentMoniker": "..\\GamingUniversityApp.Services.Data\\AssignmentService.cs",
               "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Services.Data\\AssignmentService.cs",
               "RelativeToolTip": "..\\GamingUniversityApp.Services.Data\\AssignmentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T17:26:43.855Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "IAssignmentService.cs",
               "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Services.Data\\Interfaces\\IAssignmentService.cs",
               "RelativeDocumentMoniker": "..\\GamingUniversityApp.Services.Data\\Interfaces\\IAssignmentService.cs",
               "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Services.Data\\Interfaces\\IAssignmentService.cs",
               "RelativeToolTip": "..\\GamingUniversityApp.Services.Data\\Interfaces\\IAssignmentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T18:06:59.37Z",
               "EditorCaption": ""
@@ -81,25 +112,90 @@
           ]
         },
         {
-          "DockedWidth": 175,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 155,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "AssignmentConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data\\Configuration\\AssignmentConfiguration.cs",
               "RelativeDocumentMoniker": "..\\GamingUniversityApp.Data\\Configuration\\AssignmentConfiguration.cs",
               "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data\\Configuration\\AssignmentConfiguration.cs",
               "RelativeToolTip": "..\\GamingUniversityApp.Data\\Configuration\\AssignmentConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T20:18:12.882Z",
+              "WhenOpened": "2024-11-24T09:01:35.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Assignment.cs",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data.Models\\Assignment.cs",
+              "RelativeDocumentMoniker": "..\\GamingUniversityApp.Data.Models\\Assignment.cs",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Data.Models\\Assignment.cs",
+              "RelativeToolTip": "..\\GamingUniversityApp.Data.Models\\Assignment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T09:01:27.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddInputCourseModel.cs",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web.ViewModels\\Course\\AddInputCourseModel.cs",
+              "RelativeDocumentMoniker": "..\\GamingUniversityApp.Web.ViewModels\\Course\\AddInputCourseModel.cs",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web.ViewModels\\Course\\AddInputCourseModel.cs",
+              "RelativeToolTip": "..\\GamingUniversityApp.Web.ViewModels\\Course\\AddInputCourseModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T08:58:12.292Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "AddAssignmentFormModel.cs",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web.ViewModels\\Assignment\\AddAssignmentFormModel.cs",
+              "RelativeDocumentMoniker": "..\\GamingUniversityApp.Web.ViewModels\\Assignment\\AddAssignmentFormModel.cs",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web.ViewModels\\Assignment\\AddAssignmentFormModel.cs",
+              "RelativeToolTip": "..\\GamingUniversityApp.Web.ViewModels\\Assignment\\AddAssignmentFormModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T08:57:00.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AutoMapperConfig.cs",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniveristyApp.Services.Mapping\\AutoMapperConfig.cs",
+              "RelativeDocumentMoniker": "..\\GamingUniveristyApp.Services.Mapping\\AutoMapperConfig.cs",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniveristyApp.Services.Mapping\\AutoMapperConfig.cs",
+              "RelativeToolTip": "..\\GamingUniveristyApp.Services.Mapping\\AutoMapperConfig.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAhwEkAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T08:55:25.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EntityValidationMessages.cs",
+              "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Common\\EntityValidationMessages.cs",
+              "RelativeDocumentMoniker": "..\\GamingUniversityApp.Common\\EntityValidationMessages.cs",
+              "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Common\\EntityValidationMessages.cs",
+              "RelativeToolTip": "..\\GamingUniversityApp.Common\\EntityValidationMessages.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T08:55:06.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Views\\Assignment\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Assignment\\Edit.cshtml",
@@ -112,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "EditAssignmentViewModel.cs",
               "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web.ViewModels\\Assignment\\EditAssignmentViewModel.cs",
               "RelativeDocumentMoniker": "..\\GamingUniversityApp.Web.ViewModels\\Assignment\\EditAssignmentViewModel.cs",
@@ -125,26 +221,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "CourseController.cs",
               "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Controllers\\CourseController.cs",
               "RelativeDocumentMoniker": "Controllers\\CourseController.cs",
               "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Controllers\\CourseController.cs",
               "RelativeToolTip": "Controllers\\CourseController.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAuwHEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAAwIgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T18:04:07.54Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "AssignmentController.cs",
               "DocumentMoniker": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Controllers\\AssignmentController.cs",
               "RelativeDocumentMoniker": "Controllers\\AssignmentController.cs",
               "ToolTip": "C:\\Users\\tgefo\\source\\repos\\GamingUniversityApp\\GamingUniversityApp\\GamingUniversityApp.Web\\Controllers\\AssignmentController.cs",
               "RelativeToolTip": "Controllers\\AssignmentController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAwwKgAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T18:00:57.783Z",
               "EditorCaption": ""

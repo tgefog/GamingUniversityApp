@@ -176,5 +176,53 @@
             }
             return this.RedirectToAction(nameof(Details), "Assignment", new { id = model.Id });
         }
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> Delete(string? id)
+        {
+            Guid assignmentGuid = Guid.Empty;
+            bool isLecturer = await this.IsUserLecturerAsync();
+            if (!isLecturer)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+            bool isIdValid = this.IsGuidValid(id, ref assignmentGuid);
+            if (!isIdValid)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+
+            DeleteAssignmentViewModel? assignmentToDelete = await this.assignmentService
+                .GetAssignmentForDeleteByIdAsync(assignmentGuid);
+            if (assignmentToDelete == null)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+            return this.View(assignmentToDelete);
+        }
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> SoftDeleteConfirmed(DeleteAssignmentViewModel assignment)
+        {
+            Guid assignmentId = Guid.Empty;
+            bool isLecturer = await this.IsUserLecturerAsync();
+            bool isIdValid = this.IsGuidValid(assignment.Id, ref assignmentId);
+            if (!isLecturer)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+            if (!isIdValid)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+            bool isDeleted = await this.assignmentService
+                .SoftDeleteAssignmentAsync(assignmentId);
+            if (!isDeleted)
+            {
+                TempData["ErrorMessage"] = "Unexpected error occured while trying to delete the assignment! Please contact system administrator";
+                return this.RedirectToAction(nameof(Delete), new { id = assignment.Id });
+            }
+            return this.RedirectToAction(nameof(Index));
+        }
     }
 }

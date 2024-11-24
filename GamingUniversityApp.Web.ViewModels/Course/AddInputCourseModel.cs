@@ -2,12 +2,12 @@
 {
     using System.ComponentModel.DataAnnotations;
     using GamingUniversityApp.Services.Mapping;
-    
+
     using static GamingUniversityApp.Common.EntityValidationConstants.Course;
     using static GamingUniversityApp.Common.EntityValidationMessages.Course;
 
     using Data.Models;
-	public class AddInputCourseModel : IHaveCustomMappings<Course>
+    public class AddInputCourseModel : IMapTo<Course>
     {
         [Required(ErrorMessage = NameRequiredMessage)]
         [MinLength(NameMinLength)]

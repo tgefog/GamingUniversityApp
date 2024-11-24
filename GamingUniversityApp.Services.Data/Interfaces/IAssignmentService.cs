@@ -1,6 +1,7 @@
 ﻿namespace GamingUniversityApp.Services.Data.Interfaces
 {
     using GamingUniversityApp.Web.ViewModels.Assignment;
+
     public interface IAssignmentService
     {
         Task<IEnumerable<AssignmentIndexViewModel>> IndexGetAllAsync();
@@ -10,5 +11,7 @@
         Task<bool> AddAssignmentToCourseAsync(Guid assignmentId, AddAssignmentToCourseViewModel model);
         Task<EditAssignmentViewModel?> GetAssignmentForEditByIdAsync(Guid id);
         Task<bool> EditAssignmentAsync(EditAssignmentViewModel model);
+        Task<DeleteAssignmentViewModel?> GetAssignmentForDeleteByIdAsync(Guid id);
+        Task<bool> SoftDeleteAssignmentAsync(Guid id);
     }
 }

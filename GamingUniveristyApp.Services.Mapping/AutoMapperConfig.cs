@@ -1,8 +1,10 @@
-﻿using AutoMapper;
-using System.Reflection;
-
-namespace GamingUniversityApp.Services.Mapping
+﻿namespace GamingUniversityApp.Services.Mapping
 {
+    using System.Reflection;
+
+    using AutoMapper;
+    using GamingUniversityApp.Services.Mapping;
+
     public class AutoMapperConfig
     {
         private static bool initialized;
@@ -69,7 +71,7 @@ namespace GamingUniversityApp.Services.Mapping
             var toMaps = from t in types
                          from i in t.GetTypeInfo().GetInterfaces()
                          where i.GetTypeInfo().IsGenericType &&
-                               i.GetTypeInfo().GetGenericTypeDefinition() == typeof(IHaveCustomMappings<>) &&
+                               i.GetTypeInfo().GetGenericTypeDefinition() == typeof(IMapTo<>) &&
                                !t.GetTypeInfo().IsAbstract &&
                                !t.GetTypeInfo().IsInterface
                          select new TypesMap
