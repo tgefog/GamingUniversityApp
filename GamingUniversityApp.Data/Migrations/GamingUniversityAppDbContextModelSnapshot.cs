@@ -98,7 +98,7 @@ namespace GamingUniversityApp.Data.Migrations
                         {
                             Id = new Guid("658c530c-6d7e-4bc5-956d-571166b579e3"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "acb06ad4-cf78-48ac-b645-c411a4a14bea",
+                            ConcurrencyStamp = "9e71ed02-9826-4d72-8be7-97a604c24a25",
                             Email = "lecturer1@abv.bg",
                             EmailConfirmed = true,
                             FirstName = "Lecturer",
@@ -106,10 +106,10 @@ namespace GamingUniversityApp.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "LECTURER1@ABV.BG",
                             NormalizedUserName = "LECTURER",
-                            PasswordHash = "AQAAAAIAAYagAAAAEItzd48cSZMBv1v1BhCiui76WG2zYOO0HANdVBqADHw2SgMl1VMPgy+2JmEpheA3Aw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEN66YHu7qKNnYXM8f66gahzVEUtlQWN2W0DtqOlPjV/Azip5QlcRK0iEPm8u+hR/uQ==",
                             PhoneNumber = "1234567890",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "73947527-fcc1-4cdb-a55c-22481c2e1cad",
+                            SecurityStamp = "80a59134-ebd6-4e51-8fed-090ec4b1336a",
                             TwoFactorEnabled = false,
                             UserName = "Lecturer"
                         },
@@ -117,7 +117,7 @@ namespace GamingUniversityApp.Data.Migrations
                         {
                             Id = new Guid("1ee14426-147e-4d41-ad56-4c1388086c8a"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c4ebe38b-8882-4267-a67e-0a131c226103",
+                            ConcurrencyStamp = "185685b3-df9d-4be2-99b4-d99e85d4f187",
                             Email = "lecturer2@abv.bg",
                             EmailConfirmed = true,
                             FirstName = "Lecturer2",
@@ -125,10 +125,10 @@ namespace GamingUniversityApp.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "LECTURER2@ABV.BG",
                             NormalizedUserName = "LECTURER2",
-                            PasswordHash = "AQAAAAIAAYagAAAAECB2J2N5rESlJa/Wp6z6kvuk2TgyB28MqCo0Vd7TCHlZ8rvv2wOwetjo3x3a3gI+Nw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAjVBikR/ZzpXIOCmxBpi7cip6XbiNIanzNgqivZT6aa+4YiV23BpWAWqEQja3cruA==",
                             PhoneNumber = "98765",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "2b462a06-146a-415b-9588-e5b55aa74f77",
+                            SecurityStamp = "d3ac16a2-976c-490a-8fdd-70db661fe7f7",
                             TwoFactorEnabled = false,
                             UserName = "Lecturer2"
                         },
@@ -136,7 +136,7 @@ namespace GamingUniversityApp.Data.Migrations
                         {
                             Id = new Guid("25f228f7-d8d5-4a23-93fb-8b489ce206a1"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "879da54f-fc55-4c31-b84d-06ca91da2ff4",
+                            ConcurrencyStamp = "01c7f588-913f-4e72-9b35-397cfe21315d",
                             Email = "student1@abv.bg",
                             EmailConfirmed = true,
                             FirstName = "Student1",
@@ -144,10 +144,10 @@ namespace GamingUniversityApp.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "STUDENT1@ABV.BG",
                             NormalizedUserName = "STUDENT1",
-                            PasswordHash = "AQAAAAIAAYagAAAAENUwF+mFHxw70RHFGv6n7Q5U24J6m+SIagg+8sELX8GSgNGh7CWlnFGdhWLAndbOdQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEDRie4DLmIk7/9vCxrgJMXUoLZjcxoAqSYjgc8X4nCPnQlduQbEWjUkC2oLZTecqhg==",
                             PhoneNumber = "12345",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "25622179-2d2f-468e-910b-1a486bfd856e",
+                            SecurityStamp = "8b21efff-7591-4da7-b393-fadac2a14f3a",
                             TwoFactorEnabled = false,
                             UserName = "Student1"
                         },
@@ -155,7 +155,7 @@ namespace GamingUniversityApp.Data.Migrations
                         {
                             Id = new Guid("284bd583-dd2c-4453-98fa-74236f9cdcf9"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "8234fafa-d591-4616-ad49-9cfe1cf1c28a",
+                            ConcurrencyStamp = "9b16530e-eed3-481d-a0a5-46d025f5b8bb",
                             Email = "student2@abv.bg",
                             EmailConfirmed = true,
                             FirstName = "Student2",
@@ -163,10 +163,10 @@ namespace GamingUniversityApp.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "STUDENT2@ABV.BG",
                             NormalizedUserName = "STUDENT2",
-                            PasswordHash = "AQAAAAIAAYagAAAAEO5qckmh0yYn8tCQ6mIfivMJYdySfN/CXgRIDh0DW1b0LmzHWrq5s67XUaLNIJ8Y2Q==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEFuLoOQWrLz8W9le/aAeEVogMngQXuUDd840/6Kb+zOpplui/hAEjvCjee2JpZu0XQ==",
                             PhoneNumber = "13345",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c79f938a-e4c3-4d80-820d-c22c92741075",
+                            SecurityStamp = "7dfa9935-420a-435a-aa17-c0972ce0d7bd",
                             TwoFactorEnabled = false,
                             UserName = "Student2"
                         },
@@ -174,7 +174,7 @@ namespace GamingUniversityApp.Data.Migrations
                         {
                             Id = new Guid("79cda038-04b2-4333-a6b5-8fff05f5df8c"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a8fea172-bcc5-4b26-a0ef-25fd8d93be16",
+                            ConcurrencyStamp = "2dbf4b54-749d-499c-841a-980f9524ffcf",
                             Email = "student3@abv.bg",
                             EmailConfirmed = true,
                             FirstName = "Student3",
@@ -182,10 +182,10 @@ namespace GamingUniversityApp.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "STUDENT3@ABV.BG",
                             NormalizedUserName = "STUDENT3",
-                            PasswordHash = "AQAAAAIAAYagAAAAEBiZuCjlgIpD4EJ7a5qoHYXXzivffL/VXoC4dqTfiYFsF3rh+O7jYUoHpj46ynXoug==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEBCFajnBJNLxLs8Pk7KDsUPPSp4wCAOYsySs8vKQYOolYDX4SzCbdh5O5a6kX8wxaQ==",
                             PhoneNumber = "12245",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "06b8213e-9792-4609-be8a-a8d244101209",
+                            SecurityStamp = "e1132f8f-4b01-418c-9519-81a2469a8961",
                             TwoFactorEnabled = false,
                             UserName = "Student3"
                         });
@@ -204,8 +204,8 @@ namespace GamingUniversityApp.Data.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)")
                         .HasComment("Description of the assignment");
 
                     b.Property<DateTime>("DueDate")
@@ -249,8 +249,8 @@ namespace GamingUniversityApp.Data.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)")
                         .HasComment("Course description");
 
                     b.Property<string>("ImageUrl")
@@ -272,6 +272,26 @@ namespace GamingUniversityApp.Data.Migrations
                     b.HasIndex("LecturerId");
 
                     b.ToTable("Courses");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("a3841c0b-3660-4398-93f5-f606e7d5bf60"),
+                            CourseName = "League of Legends",
+                            Credits = 25,
+                            Description = "League of Legends is a multiplayer online battle arena (MOBA) game in which the player controls a character (\"champion\") with a set of unique abilities from an isometric perspective. As of 2024, there are 168 champions available to play. Over the course of a match, champions gain levels by accruing experience points (XP) through killing enemies. Items can be acquired to increase champions' strength, and are bought with gold, which players accrue passively over time and earn actively by defeating the opposing team's minions, champions, or defensive structures. In the main game mode, Summoner's Rift, items are purchased through a shop menu available to players only when their champion is in the team's base. Each match is discrete; levels and items do not transfer from one match to another.",
+                            IsDeleted = false,
+                            LecturerId = new Guid("eb9a19de-0b05-48f5-9c2f-dbab7ed332b6")
+                        },
+                        new
+                        {
+                            Id = new Guid("61088dab-2ca0-4258-b7fa-5737ce436ff2"),
+                            CourseName = "Counter Strike",
+                            Credits = 30,
+                            Description = "Counter-Strike is an objective-based, multiplayer tactical first-person shooter. Two opposing teams—the Terrorists and the Counter Terrorists—compete in game modes to complete objectives, such as securing a location to plant or defuse a bomb and rescuing or guarding hostages. At the end of each round, players are rewarded based on their individual performance with in-game currency to spend on more powerful weapons in subsequent rounds. Winning rounds results in more money than losing and completing objectives such as killing enemy players gives cash bonuses.Uncooperative actions, such as killing teammates, result in a penalty.",
+                            IsDeleted = false,
+                            LecturerId = new Guid("cc5a700b-076e-4c88-b8ad-5ebe548735a0")
+                        });
                 });
 
             modelBuilder.Entity("GamingUniversityApp.Data.Models.Lecturer", b =>

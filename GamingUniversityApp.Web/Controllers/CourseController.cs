@@ -1,10 +1,11 @@
-﻿
-namespace GamingUniversityApp.Web.Controllers
+﻿namespace GamingUniversityApp.Web.Controllers
 {
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.Rendering;
     using Services.Data.Interfaces;
     using ViewModels.Course;
+    using static GamingUniversityApp.Common.ErrorMessages.Course;
 
     public class CourseController : BaseController
     {
@@ -32,7 +33,9 @@ namespace GamingUniversityApp.Web.Controllers
             {
                 return this.RedirectToAction(nameof(Index));
             }
-            return View();
+			var lecturers = await this.lecturerService.GetAllLecturersAsync(); // Ensure this returns valid data
+			ViewBag.Lecturers = new SelectList(lecturers, "Id", "FullName");
+			return View();
         }
         [HttpPost]
         [Authorize]
@@ -43,6 +46,8 @@ namespace GamingUniversityApp.Web.Controllers
             {
                 return this.RedirectToAction(nameof(Index));
             }
+            var lecturers = await this.lecturerService.GetAllLecturersAsync();
+            ViewBag.Lecturers = new SelectList(lecturers, "Id");
             if (!this.ModelState.IsValid)
             {
                 return this.View(model);
@@ -94,7 +99,6 @@ namespace GamingUniversityApp.Web.Controllers
 
             if (!isLecturer)
             {
-                //TODO : Implement notifications for error and warning messages!
                 return this.RedirectToAction(nameof(Index));
             }
 
@@ -129,7 +133,7 @@ namespace GamingUniversityApp.Web.Controllers
             bool isUpdated = await this.courseService.EditCourseAsync(model);
             if (!isUpdated)
             {
-                ModelState.AddModelError(string.Empty, "Unexpected error occured while updating the course! Please contact administrator");
+                ModelState.AddModelError(string.Empty, EditCourseNotSuccessfullMessage);
                 return this.RedirectToAction(nameof(Index));
             }
             return this.RedirectToAction(nameof(Details), "Course", new { id = model.Id });
@@ -177,7 +181,7 @@ namespace GamingUniversityApp.Web.Controllers
                 .SoftDeleteCourseAsync(courseGuid);
             if (!isDeleted)
             {
-                TempData["ErrorMessage"] = "Unexpected error occured while trying to delete the course! Please contact system administrator";
+                TempData["ErrorMessage"] = DeleteCourseNotSuccessfullMessage;
                 return this.RedirectToAction(nameof(Delete), new { id = course.Id });
             }
             return this.RedirectToAction(nameof(Manage));

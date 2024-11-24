@@ -7,7 +7,7 @@
 			public const int NameMinLength = 3;
 			public const int NameMaxLength = 50;
 			public const int DescriptionMinLength = 10;
-			public const int DescriptionMaxLength = 200;
+			public const int DescriptionMaxLength = 2000;
 			public const int ImageUrlMaxLength = 2083; //in Chrome
 			public const int ImageUrlMinLength = 8; //www.x.xx
 		}
@@ -16,7 +16,7 @@
 			public const int NameMinLength = 3;
 			public const int NameMaxLength = 50;
 			public const int DescriptionMinLength = 10;
-			public const int DescriptionMaxLength = 200;
+			public const int DescriptionMaxLength = 2000;
 			public const string DueDateFormat = "dd/MM/yyyy";
 		}
 		public static class Student

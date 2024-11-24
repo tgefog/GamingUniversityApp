@@ -25,8 +25,8 @@
             builder
                 .HasMany(l => l.Courses)
                 .WithOne(c => c.Lecturer)
-                .HasForeignKey(c => c.LecturerId)
-                .IsRequired();
+                .HasForeignKey(c => c.LecturerId);
+
             builder.HasData(this.GenerateLecturers());
         }
         private IEnumerable<Lecturer> GenerateLecturers()

@@ -1,7 +1,7 @@
 ﻿@using GamingUniversityApp.Web.ViewModels.Course;
 @model AddInputCourseModel
 
-<h2>Add a New Course</h2> 
+<h2>Add a New Course</h2>
 
 <form asp-action="Create" method="post">
 	<div>
@@ -23,6 +23,11 @@
 		<label for="Credits">Credits</label>
 		<textarea asp-for="Credits" class="form-control"></textarea>
 		<span asp-validation-for="Credits"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="LecturerId" class="control-label">Select Lecturer</label>
+		<select asp-for="LecturerId" class="form-control" asp-items="ViewBag.Lecturers"></select>
+		<span asp-validation-for="LecturerId" class="text-danger"></span>
 	</div>
 	<button type="submit" class="btn btn-primary mt-2">Create Course</button>
 </form>

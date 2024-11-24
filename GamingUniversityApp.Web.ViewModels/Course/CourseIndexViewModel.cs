@@ -9,5 +9,6 @@
         public string Description { get; set; } = null!;
         public int Credits { get; set; }
         public string ImageUrl { get; set; } = null!;
+        public string LecturerName { get; set; } = null!;
     }
 }

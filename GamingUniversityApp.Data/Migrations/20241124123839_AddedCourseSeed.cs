@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace GamingUniversityApp.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class FixIdentity : Migration
+    public partial class AddedCourseSeed : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -204,7 +204,7 @@ namespace GamingUniversityApp.Data.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, comment: "Unique identifier"),
                     CourseName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false, comment: "Name of the course"),
-                    Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false, comment: "Course description"),
+                    Description = table.Column<string>(type: "nvarchar(2000)", maxLength: 2000, nullable: false, comment: "Course description"),
                     Credits = table.Column<int>(type: "int", nullable: false, comment: "Amount of credits given to students for completing the course"),
                     LecturerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     ImageUrl = table.Column<string>(type: "nvarchar(2083)", maxLength: 2083, nullable: true, defaultValue: "/images/No_Image_Available.jpg"),
@@ -227,7 +227,7 @@ namespace GamingUniversityApp.Data.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, comment: "Unique identifier"),
                     Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false, comment: "Name of the assignment"),
-                    Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false, comment: "Description of the assignment"),
+                    Description = table.Column<string>(type: "nvarchar(2000)", maxLength: 2000, nullable: false, comment: "Description of the assignment"),
                     DueDate = table.Column<DateTime>(type: "datetime2", nullable: false, comment: "Due date for this assignment"),
                     CourseId = table.Column<Guid>(type: "uniqueidentifier", nullable: false, comment: "Unique identifier of the course that the assignment belongs to"),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false)
@@ -299,11 +299,11 @@ namespace GamingUniversityApp.Data.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { new Guid("1ee14426-147e-4d41-ad56-4c1388086c8a"), 0, "c4ebe38b-8882-4267-a67e-0a131c226103", "lecturer2@abv.bg", true, "Lecturer2", "Lecturer2", false, null, "LECTURER2@ABV.BG", "LECTURER2", "AQAAAAIAAYagAAAAECB2J2N5rESlJa/Wp6z6kvuk2TgyB28MqCo0Vd7TCHlZ8rvv2wOwetjo3x3a3gI+Nw==", "98765", false, "2b462a06-146a-415b-9588-e5b55aa74f77", false, "Lecturer2" },
-                    { new Guid("25f228f7-d8d5-4a23-93fb-8b489ce206a1"), 0, "879da54f-fc55-4c31-b84d-06ca91da2ff4", "student1@abv.bg", true, "Student1", "Student1", false, null, "STUDENT1@ABV.BG", "STUDENT1", "AQAAAAIAAYagAAAAENUwF+mFHxw70RHFGv6n7Q5U24J6m+SIagg+8sELX8GSgNGh7CWlnFGdhWLAndbOdQ==", "12345", false, "25622179-2d2f-468e-910b-1a486bfd856e", false, "Student1" },
-                    { new Guid("284bd583-dd2c-4453-98fa-74236f9cdcf9"), 0, "8234fafa-d591-4616-ad49-9cfe1cf1c28a", "student2@abv.bg", true, "Student2", "Student2", false, null, "STUDENT2@ABV.BG", "STUDENT2", "AQAAAAIAAYagAAAAEO5qckmh0yYn8tCQ6mIfivMJYdySfN/CXgRIDh0DW1b0LmzHWrq5s67XUaLNIJ8Y2Q==", "13345", false, "c79f938a-e4c3-4d80-820d-c22c92741075", false, "Student2" },
-                    { new Guid("658c530c-6d7e-4bc5-956d-571166b579e3"), 0, "acb06ad4-cf78-48ac-b645-c411a4a14bea", "lecturer1@abv.bg", true, "Lecturer", "Lecturer", false, null, "LECTURER1@ABV.BG", "LECTURER", "AQAAAAIAAYagAAAAEItzd48cSZMBv1v1BhCiui76WG2zYOO0HANdVBqADHw2SgMl1VMPgy+2JmEpheA3Aw==", "1234567890", false, "73947527-fcc1-4cdb-a55c-22481c2e1cad", false, "Lecturer" },
-                    { new Guid("79cda038-04b2-4333-a6b5-8fff05f5df8c"), 0, "a8fea172-bcc5-4b26-a0ef-25fd8d93be16", "student3@abv.bg", true, "Student3", "Student3", false, null, "STUDENT3@ABV.BG", "STUDENT3", "AQAAAAIAAYagAAAAEBiZuCjlgIpD4EJ7a5qoHYXXzivffL/VXoC4dqTfiYFsF3rh+O7jYUoHpj46ynXoug==", "12245", false, "06b8213e-9792-4609-be8a-a8d244101209", false, "Student3" }
+                    { new Guid("1ee14426-147e-4d41-ad56-4c1388086c8a"), 0, "185685b3-df9d-4be2-99b4-d99e85d4f187", "lecturer2@abv.bg", true, "Lecturer2", "Lecturer2", false, null, "LECTURER2@ABV.BG", "LECTURER2", "AQAAAAIAAYagAAAAEAjVBikR/ZzpXIOCmxBpi7cip6XbiNIanzNgqivZT6aa+4YiV23BpWAWqEQja3cruA==", "98765", false, "d3ac16a2-976c-490a-8fdd-70db661fe7f7", false, "Lecturer2" },
+                    { new Guid("25f228f7-d8d5-4a23-93fb-8b489ce206a1"), 0, "01c7f588-913f-4e72-9b35-397cfe21315d", "student1@abv.bg", true, "Student1", "Student1", false, null, "STUDENT1@ABV.BG", "STUDENT1", "AQAAAAIAAYagAAAAEDRie4DLmIk7/9vCxrgJMXUoLZjcxoAqSYjgc8X4nCPnQlduQbEWjUkC2oLZTecqhg==", "12345", false, "8b21efff-7591-4da7-b393-fadac2a14f3a", false, "Student1" },
+                    { new Guid("284bd583-dd2c-4453-98fa-74236f9cdcf9"), 0, "9b16530e-eed3-481d-a0a5-46d025f5b8bb", "student2@abv.bg", true, "Student2", "Student2", false, null, "STUDENT2@ABV.BG", "STUDENT2", "AQAAAAIAAYagAAAAEFuLoOQWrLz8W9le/aAeEVogMngQXuUDd840/6Kb+zOpplui/hAEjvCjee2JpZu0XQ==", "13345", false, "7dfa9935-420a-435a-aa17-c0972ce0d7bd", false, "Student2" },
+                    { new Guid("658c530c-6d7e-4bc5-956d-571166b579e3"), 0, "9e71ed02-9826-4d72-8be7-97a604c24a25", "lecturer1@abv.bg", true, "Lecturer", "Lecturer", false, null, "LECTURER1@ABV.BG", "LECTURER", "AQAAAAIAAYagAAAAEN66YHu7qKNnYXM8f66gahzVEUtlQWN2W0DtqOlPjV/Azip5QlcRK0iEPm8u+hR/uQ==", "1234567890", false, "80a59134-ebd6-4e51-8fed-090ec4b1336a", false, "Lecturer" },
+                    { new Guid("79cda038-04b2-4333-a6b5-8fff05f5df8c"), 0, "2dbf4b54-749d-499c-841a-980f9524ffcf", "student3@abv.bg", true, "Student3", "Student3", false, null, "STUDENT3@ABV.BG", "STUDENT3", "AQAAAAIAAYagAAAAEBCFajnBJNLxLs8Pk7KDsUPPSp4wCAOYsySs8vKQYOolYDX4SzCbdh5O5a6kX8wxaQ==", "12245", false, "e1132f8f-4b01-418c-9519-81a2469a8961", false, "Student3" }
                 });
 
             migrationBuilder.InsertData(
@@ -323,6 +323,15 @@ namespace GamingUniversityApp.Data.Migrations
                     { new Guid("56d668ca-324c-4e54-90d2-800fa38d932a"), new Guid("284bd583-dd2c-4453-98fa-74236f9cdcf9") },
                     { new Guid("9250c8b9-66e5-4a04-b26d-a02203cd0ca2"), new Guid("25f228f7-d8d5-4a23-93fb-8b489ce206a1") },
                     { new Guid("fbceacec-0bf1-48eb-a473-f7f7c4f17e4b"), new Guid("79cda038-04b2-4333-a6b5-8fff05f5df8c") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Courses",
+                columns: new[] { "Id", "CourseName", "Credits", "Description", "LecturerId" },
+                values: new object[,]
+                {
+                    { new Guid("61088dab-2ca0-4258-b7fa-5737ce436ff2"), "Counter Strike", 30, "Counter-Strike is an objective-based, multiplayer tactical first-person shooter. Two opposing teams—the Terrorists and the Counter Terrorists—compete in game modes to complete objectives, such as securing a location to plant or defuse a bomb and rescuing or guarding hostages. At the end of each round, players are rewarded based on their individual performance with in-game currency to spend on more powerful weapons in subsequent rounds. Winning rounds results in more money than losing and completing objectives such as killing enemy players gives cash bonuses.Uncooperative actions, such as killing teammates, result in a penalty.", new Guid("cc5a700b-076e-4c88-b8ad-5ebe548735a0") },
+                    { new Guid("a3841c0b-3660-4398-93f5-f606e7d5bf60"), "League of Legends", 25, "League of Legends is a multiplayer online battle arena (MOBA) game in which the player controls a character (\"champion\") with a set of unique abilities from an isometric perspective. As of 2024, there are 168 champions available to play. Over the course of a match, champions gain levels by accruing experience points (XP) through killing enemies. Items can be acquired to increase champions' strength, and are bought with gold, which players accrue passively over time and earn actively by defeating the opposing team's minions, champions, or defensive structures. In the main game mode, Summoner's Rift, items are purchased through a shop menu available to players only when their champion is in the team's base. Each match is discrete; levels and items do not transfer from one match to another.", new Guid("eb9a19de-0b05-48f5-9c2f-dbab7ed332b6") }
                 });
 
             migrationBuilder.CreateIndex(

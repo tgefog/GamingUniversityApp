@@ -1,11 +1,12 @@
 ﻿namespace GamingUniversityApp.Services.Data
 {
-	using Microsoft.EntityFrameworkCore;
-	using GamingUniversityApp.Data.Models;
-	using GamingUniversityApp.Data.Repository.Interfaces;
-	using Interfaces;
+    using GamingUniversityApp.Data.Models;
+    using GamingUniversityApp.Data.Repository.Interfaces;
+    using GamingUniversityApp.Web.ViewModels.Lecturer;
+    using Interfaces;
+    using Microsoft.EntityFrameworkCore;
 
-	public class LecturerService : BaseService, ILecturerService
+    public class LecturerService : BaseService, ILecturerService
 	{
 		private readonly IRepository<Lecturer, Guid> lecturersRepository;
 		public LecturerService(IRepository<Lecturer, Guid> lecturersRepository)
@@ -18,8 +19,21 @@
 			{
 				return false;
 			}
-			bool result = await this.lecturersRepository.GetAllAttached().AnyAsync(l => l.UserId.ToString().ToLower() == userId.ToLower());
+
+			bool result = await this.lecturersRepository
+				.GetAllAttached()
+				.AnyAsync(l => l.UserId.ToString().ToLower() == userId.ToLower());
+
 			return result;
 		}
-	}
+        public async Task<IEnumerable<LecturerViewModel>> GetAllLecturersAsync()
+        {
+			var lecturers = await this.lecturersRepository.GetAllAsync();
+			return lecturers.Select(l => new LecturerViewModel
+			{
+				Id = l.Id.ToString(),
+				FullName = $"{l.User.FirstName} {l.User.LastName}"
+			});
+		}
+    }
 }

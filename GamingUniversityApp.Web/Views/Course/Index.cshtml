@@ -18,6 +18,7 @@
 			<th>Course Name</th>
 			<th>Description</th>
 			<th>Credits</th>
+			<th>Lecturer</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -31,6 +32,7 @@
 				<td>@course.CourseName</td>
 				<td>@course.Description</td>
 				<td>@course.Credits</td>
+				<td>@course.LecturerName</td>
 				<td>
 					<a asp-action="Details" asp-route-id="@course.Id" class="btn btn-info">Details</a>
 
