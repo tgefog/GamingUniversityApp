@@ -31,6 +31,8 @@
 		public static class Submission
 		{
 			public const string SubmissionDateFormat = "dd/MM/yyyy";
+			public const int GradeMaxValue = 6;
+			public const int GradeMinValue = 2;
 		}
 		public static class StudentCourse
 		{

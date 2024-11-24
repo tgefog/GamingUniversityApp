@@ -42,6 +42,12 @@ namespace GamingUniversityApp.Data.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
@@ -86,21 +92,103 @@ namespace GamingUniversityApp.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
-                });
 
-            modelBuilder.Entity("GamingUniversityApp.Data.Models.ApplicationUserCourse", b =>
-                {
-                    b.Property<Guid>("ApplicationUserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CourseId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("ApplicationUserId", "CourseId");
-
-                    b.HasIndex("CourseId");
-
-                    b.ToTable("UsersCourses");
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("658c530c-6d7e-4bc5-956d-571166b579e3"),
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "acb06ad4-cf78-48ac-b645-c411a4a14bea",
+                            Email = "lecturer1@abv.bg",
+                            EmailConfirmed = true,
+                            FirstName = "Lecturer",
+                            LastName = "Lecturer",
+                            LockoutEnabled = false,
+                            NormalizedEmail = "LECTURER1@ABV.BG",
+                            NormalizedUserName = "LECTURER",
+                            PasswordHash = "AQAAAAIAAYagAAAAEItzd48cSZMBv1v1BhCiui76WG2zYOO0HANdVBqADHw2SgMl1VMPgy+2JmEpheA3Aw==",
+                            PhoneNumber = "1234567890",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "73947527-fcc1-4cdb-a55c-22481c2e1cad",
+                            TwoFactorEnabled = false,
+                            UserName = "Lecturer"
+                        },
+                        new
+                        {
+                            Id = new Guid("1ee14426-147e-4d41-ad56-4c1388086c8a"),
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "c4ebe38b-8882-4267-a67e-0a131c226103",
+                            Email = "lecturer2@abv.bg",
+                            EmailConfirmed = true,
+                            FirstName = "Lecturer2",
+                            LastName = "Lecturer2",
+                            LockoutEnabled = false,
+                            NormalizedEmail = "LECTURER2@ABV.BG",
+                            NormalizedUserName = "LECTURER2",
+                            PasswordHash = "AQAAAAIAAYagAAAAECB2J2N5rESlJa/Wp6z6kvuk2TgyB28MqCo0Vd7TCHlZ8rvv2wOwetjo3x3a3gI+Nw==",
+                            PhoneNumber = "98765",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "2b462a06-146a-415b-9588-e5b55aa74f77",
+                            TwoFactorEnabled = false,
+                            UserName = "Lecturer2"
+                        },
+                        new
+                        {
+                            Id = new Guid("25f228f7-d8d5-4a23-93fb-8b489ce206a1"),
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "879da54f-fc55-4c31-b84d-06ca91da2ff4",
+                            Email = "student1@abv.bg",
+                            EmailConfirmed = true,
+                            FirstName = "Student1",
+                            LastName = "Student1",
+                            LockoutEnabled = false,
+                            NormalizedEmail = "STUDENT1@ABV.BG",
+                            NormalizedUserName = "STUDENT1",
+                            PasswordHash = "AQAAAAIAAYagAAAAENUwF+mFHxw70RHFGv6n7Q5U24J6m+SIagg+8sELX8GSgNGh7CWlnFGdhWLAndbOdQ==",
+                            PhoneNumber = "12345",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "25622179-2d2f-468e-910b-1a486bfd856e",
+                            TwoFactorEnabled = false,
+                            UserName = "Student1"
+                        },
+                        new
+                        {
+                            Id = new Guid("284bd583-dd2c-4453-98fa-74236f9cdcf9"),
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "8234fafa-d591-4616-ad49-9cfe1cf1c28a",
+                            Email = "student2@abv.bg",
+                            EmailConfirmed = true,
+                            FirstName = "Student2",
+                            LastName = "Student2",
+                            LockoutEnabled = false,
+                            NormalizedEmail = "STUDENT2@ABV.BG",
+                            NormalizedUserName = "STUDENT2",
+                            PasswordHash = "AQAAAAIAAYagAAAAEO5qckmh0yYn8tCQ6mIfivMJYdySfN/CXgRIDh0DW1b0LmzHWrq5s67XUaLNIJ8Y2Q==",
+                            PhoneNumber = "13345",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "c79f938a-e4c3-4d80-820d-c22c92741075",
+                            TwoFactorEnabled = false,
+                            UserName = "Student2"
+                        },
+                        new
+                        {
+                            Id = new Guid("79cda038-04b2-4333-a6b5-8fff05f5df8c"),
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "a8fea172-bcc5-4b26-a0ef-25fd8d93be16",
+                            Email = "student3@abv.bg",
+                            EmailConfirmed = true,
+                            FirstName = "Student3",
+                            LastName = "Student3",
+                            LockoutEnabled = false,
+                            NormalizedEmail = "STUDENT3@ABV.BG",
+                            NormalizedUserName = "STUDENT3",
+                            PasswordHash = "AQAAAAIAAYagAAAAEBiZuCjlgIpD4EJ7a5qoHYXXzivffL/VXoC4dqTfiYFsF3rh+O7jYUoHpj46ynXoug==",
+                            PhoneNumber = "12245",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "06b8213e-9792-4609-be8a-a8d244101209",
+                            TwoFactorEnabled = false,
+                            UserName = "Student3"
+                        });
                 });
 
             modelBuilder.Entity("GamingUniversityApp.Data.Models.Assignment", b =>
@@ -192,6 +280,10 @@ namespace GamingUniversityApp.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Department")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
@@ -202,10 +294,25 @@ namespace GamingUniversityApp.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
+                    b.HasIndex("UserId");
 
                     b.ToTable("Lecturers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("cc5a700b-076e-4c88-b8ad-5ebe548735a0"),
+                            Department = "FPS",
+                            UserId = new Guid("658c530c-6d7e-4bc5-956d-571166b579e3"),
+                            WorkPhoneNumber = "12345678"
+                        },
+                        new
+                        {
+                            Id = new Guid("eb9a19de-0b05-48f5-9c2f-dbab7ed332b6"),
+                            Department = "Moba",
+                            UserId = new Guid("1ee14426-147e-4d41-ad56-4c1388086c8a"),
+                            WorkPhoneNumber = "87654321"
+                        });
                 });
 
             modelBuilder.Entity("GamingUniversityApp.Data.Models.Student", b =>
@@ -215,27 +322,31 @@ namespace GamingUniversityApp.Data.Migrations
                         .HasColumnType("uniqueidentifier")
                         .HasComment("Unique identifier");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)")
-                        .HasComment("Email address of the student");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasComment("First name of the student");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasComment("Last name of the student");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("UserId");
+
                     b.ToTable("Students");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("9250c8b9-66e5-4a04-b26d-a02203cd0ca2"),
+                            UserId = new Guid("25f228f7-d8d5-4a23-93fb-8b489ce206a1")
+                        },
+                        new
+                        {
+                            Id = new Guid("56d668ca-324c-4e54-90d2-800fa38d932a"),
+                            UserId = new Guid("284bd583-dd2c-4453-98fa-74236f9cdcf9")
+                        },
+                        new
+                        {
+                            Id = new Guid("fbceacec-0bf1-48eb-a473-f7f7c4f17e4b"),
+                            UserId = new Guid("79cda038-04b2-4333-a6b5-8fff05f5df8c")
+                        });
                 });
 
             modelBuilder.Entity("GamingUniversityApp.Data.Models.StudentCourse", b =>
@@ -287,16 +398,11 @@ namespace GamingUniversityApp.Data.Migrations
                         .HasColumnType("datetime2")
                         .HasComment("Date of the submission");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
 
                     b.HasIndex("AssignmentId");
 
                     b.HasIndex("StudentId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Submissions");
                 });
@@ -432,25 +538,6 @@ namespace GamingUniversityApp.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("GamingUniversityApp.Data.Models.ApplicationUserCourse", b =>
-                {
-                    b.HasOne("GamingUniversityApp.Data.Models.ApplicationUser", "ApplicationUser")
-                        .WithMany("ApplicationUserCourses")
-                        .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("GamingUniversityApp.Data.Models.Course", "Course")
-                        .WithMany("CourseApplicationUsers")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ApplicationUser");
-
-                    b.Navigation("Course");
-                });
-
             modelBuilder.Entity("GamingUniversityApp.Data.Models.Assignment", b =>
                 {
                     b.HasOne("GamingUniversityApp.Data.Models.Course", "Course")
@@ -476,9 +563,20 @@ namespace GamingUniversityApp.Data.Migrations
             modelBuilder.Entity("GamingUniversityApp.Data.Models.Lecturer", b =>
                 {
                     b.HasOne("GamingUniversityApp.Data.Models.ApplicationUser", "User")
-                        .WithOne()
-                        .HasForeignKey("GamingUniversityApp.Data.Models.Lecturer", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("GamingUniversityApp.Data.Models.Student", b =>
+                {
+                    b.HasOne("GamingUniversityApp.Data.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("User");
@@ -508,26 +606,18 @@ namespace GamingUniversityApp.Data.Migrations
                     b.HasOne("GamingUniversityApp.Data.Models.Assignment", "Assignment")
                         .WithMany("Submissions")
                         .HasForeignKey("AssignmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("GamingUniversityApp.Data.Models.Student", "Student")
                         .WithMany("Submissions")
                         .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("GamingUniversityApp.Data.Models.ApplicationUser", "User")
-                        .WithMany("Submissions")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Assignment");
 
                     b.Navigation("Student");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -581,13 +671,6 @@ namespace GamingUniversityApp.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("GamingUniversityApp.Data.Models.ApplicationUser", b =>
-                {
-                    b.Navigation("ApplicationUserCourses");
-
-                    b.Navigation("Submissions");
-                });
-
             modelBuilder.Entity("GamingUniversityApp.Data.Models.Assignment", b =>
                 {
                     b.Navigation("Submissions");
@@ -596,8 +679,6 @@ namespace GamingUniversityApp.Data.Migrations
             modelBuilder.Entity("GamingUniversityApp.Data.Models.Course", b =>
                 {
                     b.Navigation("Assignments");
-
-                    b.Navigation("CourseApplicationUsers");
 
                     b.Navigation("CourseStudents");
                 });

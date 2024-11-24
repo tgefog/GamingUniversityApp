@@ -1,15 +1,14 @@
-﻿using Microsoft.AspNetCore.Identity;
-
-namespace GamingUniversityApp.Data.Models
+﻿namespace GamingUniversityApp.Data.Models
 {
-	public class ApplicationUser : IdentityUser<Guid>
-    {
-		public ApplicationUser()
-		{
-			this.Id = Guid.NewGuid();
-		}
-		public virtual ICollection<ApplicationUserCourse> ApplicationUserCourses { get; set; } = new HashSet<ApplicationUserCourse>();
+    using Microsoft.AspNetCore.Identity;
 
-		public virtual ICollection<Submission> Submissions { get; set; } = new HashSet<Submission>();
-	}
+    public class ApplicationUser : IdentityUser<Guid>
+    {
+        public ApplicationUser()
+        {
+            this.Id = Guid.NewGuid();
+        }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+    }
 }

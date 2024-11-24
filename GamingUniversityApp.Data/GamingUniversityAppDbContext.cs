@@ -21,7 +21,6 @@
 		public virtual DbSet<Submission> Submissions { get; set; } = null!;
 		public virtual DbSet<Assignment> Assignments { get; set; } = null!;
 		public virtual DbSet<StudentCourse> StudentCourses { get; set; } = null!;
-		public virtual DbSet<ApplicationUserCourse> UsersCourses { get; set; }
 		public virtual DbSet<Lecturer> Lecturers { get; set; } = null!;
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{

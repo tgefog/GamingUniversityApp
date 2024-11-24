@@ -19,5 +19,9 @@
 
 			return app;
 		}
-	}
+        //public static void ApplyMockData(this ModelBuilder builder)
+        //{
+        //    builder.ApplyConfiguration(new UserConfiguration());
+        //}
+    }
 }
