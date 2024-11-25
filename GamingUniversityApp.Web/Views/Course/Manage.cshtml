@@ -5,35 +5,35 @@
     ViewData["Title"] = "Manage Courses";
 }
 
-<h2>Manage Courses</h2>
+<h2 class="my-4 text-center">Manage Courses</h2>
 
-<div class="mb-3">
-    <a asp-action="Create" class="btn btn-success">Add New Course</a>
+<div class="d-flex justify-content-end mb-4">
+    <a asp-action="Create" class="btn btn-success btn-lg">
+        <i class="bi bi-plus-circle"></i> Add New Course
+    </a>
 </div>
 
-<table class="table table-striped">
-    <thead>
+<table class="table table-hover table-bordered">
+    <thead class="table-dark">
         <tr>
-            <th>Name</th>
-            <th>Location</th>
-            <th>Actions</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col" class="text-center">Actions</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (CourseIndexViewModel course in Model)
+        @foreach (var course in Model)
         {
             <tr>
-                <td>
-                    <img src="@course.ImageUrl" alt="@course.CourseName" style="width: 100px; height: 75px;" />
-                </td>
-
                 <td>@course.CourseName</td>
                 <td>@course.Description</td>
-                <td>@course.Credits</td>
-                <td>
-                    <a asp-action="Details" asp-route-id="@course.Id" class="btn btn-info">Details</a>
-                    <a asp-action="Edit" asp-route-id="@course.Id" class="btn btn-primary">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@course.Id" class="btn btn-danger">Delete</a>
+                <td class="text-center">
+                    <a asp-action="Edit" asp-route-id="@course.Id" class="btn btn-primary btn-sm me-2">
+                        <i class="bi bi-pencil-square"></i> Edit
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@course.Id" class="btn btn-danger btn-sm">
+                        <i class="bi bi-trash"></i> Delete
+                    </a>
                 </td>
             </tr>
         }

@@ -224,5 +224,18 @@
             }
             return this.RedirectToAction(nameof(Index));
         }
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> Manage()
+        {
+            bool isLecturer = await this.IsUserLecturerAsync();
+            if (!isLecturer)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+            IEnumerable<AssignmentIndexViewModel> assignments =
+                await this.assignmentService.IndexGetAllAsync();
+            return this.View(assignments);
+        }
     }
 }

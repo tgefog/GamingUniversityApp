@@ -1,0 +1,49 @@
+﻿@using GamingUniversityApp.Services.Data.Interfaces
+@using GamingUniversityApp.Web.ViewModels.Assignment
+@model IEnumerable<AssignmentIndexViewModel>
+
+@{
+    ViewData["Title"] = "Manage Assignments";
+}
+
+<h2 class="my-4 text-center">Manage Assignments</h2>
+
+<div class="d-flex justify-content-end mb-4">
+    <a asp-action="Create" class="btn btn-primary btn-lg">
+        <i class="bi bi-plus-circle"></i> Add New Assignment
+    </a>
+</div>
+
+<table class="table table-hover table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Due Date</th>
+            <th scope="col">CourseName</th>
+            <th scope="col" class="text-center">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (AssignmentIndexViewModel assignment in Model)
+        {
+            <tr>
+                <td>@assignment.Name</td>
+                <td>@assignment.Description</td>
+                <td>@assignment.DueDate</td>
+                <td>@assignment.CourseName</td>
+                <td class="text-center">
+                    <a asp-action="AddToProgram" asp-route-id="@assignment.Id" class="btn btn-info btn-sm me-2">
+                        <i class="bi bi-calendar-plus"></i> Add to Program
+                    </a>
+                    <a asp-action="Edit" asp-route-id="@assignment.Id" class="btn btn-primary btn-sm me-2">
+                        <i class="bi bi-pencil-square"></i> Edit
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@assignment.Id" class="btn btn-danger btn-sm">
+                        <i class="bi bi-trash"></i> Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
