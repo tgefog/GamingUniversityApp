@@ -57,6 +57,7 @@ namespace GamingUniversityApp.Data.Configuration
             {
                 new Course()
                 {
+                    Id = Guid.Parse("A3841C0B-3660-4398-93F5-F606E7D5BF60"),
                     CourseName = "League of Legends",
                     Description = "League of Legends is a multiplayer online battle arena (MOBA) game in which the player controls a character (\"champion\") with a set of unique abilities from an isometric perspective. " +
                     "As of 2024, there are 168 champions available to play. Over the course of a match, champions gain levels by accruing experience points (XP) through killing enemies. " +
@@ -68,6 +69,7 @@ namespace GamingUniversityApp.Data.Configuration
                 },
                 new Course()
                 {
+                    Id = Guid.Parse("61088DAB-2CA0-4258-B7FA-5737CE436FF2"),
                     CourseName = "Counter Strike",
                     Description = "Counter-Strike is an objective-based, multiplayer tactical first-person shooter." +
                     " Two opposing teams—the Terrorists and the Counter Terrorists—compete in game modes to complete objectives, such as securing a location to plant or defuse a bomb and rescuing or guarding hostages." +

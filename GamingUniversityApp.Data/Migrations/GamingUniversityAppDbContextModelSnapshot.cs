@@ -98,7 +98,7 @@ namespace GamingUniversityApp.Data.Migrations
                         {
                             Id = new Guid("658c530c-6d7e-4bc5-956d-571166b579e3"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "9e71ed02-9826-4d72-8be7-97a604c24a25",
+                            ConcurrencyStamp = "3a97d908-b7d5-432f-a58d-c16871cb3a6a",
                             Email = "lecturer1@abv.bg",
                             EmailConfirmed = true,
                             FirstName = "Lecturer",
@@ -106,10 +106,10 @@ namespace GamingUniversityApp.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "LECTURER1@ABV.BG",
                             NormalizedUserName = "LECTURER",
-                            PasswordHash = "AQAAAAIAAYagAAAAEN66YHu7qKNnYXM8f66gahzVEUtlQWN2W0DtqOlPjV/Azip5QlcRK0iEPm8u+hR/uQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAENgcMSzNqVLi08qQNzBA3w0JD2yESuC5Tb9JBJbG/rambGP/h6eAJVFGr2pgf8oDcw==",
                             PhoneNumber = "1234567890",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "80a59134-ebd6-4e51-8fed-090ec4b1336a",
+                            SecurityStamp = "a0aeefeb-a9e9-4ee5-bcae-4ae25ee6c28b",
                             TwoFactorEnabled = false,
                             UserName = "Lecturer"
                         },
@@ -117,7 +117,7 @@ namespace GamingUniversityApp.Data.Migrations
                         {
                             Id = new Guid("1ee14426-147e-4d41-ad56-4c1388086c8a"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "185685b3-df9d-4be2-99b4-d99e85d4f187",
+                            ConcurrencyStamp = "ae033818-87ef-40c0-a69d-075bb3957e86",
                             Email = "lecturer2@abv.bg",
                             EmailConfirmed = true,
                             FirstName = "Lecturer2",
@@ -125,10 +125,10 @@ namespace GamingUniversityApp.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "LECTURER2@ABV.BG",
                             NormalizedUserName = "LECTURER2",
-                            PasswordHash = "AQAAAAIAAYagAAAAEAjVBikR/ZzpXIOCmxBpi7cip6XbiNIanzNgqivZT6aa+4YiV23BpWAWqEQja3cruA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEHqYZbEkYjHE6AjFErxZ+o7fIlNKFY6qKWQ6gbUnmwVVkoHI4fmoP4fa2Pri8DjTSA==",
                             PhoneNumber = "98765",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "d3ac16a2-976c-490a-8fdd-70db661fe7f7",
+                            SecurityStamp = "290de3c5-5407-4fea-9f6f-99dd4800f36c",
                             TwoFactorEnabled = false,
                             UserName = "Lecturer2"
                         },
@@ -136,7 +136,7 @@ namespace GamingUniversityApp.Data.Migrations
                         {
                             Id = new Guid("25f228f7-d8d5-4a23-93fb-8b489ce206a1"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "01c7f588-913f-4e72-9b35-397cfe21315d",
+                            ConcurrencyStamp = "05a6e8f7-f59f-41ea-a370-069be1ac07e1",
                             Email = "student1@abv.bg",
                             EmailConfirmed = true,
                             FirstName = "Student1",
@@ -144,10 +144,10 @@ namespace GamingUniversityApp.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "STUDENT1@ABV.BG",
                             NormalizedUserName = "STUDENT1",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDRie4DLmIk7/9vCxrgJMXUoLZjcxoAqSYjgc8X4nCPnQlduQbEWjUkC2oLZTecqhg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEIHpSxpMSdDR3G8wYrqzbe/tzuil+FxFKc1NwjtphwYWPzW8fvCg6vc/RRsOsFawQA==",
                             PhoneNumber = "12345",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "8b21efff-7591-4da7-b393-fadac2a14f3a",
+                            SecurityStamp = "edf61d1b-755c-4a5f-88ab-1092446f9888",
                             TwoFactorEnabled = false,
                             UserName = "Student1"
                         },
@@ -155,7 +155,7 @@ namespace GamingUniversityApp.Data.Migrations
                         {
                             Id = new Guid("284bd583-dd2c-4453-98fa-74236f9cdcf9"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "9b16530e-eed3-481d-a0a5-46d025f5b8bb",
+                            ConcurrencyStamp = "f90b954f-1916-41ff-91cf-9155a540feca",
                             Email = "student2@abv.bg",
                             EmailConfirmed = true,
                             FirstName = "Student2",
@@ -163,10 +163,10 @@ namespace GamingUniversityApp.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "STUDENT2@ABV.BG",
                             NormalizedUserName = "STUDENT2",
-                            PasswordHash = "AQAAAAIAAYagAAAAEFuLoOQWrLz8W9le/aAeEVogMngQXuUDd840/6Kb+zOpplui/hAEjvCjee2JpZu0XQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAcg8g8oz7zt9vRIw2E6RBn8f4+N52udtCt6vATwlQOnFJ3TJymdBPBnH7VEUkywww==",
                             PhoneNumber = "13345",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "7dfa9935-420a-435a-aa17-c0972ce0d7bd",
+                            SecurityStamp = "efc14b1e-dbcb-4d41-8b67-f2a53629bf69",
                             TwoFactorEnabled = false,
                             UserName = "Student2"
                         },
@@ -174,7 +174,7 @@ namespace GamingUniversityApp.Data.Migrations
                         {
                             Id = new Guid("79cda038-04b2-4333-a6b5-8fff05f5df8c"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "2dbf4b54-749d-499c-841a-980f9524ffcf",
+                            ConcurrencyStamp = "a7600aec-24ea-4027-ae1d-065dfd95ef61",
                             Email = "student3@abv.bg",
                             EmailConfirmed = true,
                             FirstName = "Student3",
@@ -182,10 +182,10 @@ namespace GamingUniversityApp.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "STUDENT3@ABV.BG",
                             NormalizedUserName = "STUDENT3",
-                            PasswordHash = "AQAAAAIAAYagAAAAEBCFajnBJNLxLs8Pk7KDsUPPSp4wCAOYsySs8vKQYOolYDX4SzCbdh5O5a6kX8wxaQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEBNU91Z6wBSEjhGTu+k2zhuoYR26CmnxZbTiWJuofjg95r7/PvGpEAL0Ru2d71FY/Q==",
                             PhoneNumber = "12245",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "e1132f8f-4b01-418c-9519-81a2469a8961",
+                            SecurityStamp = "23255884-a37b-4166-ab7f-116213ed5d56",
                             TwoFactorEnabled = false,
                             UserName = "Student3"
                         });
@@ -228,6 +228,26 @@ namespace GamingUniversityApp.Data.Migrations
                     b.HasIndex("CourseId");
 
                     b.ToTable("Assignments");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("af6d1a97-74c4-4c9f-befe-8f6dbb45269f"),
+                            CourseId = new Guid("a3841c0b-3660-4398-93f5-f606e7d5bf60"),
+                            Description = "Learn the basics of lane control, farming, and map awareness in League of Legends.",
+                            DueDate = new DateTime(2024, 12, 11, 17, 27, 6, 203, DateTimeKind.Utc).AddTicks(4174),
+                            IsDeleted = false,
+                            Name = "Introduction to League Mechanics"
+                        },
+                        new
+                        {
+                            Id = new Guid("4da79f7f-bb60-4d24-8992-1b2ed252f64f"),
+                            CourseId = new Guid("61088dab-2ca0-4258-b7fa-5737ce436ff2"),
+                            Description = "Understand team strategies and map control in Counter-Strike.",
+                            DueDate = new DateTime(2024, 12, 18, 17, 27, 6, 203, DateTimeKind.Utc).AddTicks(4189),
+                            IsDeleted = false,
+                            Name = "Counter-Strike Tactics"
+                        });
                 });
 
             modelBuilder.Entity("GamingUniversityApp.Data.Models.Course", b =>
@@ -425,6 +445,26 @@ namespace GamingUniversityApp.Data.Migrations
                     b.HasIndex("StudentId");
 
                     b.ToTable("Submissions");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("cff8ba3e-3f3c-4c4d-9883-57f819e23509"),
+                            AssignmentId = new Guid("af6d1a97-74c4-4c9f-befe-8f6dbb45269f"),
+                            Content = "Completed the map awareness module.",
+                            Grade = "A",
+                            StudentId = new Guid("9250c8b9-66e5-4a04-b26d-a02203cd0ca2"),
+                            SubmissionDate = new DateTime(2024, 11, 26, 17, 27, 6, 205, DateTimeKind.Utc).AddTicks(9440)
+                        },
+                        new
+                        {
+                            Id = new Guid("12aa74f9-2589-496d-99c9-7746f32ede7e"),
+                            AssignmentId = new Guid("4da79f7f-bb60-4d24-8992-1b2ed252f64f"),
+                            Content = "Submitted the team strategy report.",
+                            Grade = "B+",
+                            StudentId = new Guid("56d668ca-324c-4e54-90d2-800fa38d932a"),
+                            SubmissionDate = new DateTime(2024, 11, 27, 17, 27, 6, 205, DateTimeKind.Utc).AddTicks(9451)
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", b =>

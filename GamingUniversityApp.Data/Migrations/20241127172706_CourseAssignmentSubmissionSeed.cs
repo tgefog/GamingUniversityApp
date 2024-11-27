@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace GamingUniversityApp.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class AddedCourseSeed : Migration
+    public partial class CourseAssignmentSubmissionSeed : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -299,11 +299,11 @@ namespace GamingUniversityApp.Data.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { new Guid("1ee14426-147e-4d41-ad56-4c1388086c8a"), 0, "185685b3-df9d-4be2-99b4-d99e85d4f187", "lecturer2@abv.bg", true, "Lecturer2", "Lecturer2", false, null, "LECTURER2@ABV.BG", "LECTURER2", "AQAAAAIAAYagAAAAEAjVBikR/ZzpXIOCmxBpi7cip6XbiNIanzNgqivZT6aa+4YiV23BpWAWqEQja3cruA==", "98765", false, "d3ac16a2-976c-490a-8fdd-70db661fe7f7", false, "Lecturer2" },
-                    { new Guid("25f228f7-d8d5-4a23-93fb-8b489ce206a1"), 0, "01c7f588-913f-4e72-9b35-397cfe21315d", "student1@abv.bg", true, "Student1", "Student1", false, null, "STUDENT1@ABV.BG", "STUDENT1", "AQAAAAIAAYagAAAAEDRie4DLmIk7/9vCxrgJMXUoLZjcxoAqSYjgc8X4nCPnQlduQbEWjUkC2oLZTecqhg==", "12345", false, "8b21efff-7591-4da7-b393-fadac2a14f3a", false, "Student1" },
-                    { new Guid("284bd583-dd2c-4453-98fa-74236f9cdcf9"), 0, "9b16530e-eed3-481d-a0a5-46d025f5b8bb", "student2@abv.bg", true, "Student2", "Student2", false, null, "STUDENT2@ABV.BG", "STUDENT2", "AQAAAAIAAYagAAAAEFuLoOQWrLz8W9le/aAeEVogMngQXuUDd840/6Kb+zOpplui/hAEjvCjee2JpZu0XQ==", "13345", false, "7dfa9935-420a-435a-aa17-c0972ce0d7bd", false, "Student2" },
-                    { new Guid("658c530c-6d7e-4bc5-956d-571166b579e3"), 0, "9e71ed02-9826-4d72-8be7-97a604c24a25", "lecturer1@abv.bg", true, "Lecturer", "Lecturer", false, null, "LECTURER1@ABV.BG", "LECTURER", "AQAAAAIAAYagAAAAEN66YHu7qKNnYXM8f66gahzVEUtlQWN2W0DtqOlPjV/Azip5QlcRK0iEPm8u+hR/uQ==", "1234567890", false, "80a59134-ebd6-4e51-8fed-090ec4b1336a", false, "Lecturer" },
-                    { new Guid("79cda038-04b2-4333-a6b5-8fff05f5df8c"), 0, "2dbf4b54-749d-499c-841a-980f9524ffcf", "student3@abv.bg", true, "Student3", "Student3", false, null, "STUDENT3@ABV.BG", "STUDENT3", "AQAAAAIAAYagAAAAEBCFajnBJNLxLs8Pk7KDsUPPSp4wCAOYsySs8vKQYOolYDX4SzCbdh5O5a6kX8wxaQ==", "12245", false, "e1132f8f-4b01-418c-9519-81a2469a8961", false, "Student3" }
+                    { new Guid("1ee14426-147e-4d41-ad56-4c1388086c8a"), 0, "ae033818-87ef-40c0-a69d-075bb3957e86", "lecturer2@abv.bg", true, "Lecturer2", "Lecturer2", false, null, "LECTURER2@ABV.BG", "LECTURER2", "AQAAAAIAAYagAAAAEHqYZbEkYjHE6AjFErxZ+o7fIlNKFY6qKWQ6gbUnmwVVkoHI4fmoP4fa2Pri8DjTSA==", "98765", false, "290de3c5-5407-4fea-9f6f-99dd4800f36c", false, "Lecturer2" },
+                    { new Guid("25f228f7-d8d5-4a23-93fb-8b489ce206a1"), 0, "05a6e8f7-f59f-41ea-a370-069be1ac07e1", "student1@abv.bg", true, "Student1", "Student1", false, null, "STUDENT1@ABV.BG", "STUDENT1", "AQAAAAIAAYagAAAAEIHpSxpMSdDR3G8wYrqzbe/tzuil+FxFKc1NwjtphwYWPzW8fvCg6vc/RRsOsFawQA==", "12345", false, "edf61d1b-755c-4a5f-88ab-1092446f9888", false, "Student1" },
+                    { new Guid("284bd583-dd2c-4453-98fa-74236f9cdcf9"), 0, "f90b954f-1916-41ff-91cf-9155a540feca", "student2@abv.bg", true, "Student2", "Student2", false, null, "STUDENT2@ABV.BG", "STUDENT2", "AQAAAAIAAYagAAAAEAcg8g8oz7zt9vRIw2E6RBn8f4+N52udtCt6vATwlQOnFJ3TJymdBPBnH7VEUkywww==", "13345", false, "efc14b1e-dbcb-4d41-8b67-f2a53629bf69", false, "Student2" },
+                    { new Guid("658c530c-6d7e-4bc5-956d-571166b579e3"), 0, "3a97d908-b7d5-432f-a58d-c16871cb3a6a", "lecturer1@abv.bg", true, "Lecturer", "Lecturer", false, null, "LECTURER1@ABV.BG", "LECTURER", "AQAAAAIAAYagAAAAENgcMSzNqVLi08qQNzBA3w0JD2yESuC5Tb9JBJbG/rambGP/h6eAJVFGr2pgf8oDcw==", "1234567890", false, "a0aeefeb-a9e9-4ee5-bcae-4ae25ee6c28b", false, "Lecturer" },
+                    { new Guid("79cda038-04b2-4333-a6b5-8fff05f5df8c"), 0, "a7600aec-24ea-4027-ae1d-065dfd95ef61", "student3@abv.bg", true, "Student3", "Student3", false, null, "STUDENT3@ABV.BG", "STUDENT3", "AQAAAAIAAYagAAAAEBNU91Z6wBSEjhGTu+k2zhuoYR26CmnxZbTiWJuofjg95r7/PvGpEAL0Ru2d71FY/Q==", "12245", false, "23255884-a37b-4166-ab7f-116213ed5d56", false, "Student3" }
                 });
 
             migrationBuilder.InsertData(
@@ -332,6 +332,24 @@ namespace GamingUniversityApp.Data.Migrations
                 {
                     { new Guid("61088dab-2ca0-4258-b7fa-5737ce436ff2"), "Counter Strike", 30, "Counter-Strike is an objective-based, multiplayer tactical first-person shooter. Two opposing teams—the Terrorists and the Counter Terrorists—compete in game modes to complete objectives, such as securing a location to plant or defuse a bomb and rescuing or guarding hostages. At the end of each round, players are rewarded based on their individual performance with in-game currency to spend on more powerful weapons in subsequent rounds. Winning rounds results in more money than losing and completing objectives such as killing enemy players gives cash bonuses.Uncooperative actions, such as killing teammates, result in a penalty.", new Guid("cc5a700b-076e-4c88-b8ad-5ebe548735a0") },
                     { new Guid("a3841c0b-3660-4398-93f5-f606e7d5bf60"), "League of Legends", 25, "League of Legends is a multiplayer online battle arena (MOBA) game in which the player controls a character (\"champion\") with a set of unique abilities from an isometric perspective. As of 2024, there are 168 champions available to play. Over the course of a match, champions gain levels by accruing experience points (XP) through killing enemies. Items can be acquired to increase champions' strength, and are bought with gold, which players accrue passively over time and earn actively by defeating the opposing team's minions, champions, or defensive structures. In the main game mode, Summoner's Rift, items are purchased through a shop menu available to players only when their champion is in the team's base. Each match is discrete; levels and items do not transfer from one match to another.", new Guid("eb9a19de-0b05-48f5-9c2f-dbab7ed332b6") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Assignments",
+                columns: new[] { "Id", "CourseId", "Description", "DueDate", "Name" },
+                values: new object[,]
+                {
+                    { new Guid("4da79f7f-bb60-4d24-8992-1b2ed252f64f"), new Guid("61088dab-2ca0-4258-b7fa-5737ce436ff2"), "Understand team strategies and map control in Counter-Strike.", new DateTime(2024, 12, 18, 17, 27, 6, 203, DateTimeKind.Utc).AddTicks(4189), "Counter-Strike Tactics" },
+                    { new Guid("af6d1a97-74c4-4c9f-befe-8f6dbb45269f"), new Guid("a3841c0b-3660-4398-93f5-f606e7d5bf60"), "Learn the basics of lane control, farming, and map awareness in League of Legends.", new DateTime(2024, 12, 11, 17, 27, 6, 203, DateTimeKind.Utc).AddTicks(4174), "Introduction to League Mechanics" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Submissions",
+                columns: new[] { "Id", "AssignmentId", "Content", "Grade", "StudentId", "SubmissionDate" },
+                values: new object[,]
+                {
+                    { new Guid("12aa74f9-2589-496d-99c9-7746f32ede7e"), new Guid("4da79f7f-bb60-4d24-8992-1b2ed252f64f"), "Submitted the team strategy report.", "B+", new Guid("56d668ca-324c-4e54-90d2-800fa38d932a"), new DateTime(2024, 11, 27, 17, 27, 6, 205, DateTimeKind.Utc).AddTicks(9451) },
+                    { new Guid("cff8ba3e-3f3c-4c4d-9883-57f819e23509"), new Guid("af6d1a97-74c4-4c9f-befe-8f6dbb45269f"), "Completed the map awareness module.", "A", new Guid("9250c8b9-66e5-4a04-b26d-a02203cd0ca2"), new DateTime(2024, 11, 26, 17, 27, 6, 205, DateTimeKind.Utc).AddTicks(9440) }
                 });
 
             migrationBuilder.CreateIndex(
