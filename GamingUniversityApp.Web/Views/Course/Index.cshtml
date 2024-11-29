@@ -34,7 +34,7 @@
 				<td>@course.Credits</td>
 				<td>@course.LecturerName</td>
 				<td>
-					<a asp-action="Details" asp-route-id="@course.Id" class="btn btn-info">Details</a>
+					<a asp-action="Details" asp-route-id="@course.Id" class="btn btn-info">View Course Assignments</a>
 
 					@if (User?.Identity?.IsAuthenticated ?? false)
 					{

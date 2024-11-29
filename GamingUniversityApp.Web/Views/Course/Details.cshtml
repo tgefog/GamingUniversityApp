@@ -1,11 +1,77 @@
-﻿@using GamingUniversityApp.Web.ViewModels.Course;
+﻿﻿@using GamingUniversityApp.Web.ViewModels.Course;
+@using GamingUniversityApp.Services.Data.Interfaces
+@using GamingUniversityApp.Web.Infrastructure.Extensions
+@using Microsoft.AspNetCore.Mvc.TagHelpers
 @model CourseDetailsViewModel
 
-<h2>@Model.CourseName</h2>
+@inject ILecturerService lecturerService
 
-<img src="@Model.ImageUrl" alt="@Model.CourseName" class="course-image" />
+@{
+    ViewData["Title"] = "Course Program";
+}
 
-<p><strong>Description:</strong> @Model.Description</p>
-<p><strong>Credits:</strong> @Model.Credits</p>
+<h2 class="my-4 text-center display-4">Course Program - @Model.CourseName</h2>
+<p class="text-center lead"><strong>Description:</strong> @Model.Description</p>
 
-<a asp-action="Index" class="btn btn-primary">Back to All Courses</a>
+@* <div id="manageSubmissionsModalContainer">
+    <partial name="_ManageSubmissionsModal" model="Model.Assignments" />
+</div>
+<div id="uploadSubmissionsModalContainer">
+    <partial name="_UploadSubmissionsModal" model="null" />
+</div> *@
+
+<div class="container mt-5">
+    @if (Model.Assignments.Any())
+    {
+        <div class="row">
+            @foreach (var assignment in Model.Assignments)
+            {
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-center font-weight-bold">@assignment.Name</h5>
+                            <p class="card-text text-muted text-center"><em>@assignment.Description</em></p>
+                            <p class="card-text"><strong>Due Date:</strong> @assignment.DueDate</p>
+                            <p class="card-text text-justify" style="font-size: 0.9rem;">@assignment.Description</p>
+                        </div>
+                        <div class="card-footer bg-transparent text-center">
+                            @if (await this.lecturerService.IsUserLecturerAsync(this.User.GetUserId()))
+                            {
+                                <button type="button" class="btn btn-primary btn-sm" onclick="openManageTicketsModal('@Model.Id')">
+                                    <i class="bi bi-ticket-perforated"></i> Check submissions
+                                </button>
+                            }
+                            else
+                            {
+                                <button type="button" class="btn btn-success btn-sm" onclick="buyTicketsModal('@Model.Id', '@assignment.Id')">
+                                    <i class="bi bi-ticket-perforated"></i> Upload submission
+                                </button>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p class="text-center text-muted">There are no movies scheduled for this cinema currently.</p>
+    }
+</div>
+
+@* <div class="text-center mt-5">
+    @if (await this.lecturerService.IsUserLecturerAsync(this.User.GetUserId()))
+    {
+        <a asp-action="Manage" class="btn btn-secondary btn-lg px-4">
+            <i class="bi bi-arrow-left-circle"></i> Back to Courses
+        </a>
+    }
+    else
+    {
+        <a asp-action="Index" class="btn btn-secondary btn-lg px-4">
+            <i class="bi bi-arrow-left-circle"></i> Back to Courses
+        </a>
+    }
+</div>
+
+<script src="~/js/manageSubmissions.js"></script> *@
